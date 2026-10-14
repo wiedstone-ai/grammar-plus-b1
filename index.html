@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grammar Plus B1 - Panduan & Latihan Tata Bahasa Inggris (Tingkat XI & XII)</title>
+  <meta name="description" content="Website pembelajaran dan latihan interaktif tata bahasa Inggris tingkat B1 berdasarkan buku Grammar Plus B1 (Sarah Jane Lewis) khusus untuk siswa Tingkat XI dan XII (Kurikulum Merdeka Fase F). Terintegrasi Google Spreadsheet dan siap diunggah ke GitHub Pages.">
+
+  <!-- Font Plus Jakarta Sans & SheetJS untuk Export Excel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0.0">
+</head>
+<body>
+
+  <!-- ============================================================== -->
+  <!-- HEADER & NAVIGATION                                            -->
+  <!-- ============================================================== -->
+  <header class="app-header">
+    <div class="container">
+      <div class="header-top">
+        <a href="#" class="brand-wrapper" onclick="switchTab('section-materi')">
+          <div class="brand-logo-badge">GP B1</div>
+          <div class="brand-title-group">
+            <h1>GRAMMAR PLUS B1</h1>
+            <p>Panduan &amp; Latihan Tata Bahasa Inggris &bull; Tingkat XI &amp; XII (Fase F)</p>
+          </div>
+        </a>
+
+        <div class="header-user-status" id="header-auth-status">
+          <!-- Diisi otomatis oleh JavaScript -->
+          <button class="btn btn-secondary btn-sm" onclick="openModal('modal-login')">Masuk</button>
+          <button class="btn btn-primary btn-sm" onclick="openModal('modal-register')">Daftar Murid Baru (XI/XII)</button>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="navbar" aria-label="Menu Utama Pembelajaran">
+        <a class="nav-link active" data-target="section-materi">
+          <span>📚</span> Daftar Materi (40 Unit)
+        </a>
+        <a class="nav-link" data-target="section-latihan">
+          <span>📝</span> Latihan Interaktif
+        </a>
+        <a class="nav-link" data-target="section-capaian">
+          <span>📊</span> Rekaman Capaian (Siswa)
+        </a>
+        <a class="nav-link" data-target="section-lampiran">
+          <span>📖</span> Lampiran &amp; Fonetik
+        </a>
+        <a class="nav-link" data-target="section-guru" id="nav-link-guru" style="display: none;">
+          <span>👨‍🏫</span> Portal Guru &amp; Rekap
+        </a>
+        <a class="nav-link" data-target="section-pengaturan" id="nav-link-settings" style="display: none;">
+          <span>⚙️</span> Database Google Sheet
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Database Connection Banner (Khusus Guru - Tersembunyi untuk Siswa) -->
+  <div class="db-sync-strip no-print" id="db-sync-banner" style="display: none;">
+    <div class="container db-sync-inner">
+      <div class="status-indicator">
+        <span class="dot-indicator online" id="sync-status-dot"></span>
+        <span id="sync-status-text">Database Terhubung: Google Spreadsheet 1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc</span>
+      </div>
+      <div>
+        <a href="https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.775rem;">
+          Buka Google Sheet &#8599;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MAIN CONTENT                                                   -->
+  <!-- ============================================================== -->
+  <main class="app-main">
+    <div class="container">
+
+      <!-- ========================================================== -->
+      <!-- TAB 1: DAFTAR MATERI (40 UNIT LENGKAP)                     -->
+      <!-- ========================================================== -->
+      <section id="section-materi" class="tab-section active">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-text">
+            <h2>Tingkatkan Kemampuan Tata Bahasa Inggris B1 Anda</h2>
+            <p>
+              Materi disusun sistematis mengikuti 40 unit pembelajaran buku <em>Grammar Plus B1</em> (Sarah Jane Lewis). Dikhususkan untuk siswa <strong>Tingkat XI dan XII (Kurikulum Merdeka Fase F)</strong> lengkap dengan ringkasan rumus, tabel perbandingan, contoh kontekstual, naskah audio, dan evaluasi seketika.
+            </p>
+            <div class="hero-badges">
+              <span class="pill-badge">🎓 Standar CEFR B1 / PET</span>
+              <span class="pill-badge">🏫 Khusus Tingkat XI &amp; XII (Fase F)</span>
+              <span class="pill-badge">⚡ Interaktif &amp; Koreksi Otomatis</span>
+              <span class="pill-badge">📊 Terintegrasi Google Spreadsheet</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Pencarian Unit -->
+        <div style="margin-bottom: 1.25rem;">
+          <input type="text" id="search-unit-input" class="form-control" placeholder="🔍 Cari judul materi atau topik tata bahasa (misal: to be, plural, articles, continuous, conditional, passive)...">
+        </div>
+
+        <!-- Detail Konten Unit (Akan muncul jika unit diklik) -->
+        <div id="unit-detail-content" class="unit-detail-view" style="display: none;"></div>
+
+        <!-- Grid 40 Unit -->
+        <div class="grid-units" id="unit-grid-container">
+          <!-- Diisi otomatis oleh JavaScript -->
+        </div>
+      </section>
+
+      <!-- ========================================================== -->
+      <!-- TAB 2: LATIHAN INTERAKTIF                                  -->
+      <!-- ========================================================== -->
+      <section id="section-latihan" class="tab-section">
+        <!-- Lock Banner Jika Belum Login -->
+        <div class="lock-banner" style="display: none;">
+          <div class="lock-banner-icon">🔒</div>
+          <h3>Akses Latihan Terkunci</h3>
+          <p>Tiap latihan hanya dapat diakses oleh siswa Tingkat XI dan XII yang telah mendaftarkan diri atau didaftarkan oleh guru.</p>
+          <div style="display: flex; gap: 0.75rem; justify-content: center; margin-top: 1rem;">
+            <button class="btn btn-primary" onclick="openModal('modal-login')">Masuk dengan Akun</button>
+            <button class="btn btn-secondary" onclick="openModal('modal-register')">Daftar Murid Baru (XI/XII)</button>
+          </div>
+        </div>
+
+        <!-- Konten Latihan Jika Sudah Login -->
+        <div class="locked-content">
+          <div class="card" style="margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+              <div style="flex: 1; min-width: 280px;">
+                <label for="exercise-unit-select" class="form-label" style="margin-bottom: 0.25rem;">Pilih Unit Pembelajaran:</label>
+                <select id="exercise-unit-select" class="form-control" style="font-weight: 600;" onchange="loadUnitExercises(parseInt(this.value, 10))">
+                  <option value="1">Unit 1: to be: Jawaban singkat; There is / There are (Lengkap)</option>
+                  <option value="2">Unit 2: a / an; Bentuk jamak; Kata tunjuk (Lengkap)</option>
+                  <option value="3">Unit 3: the (Lengkap)</option>
+                  <option value="4">Unit 4: one / ones</option>
+                  <option value="5">Unit 5: Kata ganti objek, Kata ganti dan kata sifat kepemilikan</option>
+                  <option value="6">Unit 6: Present simple have (got) untuk kepemilikan</option>
+                  <option value="7">Unit 7: Present simple dan keterangan frekuensi</option>
+                  <option value="8">Unit 8: Kata sifat dan kata benda kebangsaan; Waktu / Tanggal</option>
+                  <option value="9">Unit 9: Objek langsung dan tidak langsung; Urutan kata</option>
+                  <option value="10">Unit 10: Present continuous</option>
+                  <option value="11">Unit 11: must, have to, can, could, be able to, should, need, may, might</option>
+                  <option value="12">Unit 12: Kata depan tempat</option>
+                  <option value="13">Unit 13: Kata depan waktu</option>
+                  <option value="14">Unit 14: Kata depan Pergerakan</option>
+                  <option value="15">Unit 15: Imperatif</option>
+                  <option value="16">Unit 16: Kata benda dapat dan tidak dapat dihitung; Kata benda kumpulan</option>
+                  <option value="17">Unit 17: some, any, a few, a little, few, little, no, none</option>
+                  <option value="18">Unit 18: much, many, a lot (of), too, so (...that), pertanyaan dengan How</option>
+                  <option value="19">Unit 19: other(s), another, else; every, each; all, whole; both, either, neither</option>
+                  <option value="20">Unit 20: Bentuk genitif dengan 's; whose</option>
+                  <option value="21">Unit 21: Kata ganti refleksi; each other; one another; get + kata sifat</option>
+                  <option value="22">Unit 22: Kata sifat komparatif dan superlatif</option>
+                  <option value="23">Unit 23: Komparatif / Superlatif dengan kata benda dan kata kerja; less, fewer; as ... as</option>
+                  <option value="24">Unit 24: Past simple to be</option>
+                  <option value="25">Unit 25: Past simple</option>
+                  <option value="26">Unit 26: Past continuous</option>
+                  <option value="27">Unit 27: Present perfect simple</option>
+                  <option value="28">Unit 28: Present perfect continuous; for dan since</option>
+                  <option value="29">Unit 29: Present perfect simple atau Past simple</option>
+                  <option value="30">Unit 30: Past perfect, Past perfect atau Past simple?</option>
+                  <option value="31">Unit 31: Future simple; Future menggunakan going to</option>
+                  <option value="32">Unit 32: Klausa relatif</option>
+                  <option value="33">Unit 33: Kata tanya; Seruan</option>
+                  <option value="34">Unit 34: Pengandaian</option>
+                  <option value="35">Unit 35: Question tags</option>
+                  <option value="36">Unit 36: Kata kerja pengindraan</option>
+                  <option value="37">Unit 37: Bentuk -ing (gerund) setelah preposisi dan kalimat tertentu</option>
+                  <option value="38">Unit 38: Gerund (-ing form) / Bentuk infinitif</option>
+                  <option value="39">Unit 39: Kalimat laporan</option>
+                  <option value="40">Unit 40: Kalimat pasif</option>
+                </select>
+              </div>
+              <div>
+                <span class="badge badge-success" style="padding: 0.5rem 0.85rem; font-size: 0.85rem;">
+                  KKM Kelulusan: 75%
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Area Render Latihan -->
+          <div id="exercise-render-area">
+            <!-- Konten soal dimuat dinamis -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================== -->
+      <!-- TAB 3: REKAMAN CAPAIAN SISWA & DOWNLOAD PDF                -->
+      <!-- ========================================================== -->
+      <section id="section-capaian" class="tab-section">
+        <div id="student-record-container">
+          <!-- Diisi otomatis oleh JavaScript -->
+        </div>
+      </section>
+
+      <!-- ========================================================== -->
+      <!-- TAB 4: PORTAL GURU & EXPORT EXCEL                          -->
+      <!-- ========================================================== -->
+      <section id="section-guru" class="tab-section">
+        <div id="teacher-dashboard-container">
+          <!-- Diisi otomatis oleh JavaScript jika login sebagai guru -->
+        </div>
+      </section>
+
+      <!-- ========================================================== -->
+      <!-- TAB 5: LAMPIRAN (IRREGULAR VERBS, FONETIK, AUDIO)         -->
+      <!-- ========================================================== -->
+      <section id="section-lampiran" class="tab-section">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">📖 Lampiran A: Kata Kerja Khusus (Irregular Verbs)</h3>
+            <span class="form-help">Daftar Bentuk Dasar, Past Simple (V2), dan Past Participle (V3)</span>
+          </div>
+          <div id="lampiran-a-container"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">🔤 Lampiran B: Alfabet Fonetis &amp; Tanda Baca Bahasa Inggris</h3>
+          </div>
+          <div id="lampiran-b-container"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">🎧 Naskah Rekaman Audio (Audio Scripts)</h3>
+            <span class="form-help">Transkrip naskah audio rekaman buku Grammar Plus B1</span>
+          </div>
+          <div id="audio-transcripts-container"></div>
+        </div>
+      </section>
+
+      <!-- ========================================================== -->
+      <!-- TAB 6: PENGATURAN DATABASE GOOGLE SPREADSHEET              -->
+      <!-- ========================================================== -->
+      <section id="section-pengaturan" class="tab-section">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">⚙️ Konfigurasi Database Google Spreadsheet</h3>
+          </div>
+
+          <div style="background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.5rem;">
+            <p style="font-size: 0.9rem; color: #334155; margin-bottom: 0.5rem;">
+              <strong>Google Spreadsheet Resmi (Tingkat XI &amp; XII):</strong><br>
+              <a href="https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc" target="_blank" style="color: #2563EB; word-break: break-all;">
+                https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc
+              </a>
+            </p>
+            <p style="font-size: 0.825rem; color: #64748B;">
+              ID Spreadsheet: <code>1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc</code><br>
+              Tabel otomatis terpasang: <code>Siswa</code>, <code>Nilai</code>, <code>Pengaturan</code>.
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="settings-gas-url" class="form-label">URL Web App Google Apps Script:</label>
+            <input type="url" id="settings-gas-url" class="form-control" value="https://script.google.com/macros/s/AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466/exec" placeholder="https://script.google.com/macros/s/.../exec">
+            <div class="form-help">
+              URL Web App Google Apps Script resmi yang terhubung langsung dengan Google Spreadsheet <code>1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc</code>.
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+            <button class="btn btn-primary" onclick="saveGasUrl()">Simpan Konfigurasi</button>
+            <button class="btn btn-secondary" onclick="testGasConnection()">Uji Koneksi</button>
+          </div>
+
+          <div style="margin-top: 2rem; border-top: 1px solid #E2E8F0; padding-top: 1.25rem;">
+            <h4 style="font-weight: 700; color: #1E293B; margin-bottom: 0.5rem;">Cara Deploy Google Apps Script (1 Menit):</h4>
+            <ol style="padding-left: 1.25rem; font-size: 0.85rem; color: #475569; line-height: 1.7;">
+              <li>Buka tautan Google Spreadsheet di atas.</li>
+              <li>Klik menu <strong>Extensions (Ekstensi)</strong> &rarr; <strong>Apps Script</strong>.</li>
+              <li>Buka file <code>google_apps_script.js</code> yang disertakan di repositori ini, salin seluruh kodenya, dan tempel ke editor Apps Script.</li>
+              <li>Klik <strong>Deploy (Terapkan)</strong> &rarr; <strong>New deployment (Penerapan baru)</strong> &rarr; Pilih jenis <strong>Web app</strong>.</li>
+              <li>Set <em>Execute as: Me</em> dan <em>Who has access: Anyone</em>. Lalu salin URL Web App yang dihasilkan ke kotak isian di atas.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: REGISTRASI SISWA BARU (KHUSUS TINGKAT XI & XII)         -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="modal-register">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="card-title">📝 Pendaftaran Murid Baru (Tingkat XI &amp; XII)</h3>
+        <button class="modal-close" onclick="closeModal('modal-register')">&times;</button>
+      </div>
+
+      <form id="form-register">
+        <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 6px; padding: 0.75rem; margin-bottom: 1rem; font-size: 0.825rem; color: #1E40AF;">
+          ℹ️ Pendaftaran Grammar Plus B1 <strong>khusus untuk siswa Kelas XI dan XII (Fase F)</strong>.
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Tingkat (Hanya XI &amp; XII)</label>
+            <select id="reg-tingkat" class="form-control" required>
+              <option value="">Pilih Tingkat...</option>
+              <option value="XI">Kelas XI</option>
+              <option value="XII">Kelas XII</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fase (Kurikulum Merdeka)</label>
+            <select id="reg-fase" class="form-control" required>
+              <option value="F" selected>Fase F (Kelas XI &amp; XII)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Rombel (Nomor 1 - 12)</label>
+            <input type="number" id="reg-rombel" class="form-control" min="1" max="12" placeholder="Contoh: 1 ... 12" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Nomor Presensi (1 - 37)</label>
+            <input type="number" id="reg-presensi" class="form-control" min="1" max="37" placeholder="Contoh: 1 ... 37" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nama Lengkap (Huruf Kapital)</label>
+          <input type="text" id="reg-nama" class="form-control uppercase" placeholder="CONTOH: BUDI SANTOSO" required>
+          <div class="form-help">Ketik nama lengkap Anda dalam huruf kapital.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Tanggal Lahir (Sebagai Password)</label>
+          <input type="date" id="reg-tgl-lahir" class="form-control" required>
+          <div class="form-help">Tanggal lahir Anda akan digunakan sebagai kata sandi login.</div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Daftarkan Saya Sekarang</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-register')">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: HASIL PEMBUATAN AKUN                                    -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="modal-account-card">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="card-title">🎓 Kartu Identitas Akun</h3>
+        <button class="modal-close" onclick="closeModal('modal-account-card')">&times;</button>
+      </div>
+      <div id="account-card-body">
+        <!-- Konten otomatis -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: LOGIN SISWA / GURU                                      -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="modal-login">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="card-title">🔐 Masuk ke Sistem</h3>
+        <button class="modal-close" onclick="closeModal('modal-login')">&times;</button>
+      </div>
+
+      <form id="form-login">
+        <div class="form-group">
+          <label class="form-label">Username</label>
+          <input type="text" id="login-username" class="form-control uppercase" placeholder="Misal: BUD14102007 atau GURU" required>
+          <div class="form-help">Username terdiri dari 3 huruf depan nama + DDMMYYYY (contoh: BUD14102007).</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password (Tanggal Lahir DDMMYYYY)</label>
+          <input type="password" id="login-password" class="form-control" placeholder="Contoh: 14102007 atau GURU123" required>
+          <div class="form-help">Bagi siswa, password adalah tanggal lahir Anda berformat DDMMYYYY (contoh: 14102007).</div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Masuk Sekarang</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-login')">Batal</button>
+        </div>
+
+        <div style="margin-top: 1rem; text-align: center; font-size: 0.85rem;">
+          Belum punya akun? <a href="#" onclick="closeModal('modal-login'); openModal('modal-register');" style="color: var(--primary); font-weight: 700;">Daftar di sini (Tingkat XI &amp; XII)</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: AUTH KHUSUS GURU                                        -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="modal-guru-auth">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="card-title">👨‍🏫 Akses Portal Guru</h3>
+        <button class="modal-close" onclick="closeModal('modal-guru-auth')">&times;</button>
+      </div>
+
+      <form id="form-guru-auth">
+        <p style="font-size: 0.875rem; color: #475569; margin-bottom: 1rem;">
+          Masukkan PIN atau Sandi Guru untuk mengakses data seluruh siswa dan mengunduh rekaman ke Excel:
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">Sandi / PIN Guru</label>
+          <input type="password" id="guru-pin-input" class="form-control" placeholder="PIN Default: GURU123" required>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Buka Portal Guru</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-guru-auth')">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: GURU DAFTARKAN MURID SECARA MANUAL                      -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="modal-add-student-guru">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="card-title">➕ Daftarkan Murid (Oleh Guru)</h3>
+        <button class="modal-close" onclick="closeModal('modal-add-student-guru')">&times;</button>
+      </div>
+
+      <form onsubmit="handleTeacherAddStudent(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Tingkat (Hanya XI &amp; XII)</label>
+            <select id="guru-reg-tingkat" class="form-control" required>
+              <option value="XI">Kelas XI</option>
+              <option value="XII">Kelas XII</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fase</label>
+            <select id="guru-reg-fase" class="form-control" required>
+              <option value="F">Fase F</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Rombel (1 - 12)</label>
+            <input type="number" id="guru-reg-rombel" class="form-control" min="1" max="12" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Presensi (1 - 37)</label>
+            <input type="number" id="guru-reg-presensi" class="form-control" min="1" max="37" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nama Lengkap Murid</label>
+          <input type="text" id="guru-reg-nama" class="form-control uppercase" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Tanggal Lahir Murid</label>
+          <input type="date" id="guru-reg-tgl" class="form-control" required>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Daftarkan Murid Ini</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal('modal-add-student-guru')">Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container">
+      <p>
+        <strong>Grammar Plus B1</strong> &copy; 2026. Panduan dan Latihan Tata Bahasa Inggris (Sarah Jane Lewis).
+      </p>
+      <p style="font-size: 0.775rem; color: #64748B; margin-top: 0.25rem;">
+        Khusus Tingkat XI &amp; XII (Fase F) | Desain Latar Belakang Putih Kontras Tinggi | Kompatibel GitHub Pages &amp; Google Spreadsheet
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data_units.js?v=1.0.0"></script>
+  <script src="js/exercises_store.js?v=1.0.0"></script>
+  <script src="js/app.js?v=1.0.0"></script>
+
+  <script>
+    // Handler tambahan untuk Guru mendaftarkan murid
+    function handleTeacherAddStudent(e) {
+      e.preventDefault();
+      const tingkat = document.getElementById("guru-reg-tingkat").value.trim().toUpperCase();
+      const fase = document.getElementById("guru-reg-fase").value.trim().toUpperCase();
+      const rombel = parseInt(document.getElementById("guru-reg-rombel").value.trim(), 10);
+      const presensi = parseInt(document.getElementById("guru-reg-presensi").value.trim(), 10);
+      const nama = document.getElementById("guru-reg-nama").value.trim().toUpperCase();
+      const tanggalLahir = document.getElementById("guru-reg-tgl").value.trim();
+
+      if (tingkat !== "XI" && tingkat !== "XII") {
+        showToast("Tingkat harus XI atau XII!", "danger");
+        return;
+      }
+
+      const username = generateUsername(nama, tanggalLahir);
+      const password = formatBirthdateToPassword(tanggalLahir);
+      const newStudent = {
+        timestamp: new Date().toLocaleString("id-ID"),
+        username: username,
+        password: password,
+        nama: nama,
+        tingkat: tingkat,
+        fase: fase,
+        rombel: String(rombel),
+        presensi: String(presensi),
+        tanggalLahir: tanggalLahir,
+        role: "Siswa",
+        status: "Aktif",
+        synced: false
+      };
+
+      AppState.students.push(newStudent);
+      saveStudentsToStorage();
+      syncStudentToGAS(newStudent);
+
+      closeModal("modal-add-student-guru");
+      showToast(`Murid ${nama} berhasil didaftarkan! Username: ${username}`, "success");
+      renderTeacherDashboard();
+    }
+  </script>
+</body>
+</html>

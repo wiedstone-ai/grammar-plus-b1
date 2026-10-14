@@ -1,0 +1,4894 @@
+{
+  "version": "1.0.0",
+  "course": "Grammar Plus B1",
+  "description": "Database Latihan Buku Grammar Plus B1 (Sarah Jane Lewis) untuk Siswa Kelas XI & XII (Fase F)",
+  "spreadsheet_id": "1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc",
+  "units": [
+    {
+      "id": 1,
+      "title": "to be: Jawaban singkat; There is / There are",
+      "english_title": "to be: Short answers; There is / There are",
+      "category": "Basic Verbs & Sentence Structure",
+      "page": 4,
+      "grammar": {
+        "summary": "Kata kerja 'to be' (am, is, are) adalah dasar pembentukan kalimat dalam bahasa Inggris untuk menyatakan identitas, kondisi, sifat, serta keberadaan sesuatu menggunakan 'There is / There are'.",
+        "tables": [
+          {
+            "title": "Tabel Konjugasi To Be (Afirmatif, Negatif, Interogatif)",
+            "headers": [
+              "Subjek",
+              "Afirmatif",
+              "Negatif",
+              "Interogatif",
+              "Negatif Interogatif"
+            ],
+            "rows": [
+              [
+                "I",
+                "I am (I'm)",
+                "I am not (I'm not)",
+                "Am I?",
+                "Am I not?"
+              ],
+              [
+                "You",
+                "You are (You're)",
+                "You are not (You're not / aren't)",
+                "Are you?",
+                "Aren't you?"
+              ],
+              [
+                "He",
+                "He is (He's)",
+                "He is not (He's not / isn't)",
+                "Is he?",
+                "Isn't he?"
+              ],
+              [
+                "She",
+                "She is (She's)",
+                "She is not (She's not / isn't)",
+                "Is she?",
+                "Isn't she?"
+              ],
+              [
+                "It",
+                "It is (It's)",
+                "It is not (It's not / isn't)",
+                "Is it?",
+                "Isn't it?"
+              ],
+              [
+                "We",
+                "We are (We're)",
+                "We are not (We're not / aren't)",
+                "Are we?",
+                "Aren't we?"
+              ],
+              [
+                "You (plural)",
+                "You are (You're)",
+                "You are not (You're not / aren't)",
+                "Are you?",
+                "Aren't you?"
+              ],
+              [
+                "They",
+                "They are (They're)",
+                "They are not (They're not / aren't)",
+                "Are they?",
+                "Aren't they?"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Jawaban singkat (Short Answers): Ulangi kata ganti subjek dan kata kerja setelah Yes atau No. Contoh: 'Is she tired? Yes, she is. / No, she isn't.'",
+          "There is / There are: Digunakan untuk menyatakan keberadaan benda. Gunakan 'there is' untuk benda tunggal dan 'there are' untuk benda jamak. Contoh: 'There is a blackbird in the garden.', 'There are many trees in the park.'",
+          "Kalimat bahasa Inggris umumnya tidak dimulai dengan kata benda tak tentu ('A vase is on the table' kurang lazim, gunakan 'There is a vase on the table').",
+          "Struktur kalimat dengan kata tanya: Kata Tanya + to be + Subjek. Contoh: 'Where is the TV remote?', 'How are your grandparents?'"
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u1_ex1",
+          "unitId": 1,
+          "page": 4,
+          "title": "Latihan 1: Lengkapi dengan Bentuk Kata Kerja To Be yang Tepat",
+          "instruction": "Ketik kata kerja to be yang tepat (am, is, are, aren't, isn't) untuk melengkapi kalimat berikut.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. Francis [BLANK] my friend.",
+              "answer": "is",
+              "alternateAnswers": [
+                "'s"
+              ],
+              "hint": "Francis adalah orang ketiga tunggal (he).",
+              "explanation": "Gunakan 'is' untuk subjek tunggal orang ketiga."
+            },
+            {
+              "q": "2. Sam and Mark [BLANK] brothers, they are cousins.",
+              "answer": "aren't",
+              "alternateAnswers": [
+                "are not"
+              ],
+              "hint": "Kalimat bernada kontras: mereka bukan saudara kandung, melainkan sepupu.",
+              "explanation": "Gunakan bentuk negatif jamak 'aren't' atau 'are not'."
+            },
+            {
+              "q": "3. A: [BLANK] they French? B: No, they [BLANK2]. They [BLANK3] Spanish.",
+              "answer": "Are / aren't / are",
+              "alternateAnswers": [
+                "Are / are not / are",
+                "Are/aren't/are",
+                "Are/are not/are"
+              ],
+              "hint": "Pertanyaan untuk 'they', jawaban negatif singkat, dan afirmatif jamak.",
+              "explanation": "Pertanyaan: 'Are they French?', Jawaban: 'No, they aren't. They are Spanish.'"
+            },
+            {
+              "q": "4. A: [BLANK] Joanne very hungry? B: No, I don't think she is.",
+              "answer": "Is",
+              "alternateAnswers": [
+                "is"
+              ],
+              "hint": "Joanne adalah kata ganti orang ketiga tunggal (she).",
+              "explanation": "Kalimat tanya diawali 'Is' untuk subjek tunggal."
+            },
+            {
+              "q": "5. My son [BLANK] eight and my daughter [BLANK2] ten. They [BLANK3] at junior school now.",
+              "answer": "is / is / are",
+              "alternateAnswers": [
+                "is/is/are"
+              ],
+              "hint": "My son (tunggal), my daughter (tunggal), they (jamak).",
+              "explanation": "Gunakan 'is' untuk anak tunggal dan 'are' untuk 'they'."
+            },
+            {
+              "q": "6. I [BLANK] not very confident at playing sport.",
+              "answer": "am",
+              "alternateAnswers": [
+                "'m"
+              ],
+              "hint": "Subjek I berpasangan dengan...",
+              "explanation": "Subjek 'I' selalu berpasangan dengan 'am'."
+            },
+            {
+              "q": "7. Where [BLANK] the children?",
+              "answer": "are",
+              "alternateAnswers": [
+                "'re"
+              ],
+              "hint": "'The children' adalah bentuk jamak dari 'child'.",
+              "explanation": "Karena 'children' adalah jamak, gunakan 'are'."
+            },
+            {
+              "q": "8. Paul [BLANK] not very tall.",
+              "answer": "is",
+              "alternateAnswers": [
+                "'s"
+              ],
+              "hint": "Paul adalah nama satu orang.",
+              "explanation": "Subjek tunggal menggunakan 'is'."
+            }
+          ]
+        },
+        {
+          "id": "u1_ex2",
+          "unitId": 1,
+          "page": 5,
+          "title": "Latihan 2: Susun Kata Menjadi Kalimat dengan To Be",
+          "instruction": "Ketik susunan kalimat yang benar dari kata-kata yang diacak.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. we / to / going / aren't / today / the beach / ?",
+              "answer": "Aren't we going to the beach today?",
+              "alternateAnswers": [
+                "Are not we going to the beach today?"
+              ],
+              "hint": "Pertanyaan negatif diawali 'Aren't we...'",
+              "explanation": "Susunan kalimat tanya negatif: Aren't + we + going to + the beach + today?"
+            },
+            {
+              "q": "2. playing / they / in the play / the main roles / are",
+              "answer": "They are playing the main roles in the play.",
+              "alternateAnswers": [
+                "They're playing the main roles in the play."
+              ],
+              "hint": "Subjek: They + are + verb-ing...",
+              "explanation": "Susunan afirmatif: Subjek + to be + verb-ing + objek + keterangan."
+            },
+            {
+              "q": "3. well / not / feeling / is / today / he / very",
+              "answer": "He is not feeling very well today.",
+              "alternateAnswers": [
+                "He isn't feeling very well today."
+              ],
+              "hint": "Subjek he + is not...",
+              "explanation": "Susunan: He is not feeling very well today."
+            },
+            {
+              "q": "4. a bus / you / taking / to the airport / are / ?",
+              "answer": "Are you taking a bus to the airport?",
+              "hint": "Tanya diawali 'Are you...'",
+              "explanation": "Pertanyaan present continuous: Are + you + taking + a bus to the airport?"
+            },
+            {
+              "q": "5. cold / she / wearing / isn't / just / a T-shirt / ?",
+              "answer": "Isn't she cold wearing just a T-shirt?",
+              "hint": "Pertanyaan negatif diawali 'Isn't she...'",
+              "explanation": "Susunan: Isn't she cold wearing just a T-shirt?"
+            },
+            {
+              "q": "6. not / raining / is / very much / it / anymore",
+              "answer": "It is not raining very much anymore.",
+              "alternateAnswers": [
+                "It isn't raining very much anymore."
+              ],
+              "hint": "Subjek it + to be...",
+              "explanation": "Susunan kalimat negatif: It is not raining very much anymore."
+            },
+            {
+              "q": "7. you / better / the operation / looking / are / after",
+              "answer": "You are looking better after the operation.",
+              "alternateAnswers": [
+                "Are you looking better after the operation?",
+                "You're looking better after the operation."
+              ],
+              "hint": "Susun menjadi pernyataan atau pertanyaan.",
+              "explanation": "Susunan: You are looking better after the operation."
+            },
+            {
+              "q": "8. cinema / they / to / tonight / the / are / going / ?",
+              "answer": "Are they going to the cinema tonight?",
+              "hint": "Kalimat tanya diawali 'Are they...'",
+              "explanation": "Susunan: Are they going to the cinema tonight?"
+            }
+          ]
+        },
+        {
+          "id": "u1_ex3",
+          "unitId": 1,
+          "page": 5,
+          "title": "Latihan 3: Ubah Kalimat Afirmatif Menjadi Negatif dan Tanya (Interogatif)",
+          "instruction": "Ubah kalimat berikut menjadi bentuk negatif dan kalimat tanya (format: Negatif / Tanya?).",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. She is a nice woman.",
+              "answer": "She isn't a nice woman. / Is she a nice woman?",
+              "alternateAnswers": [
+                "She is not a nice woman. / Is she a nice woman?"
+              ],
+              "hint": "Bentuk negatif pakai isn't, tanya diawali Is.",
+              "explanation": "Negatif: She isn't a nice woman. Interogatif: Is she a nice woman?"
+            },
+            {
+              "q": "2. They are firemen.",
+              "answer": "They aren't firemen. / Are they firemen?",
+              "alternateAnswers": [
+                "They are not firemen. / Are they firemen?"
+              ],
+              "hint": "Bentuk negatif pakai aren't, tanya diawali Are.",
+              "explanation": "Negatif: They aren't firemen. Interogatif: Are they firemen?"
+            },
+            {
+              "q": "3. He is always on time for swimming lessons.",
+              "answer": "He isn't always on time for swimming lessons. / Is he always on time for swimming lessons?",
+              "alternateAnswers": [
+                "He is not always on time for swimming lessons. / Is he always on time for swimming lessons?"
+              ],
+              "hint": "Negatif dengan isn't, interogatif diawali Is he...",
+              "explanation": "Negatif: He isn't always on time for swimming lessons. Interogatif: Is he always on time for swimming lessons?"
+            },
+            {
+              "q": "4. You are very organised.",
+              "answer": "You aren't very organised. / Are you very organised?",
+              "alternateAnswers": [
+                "You are not very organised. / Are you very organised?"
+              ],
+              "hint": "Negatif: aren't, interogatif: Are you...",
+              "explanation": "Negatif: You aren't very organised. Interogatif: Are you very organised?"
+            },
+            {
+              "q": "5. It is cold outside this evening.",
+              "answer": "It isn't cold outside this evening. / Is it cold outside this evening?",
+              "alternateAnswers": [
+                "It is not cold outside this evening. / Is it cold outside this evening?"
+              ],
+              "hint": "Negatif: isn't, interogatif: Is it...",
+              "explanation": "Negatif: It isn't cold outside this evening. Interogatif: Is it cold outside this evening?"
+            },
+            {
+              "q": "6. She is a computer programmer.",
+              "answer": "She isn't a computer programmer. / Is she a computer programmer?",
+              "alternateAnswers": [
+                "She is not a computer programmer. / Is she a computer programmer?"
+              ],
+              "hint": "Negatif: isn't, interogatif: Is she...",
+              "explanation": "Negatif: She isn't a computer programmer. Interogatif: Is she a computer programmer?"
+            }
+          ]
+        },
+        {
+          "id": "u1_ex4",
+          "unitId": 1,
+          "page": 5,
+          "title": "Latihan 4: Dengarkan Naskah Audio (TR 2) dan Lengkapi Dialog",
+          "instruction": "Ketik kata tanya yang tepat untuk melengkapi bagian kosong dialog antara Juan dan Kathy.",
+          "type": "fill",
+          "audioTrack": "TR 2",
+          "questions": [
+            {
+              "q": "Juan: Thanks. My name's Juan, by the way. (1) [BLANK]'s yours?",
+              "answer": "What",
+              "alternateAnswers": [
+                "what"
+              ],
+              "hint": "Menanyakan nama lawan bicara.",
+              "explanation": "Juan menanyakan nama Kathy: 'What's yours?' (Siapa nama Anda?)"
+            },
+            {
+              "q": "Juan: That's an unusual accent. (2) [BLANK] are you from?",
+              "answer": "Where",
+              "alternateAnswers": [
+                "where"
+              ],
+              "hint": "Menanyakan asal daerah.",
+              "explanation": "Pertanyaan asal: 'Where are you from?'"
+            },
+            {
+              "q": "Kathy: I'm from Bristol, in the UK. I'm here on holiday. And you? Juan: I'm from Portugal. Kathy: (3) [BLANK] are you here with?",
+              "answer": "Who",
+              "alternateAnswers": [
+                "who"
+              ],
+              "hint": "Menanyakan orang yang menemani.",
+              "explanation": "Pertanyaan teman seperjalanan: 'Who are you here with?'"
+            },
+            {
+              "q": "Kathy: (4) [BLANK] are those sketches? They're really good. Juan: Thanks! They're mine.",
+              "answer": "Whose",
+              "alternateAnswers": [
+                "whose"
+              ],
+              "hint": "Menanyakan kepemilikan sketsa lukisan.",
+              "explanation": "Menanyakan kepemilikan: 'Whose are those sketches?' (Milik siapa sketsa-sketsa itu?)"
+            },
+            {
+              "q": "Kathy: (5) [BLANK] do you study? Juan: Art and design.",
+              "answer": "What",
+              "alternateAnswers": [
+                "what"
+              ],
+              "hint": "Menanyakan bidang studi.",
+              "explanation": "Menanyakan jurusan kuliah: 'What do you study?'"
+            }
+          ]
+        },
+        {
+          "id": "u1_ex5",
+          "unitId": 1,
+          "page": 5,
+          "title": "Latihan 5: Lengkapi Awal Kalimat dengan Kata Tanya yang Tepat",
+          "instruction": "Pilihlah salah satu kata tanya: what, why, who, how, which, whose, where.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "1. [BLANK] colour is your hair?",
+              "options": [
+                "What",
+                "Where",
+                "Why",
+                "Who"
+              ],
+              "answer": "What",
+              "hint": "Menanyakan jenis warna.",
+              "explanation": "'What colour' digunakan untuk menanyakan warna spesifik."
+            },
+            {
+              "q": "2. [BLANK] much is an ice cream?",
+              "options": [
+                "How",
+                "What",
+                "Which",
+                "Whose"
+              ],
+              "answer": "How",
+              "hint": "Menanyakan harga.",
+              "explanation": "'How much' digunakan untuk menanyakan harga suatu barang."
+            },
+            {
+              "q": "3. [BLANK] is that short man over there?",
+              "options": [
+                "Who",
+                "What",
+                "Why",
+                "Where"
+              ],
+              "answer": "Who",
+              "hint": "Menanyakan identitas seseorang.",
+              "explanation": "'Who' digunakan untuk menanyakan identitas orang."
+            },
+            {
+              "q": "4. [BLANK] is the university campus?",
+              "options": [
+                "Where",
+                "Why",
+                "Who",
+                "What"
+              ],
+              "answer": "Where",
+              "hint": "Menanyakan lokasi tempat.",
+              "explanation": "'Where' digunakan untuk menanyakan letak/lokasi."
+            },
+            {
+              "q": "5. [BLANK] jumper is this?",
+              "options": [
+                "Whose",
+                "Which",
+                "What",
+                "Who"
+              ],
+              "answer": "Whose",
+              "hint": "Menanyakan kepemilikan baju.",
+              "explanation": "'Whose' menanyakan milik siapa barang tersebut."
+            },
+            {
+              "q": "6. [BLANK] are you crying?",
+              "options": [
+                "Why",
+                "How",
+                "What",
+                "Where"
+              ],
+              "answer": "Why",
+              "hint": "Menanyakan alasan/sebab.",
+              "explanation": "'Why' menanyakan alasan seseorang menangis."
+            },
+            {
+              "q": "7. [BLANK] are your hobbies?",
+              "options": [
+                "What",
+                "Which",
+                "How",
+                "Where"
+              ],
+              "answer": "What",
+              "hint": "Menanyakan ragam hobi.",
+              "explanation": "'What are your hobbies?' adalah bentuk baku menanyakan hobi."
+            },
+            {
+              "q": "8. [BLANK] dress do you prefer: the red one or the blue one?",
+              "options": [
+                "Which",
+                "What",
+                "Where",
+                "Whose"
+              ],
+              "answer": "Which",
+              "hint": "Memilih di antara pilihan terbatas yang disebutkan.",
+              "explanation": "'Which' digunakan ketika memilih salah satu dari pilihan yang terbatas (merah atau biru)."
+            }
+          ]
+        },
+        {
+          "id": "u1_ex6",
+          "unitId": 1,
+          "page": 6,
+          "title": "Latihan 6: Hubungkan Jawaban Singkat (a-f) dengan Pernyataannya",
+          "instruction": "Pilih pasangan jawaban singkat yang tepat untuk setiap pertanyaan.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "1. Is Maxine going to the Halloween party?",
+              "options": [
+                "No, she isn't.",
+                "Yes, they are.",
+                "No, he isn't.",
+                "Yes, it is.",
+                "Yes, I am.",
+                "No, we're not."
+              ],
+              "answer": "No, she isn't.",
+              "hint": "Maxine adalah perempuan (she).",
+              "explanation": "Pertanyaan 'Is Maxine...' dijawab dengan kata ganti 'she'."
+            },
+            {
+              "q": "2. Are you in my Science class?",
+              "options": [
+                "Yes, I am.",
+                "No, she isn't.",
+                "Yes, they are.",
+                "No, he isn't.",
+                "Yes, it is.",
+                "No, we're not."
+              ],
+              "answer": "Yes, I am.",
+              "hint": "Pertanyaan kepada 'you' tunggal dijawab 'I'.",
+              "explanation": "Pertanyaan 'Are you...' dijawab dengan 'Yes, I am.'"
+            },
+            {
+              "q": "3. Are Emma and Jason singing in the school concert?",
+              "options": [
+                "Yes, they are.",
+                "No, she isn't.",
+                "No, he isn't.",
+                "Yes, it is.",
+                "Yes, I am.",
+                "No, we're not."
+              ],
+              "answer": "Yes, they are.",
+              "hint": "Emma and Jason adalah subjek jamak (they).",
+              "explanation": "Subjek jamak orang ketiga dijawab dengan 'they are'."
+            },
+            {
+              "q": "4. Are you and Jeffrey going out for pizza?",
+              "options": [
+                "No, we're not.",
+                "Yes, they are.",
+                "No, she isn't.",
+                "No, he isn't.",
+                "Yes, it is.",
+                "Yes, I am."
+              ],
+              "answer": "No, we're not.",
+              "hint": "You and Jeffrey dijawab 'kami' (we).",
+              "explanation": "Pertanyaan kepada 'you and [someone]' dijawab dengan 'we'."
+            },
+            {
+              "q": "5. Is Michael speaking to you online now?",
+              "options": [
+                "No, he isn't.",
+                "Yes, they are.",
+                "No, she isn't.",
+                "Yes, it is.",
+                "Yes, I am.",
+                "No, we're not."
+              ],
+              "answer": "No, he isn't.",
+              "hint": "Michael adalah laki-laki (he).",
+              "explanation": "Pertanyaan dengan subjek Michael (he) dijawab dengan 'he isn't'."
+            },
+            {
+              "q": "6. Is that your car parked in the street?",
+              "options": [
+                "Yes, it is.",
+                "No, she isn't.",
+                "Yes, they are.",
+                "No, he isn't.",
+                "Yes, I am.",
+                "No, we're not."
+              ],
+              "answer": "Yes, it is.",
+              "hint": "Your car adalah benda tunggal (it).",
+              "explanation": "Benda tunggal dijawab dengan kata ganti 'it is'."
+            }
+          ]
+        },
+        {
+          "id": "u1_ex7",
+          "unitId": 1,
+          "page": 6,
+          "title": "Latihan 7: Tuliskan Jawaban Singkat yang Tepat untuk Pertanyaan Berikut",
+          "instruction": "Pilihlah bentuk jawaban singkat yang gramatikal sesuai subjek kalimat.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "1. Are you wearing jeans today?",
+              "options": [
+                "Yes, I am. / No, I'm not.",
+                "Yes, you are. / No, you aren't.",
+                "Yes, he is. / No, he isn't."
+              ],
+              "answer": "Yes, I am. / No, I'm not.",
+              "hint": "Pertanyaan 'Are you' ditujukan ke diri Anda.",
+              "explanation": "Jawaban personal menggunakan 'Yes, I am.' atau 'No, I'm not.'"
+            },
+            {
+              "q": "2. Are you a member of the athletics team?",
+              "options": [
+                "Yes, I am. / No, I'm not.",
+                "Yes, we are. / No, we're not.",
+                "Yes, it is. / No, it isn't."
+              ],
+              "answer": "Yes, I am. / No, I'm not.",
+              "hint": "Pertanyaan keanggotaan individu.",
+              "explanation": "Jawaban individu menggunakan 'Yes, I am.' atau 'No, I'm not.'"
+            },
+            {
+              "q": "3. Are you going to Birmingham next week?",
+              "options": [
+                "Yes, I am. / No, I'm not.",
+                "Yes, they are. / No, they aren't.",
+                "Yes, she is. / No, she isn't."
+              ],
+              "answer": "Yes, I am. / No, I'm not.",
+              "hint": "Pertanyaan rencana perjalanan pribadi.",
+              "explanation": "Gunakan 'Yes, I am.' atau 'No, I'm not.'"
+            },
+            {
+              "q": "4. Are your grandparents having dinner at your house tonight?",
+              "options": [
+                "Yes, they are. / No, they aren't.",
+                "Yes, we are. / No, we aren't.",
+                "Yes, he is. / No, he isn't."
+              ],
+              "answer": "Yes, they are. / No, they aren't.",
+              "hint": "Your grandparents adalah subjek jamak (they).",
+              "explanation": "Gunakan kata ganti 'they are' atau 'they aren't'."
+            },
+            {
+              "q": "5. Is your best friend a good singer?",
+              "options": [
+                "Yes, he/she is. / No, he/she isn't.",
+                "Yes, they are. / No, they aren't.",
+                "Yes, I am. / No, I'm not."
+              ],
+              "answer": "Yes, he/she is. / No, he/she isn't.",
+              "hint": "Sahabat Anda adalah tunggal (he atau she).",
+              "explanation": "Gunakan 'he is' atau 'she is'."
+            },
+            {
+              "q": "6. Are your mother and father at work right now?",
+              "options": [
+                "Yes, they are. / No, they aren't.",
+                "Yes, we are. / No, we aren't.",
+                "Yes, it is. / No, it isn't."
+              ],
+              "answer": "Yes, they are. / No, they aren't.",
+              "hint": "Mother and father adalah dua orang (they).",
+              "explanation": "Subjek jamak orang ketiga menggunakan 'they are' / 'they aren't'."
+            },
+            {
+              "q": "7. Is your school near the sea?",
+              "options": [
+                "Yes, it is. / No, it isn't.",
+                "Yes, they are. / No, they aren't.",
+                "Yes, I am. / No, I'm not."
+              ],
+              "answer": "Yes, it is. / No, it isn't.",
+              "hint": "Your school adalah fasilitas/benda tunggal (it).",
+              "explanation": "Gunakan kata ganti 'it is' / 'it isn't'."
+            },
+            {
+              "q": "8. Is it your birthday today?",
+              "options": [
+                "Yes, it is. / No, it isn't.",
+                "Yes, I am. / No, I'm not.",
+                "Yes, you are. / No, you aren't."
+              ],
+              "answer": "Yes, it is. / No, it isn't.",
+              "hint": "Subjek pertanyaan adalah 'it'.",
+              "explanation": "Pertanyaan dengan 'Is it' dijawab dengan 'Yes, it is.' atau 'No, it isn't.'"
+            }
+          ]
+        },
+        {
+          "id": "u1_ex8",
+          "unitId": 1,
+          "page": 6,
+          "title": "Latihan 8: Isilah dengan There is atau There are",
+          "instruction": "Ketik there is atau there are sesuai jumlah benda (tunggal atau jamak).",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. [BLANK] twenty students in my language class.",
+              "answer": "There are",
+              "alternateAnswers": [
+                "there are"
+              ],
+              "hint": "Twenty students adalah jamak.",
+              "explanation": "Gunakan 'There are' untuk benda jamak (20 siswa)."
+            },
+            {
+              "q": "2. [BLANK] five members in my favourite band.",
+              "answer": "There are",
+              "alternateAnswers": [
+                "there are"
+              ],
+              "hint": "Five members adalah jamak.",
+              "explanation": "Gunakan 'There are' untuk benda jamak (5 anggota)."
+            },
+            {
+              "q": "3. [BLANK] a beautiful sculpture in my next-door neighbour's garden.",
+              "answer": "There is",
+              "alternateAnswers": [
+                "there is",
+                "There's"
+              ],
+              "hint": "'a beautiful sculpture' adalah benda tunggal.",
+              "explanation": "Gunakan 'There is' untuk benda tunggal yang diawali 'a'."
+            },
+            {
+              "q": "4. [BLANK] a few buses waiting at the station, but none are the right bus for me.",
+              "answer": "There are",
+              "alternateAnswers": [
+                "there are"
+              ],
+              "hint": "'a few buses' bermakna jamak.",
+              "explanation": "Frasa 'a few buses' membutuhkan kata kerja jamak 'There are'."
+            },
+            {
+              "q": "5. [BLANK] only one egg left in the fridge.",
+              "answer": "There is",
+              "alternateAnswers": [
+                "there is",
+                "There's"
+              ],
+              "hint": "'only one egg' adalah satu butir telur (tunggal).",
+              "explanation": "Gunakan 'There is' untuk satu butir telur."
+            },
+            {
+              "q": "6. I like my town centre. [BLANK] two cinemas, a bowling alley and lots of great shops.",
+              "answer": "There are",
+              "alternateAnswers": [
+                "there are"
+              ],
+              "hint": "Merinci dua bioskop dan banyak toko (jamak).",
+              "explanation": "Karena merinci fasilitas jamak di awal frasa ('two cinemas'), gunakan 'There are'."
+            }
+          ]
+        },
+        {
+          "id": "u1_ex9",
+          "unitId": 1,
+          "page": 6,
+          "title": "Latihan 9: Buat Kalimat Berdasarkan Gambar dengan There is atau There are",
+          "instruction": "Ketik kalimat yang mendeskripsikan gambar berikut menggunakan there is atau there are.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. Perhatikan gambar kamar berikut: [BLANK]",
+              "image": "images/u1_ex9_img1.png",
+              "answer": "There are clothes on the bed.",
+              "alternateAnswers": [
+                "There is a girl on the bed.",
+                "There are clothes on the bed",
+                "There are many clothes on the bed."
+              ],
+              "hint": "Gunakan 'There are clothes on the bed.' atau 'There is a girl on the bed.'",
+              "explanation": "Mendeskripsikan banyak pakaian yang berserakan di atas kasur atau seorang anak perempuan di atas kasur."
+            },
+            {
+              "q": "2. Perhatikan gambar antrean di ATM berikut: [BLANK]",
+              "image": "images/u1_ex9_img2.png",
+              "answer": "There are people queuing at the cash machine.",
+              "alternateAnswers": [
+                "There are people queuing at the ATM.",
+                "There are people waiting in line.",
+                "There are three people at the cash machine."
+              ],
+              "hint": "Gunakan 'There are people queuing at the cash machine.' (atau ATM)",
+              "explanation": "Mendeskripsikan orang-orang yang sedang antre mengambil uang di mesin ATM / cash machine."
+            },
+            {
+              "q": "3. Perhatikan gambar burung di ranting pohon berikut: [BLANK]",
+              "image": "images/u1_ex9_img3.png",
+              "answer": "There is a bird on the branch.",
+              "alternateAnswers": [
+                "There is a bird on the tree.",
+                "There is a bird in the tree.",
+                "There is a robin on the branch."
+              ],
+              "hint": "Gunakan 'There is a bird on the branch.'",
+              "explanation": "Mendeskripsikan seekor burung (tunggal) yang bertengger di dahan/ranting pohon."
+            },
+            {
+              "q": "4. Perhatikan gambar anak bermain ayunan berikut: [BLANK]",
+              "image": "images/u1_ex9_img4.png",
+              "answer": "There is a girl on the swing.",
+              "alternateAnswers": [
+                "There is a child on the swing.",
+                "There is a girl playing on the swing.",
+                "There is a girl on a swing."
+              ],
+              "hint": "Gunakan 'There is a girl on the swing.'",
+              "explanation": "Mendeskripsikan seorang anak perempuan yang sedang berayun di ayunan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "a / an; Bentuk jamak; Kata tunjuk",
+      "english_title": "a / an; Plural forms; Demonstratives",
+      "category": "Articles & Nouns",
+      "page": 7,
+      "grammar": {
+        "summary": "Artikel tak tentu 'a' dan 'an' digunakan di depan kata benda tunggal yang dapat dihitung. Bentuk jamak kata benda umumnya dibentuk dengan menambahkan akhiran -s, -es, -ies, atau -ves. Kata tunjuk (demonstratives) this/these merujuk pada benda dekat, sedangkan that/those merujuk pada benda jauh.",
+        "tables": [
+          {
+            "title": "Tabel Aturan Artikel dan Kata Tunjuk",
+            "headers": [
+              "Kategori",
+              "Tunggal (Singular)",
+              "Jamak (Plural)",
+              "Aturan / Bunyi Penggunaan"
+            ],
+            "rows": [
+              [
+                "Artikel Tak Tentu",
+                "a / an",
+                "- / some",
+                "'a' sebelum bunyi konsonan (a dog, a unit). 'an' sebelum bunyi vokal (an hour, an actor)."
+              ],
+              [
+                "Kata Tunjuk Dekat",
+                "this",
+                "these",
+                "'this' untuk benda tunggal dekat; 'these' untuk benda jamak dekat."
+              ],
+              [
+                "Kata Tunjuk Jauh",
+                "that",
+                "those",
+                "'that' untuk benda tunggal jauh; 'those' untuk benda jamak jauh."
+              ]
+            ]
+          },
+          {
+            "title": "Perubahan Bentuk Jamak Kata Benda",
+            "headers": [
+              "Akhiran Kata Tunggal",
+              "Perubahan Jamak",
+              "Contoh Tunggal",
+              "Contoh Jamak"
+            ],
+            "rows": [
+              [
+                "Umum (reguler)",
+                "+ s",
+                "book, school, cup",
+                "books, schools, cups"
+              ],
+              [
+                "-s, -sh, -ch, -x, -z, -o",
+                "+ es",
+                "kiss, watch, box, tomato",
+                "kisses, watches, boxes, tomatoes"
+              ],
+              [
+                "Konsonan + y",
+                "hilangkan y, + ies",
+                "baby, party",
+                "babies, parties"
+              ],
+              [
+                "-f atau -fe",
+                "hilangkan f/fe, + ves",
+                "leaf, wife, knife",
+                "leaves, wives, knives"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Penentuan 'a' atau 'an' didasarkan pada BUNYI pengucapan awal kata, bukan sekadar hurufnya. Contoh: 'a uniform' (karena diawali bunyi konsonan /juː/), 'an hour' (karena huruf h tidak dibunyikan).",
+          "Kata benda jamak dan kata benda tak dapat dihitung (uncountable) TIDAK BOLEH menggunakan artikel a/an.",
+          "Kata tunjuk dapat berdiri sendiri atau mendampingi kata benda / one / ones: 'This pen is hers. These blue hats are nicer than those ones.'"
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u2_ex1",
+          "unitId": 2,
+          "page": 7,
+          "title": "Latihan 1: Tuliskan a atau an di Depan Kata Berikut",
+          "instruction": "Ketik a atau an sesuai dengan bunyi awal pengucapan kata.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. [BLANK] angry man.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /æ/.",
+              "explanation": "'angry' berbunyi vokal sehingga menggunakan 'an'."
+            },
+            {
+              "q": "2. [BLANK] open window.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /əʊ/.",
+              "explanation": "'open' berbunyi vokal sehingga memakai 'an'."
+            },
+            {
+              "q": "3. [BLANK] English lesson.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /ɪ/.",
+              "explanation": "'English' diawali vokal sehingga memakai 'an'."
+            },
+            {
+              "q": "4. [BLANK] nose.",
+              "answer": "a",
+              "hint": "Diawali bunyi konsonan /n/.",
+              "explanation": "'nose' diawali konsonan sehingga memakai 'a'."
+            },
+            {
+              "q": "5. [BLANK] door.",
+              "answer": "a",
+              "hint": "Diawali bunyi konsonan /d/.",
+              "explanation": "'door' diawali konsonan sehingga memakai 'a'."
+            },
+            {
+              "q": "6. [BLANK] uniform.",
+              "answer": "a",
+              "hint": "Perhatikan: diucapkan /juːnɪfɔːm/, berbunyi konsonan semivokal.",
+              "explanation": "Meskipun huruf awal 'u', bunyinya adalah /j/ (konsonan), jadi gunakan 'a uniform'."
+            },
+            {
+              "q": "7. [BLANK] interesting story.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /ɪ/.",
+              "explanation": "'interesting' diawali bunyi vokal sehingga memakai 'an'."
+            },
+            {
+              "q": "8. [BLANK] can of fizzy drink.",
+              "answer": "a",
+              "hint": "Diawali bunyi konsonan /k/.",
+              "explanation": "'can' diawali bunyi konsonan sehingga memakai 'a'."
+            },
+            {
+              "q": "9. [BLANK] unusual animal.",
+              "answer": "an",
+              "hint": "Diucapkan /ʌnˈjuː.ʒu.əl/ (bunyi vokal).",
+              "explanation": "'unusual' diawali bunyi vokal pendek /ʌ/, gunakan 'an'."
+            },
+            {
+              "q": "10. [BLANK] argument.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /ɑː/.",
+              "explanation": "'argument' diawali vokal sehingga memakai 'an'."
+            },
+            {
+              "q": "11. [BLANK] smartphone.",
+              "answer": "a",
+              "hint": "Diawali bunyi konsonan /s/.",
+              "explanation": "'smartphone' berbunyi konsonan sehingga memakai 'a'."
+            },
+            {
+              "q": "12. [BLANK] old laptop.",
+              "answer": "an",
+              "hint": "Diawali bunyi vokal /əʊ/.",
+              "explanation": "'old' berbunyi vokal sehingga memakai 'an'."
+            }
+          ]
+        },
+        {
+          "id": "u2_ex2",
+          "unitId": 2,
+          "page": 8,
+          "title": "Latihan 2: Susun Kata Menjadi Kalimat yang Tepat (Audio TR 3)",
+          "instruction": "Ketik susunan kalimat yang gramatikal dengan tanda baca yang benar.",
+          "type": "fill",
+          "audioTrack": "TR 3",
+          "questions": [
+            {
+              "q": "1. apple / always / after / eat / I / breakfast / an",
+              "answer": "I always eat an apple after breakfast.",
+              "hint": "Subjek I + always + eat...",
+              "explanation": "Susunan yang benar: 'I always eat an apple after breakfast.'"
+            },
+            {
+              "q": "2. bought / book / my brother / an / about elephants / interesting",
+              "answer": "My brother bought an interesting book about elephants.",
+              "hint": "Subjek My brother + bought + an interesting book...",
+              "explanation": "Susunan: 'My brother bought an interesting book about elephants.'"
+            },
+            {
+              "q": "3. singer / saw / a / in town / Maryanne / famous",
+              "answer": "Maryanne saw a famous singer in town.",
+              "hint": "Subjek Maryanne + saw + a famous singer...",
+              "explanation": "Susunan: 'Maryanne saw a famous singer in town.'"
+            },
+            {
+              "q": "4. Italy / country / is / a / sunny",
+              "answer": "Italy is a sunny country.",
+              "hint": "Subjek Italy + is...",
+              "explanation": "Susunan: 'Italy is a sunny country.'"
+            },
+            {
+              "q": "5. Max / fantastic / had / party / birthday / a",
+              "answer": "Max had a fantastic birthday party.",
+              "hint": "Subjek Max + had + a fantastic birthday party.",
+              "explanation": "Susunan: 'Max had a fantastic birthday party.'"
+            },
+            {
+              "q": "6. packed lunch / I / a / usually / take / to school",
+              "answer": "I usually take a packed lunch to school.",
+              "hint": "Subjek I + usually take...",
+              "explanation": "Susunan: 'I usually take a packed lunch to school.'"
+            }
+          ]
+        },
+        {
+          "id": "u2_ex3",
+          "unitId": 2,
+          "page": 8,
+          "title": "Latihan 3: Lengkapi Kalimat dengan Artikel Tak Tentu (a, an, atau - jika tidak perlu)",
+          "instruction": "Ketik a, an, atau tanda minus (-) jika bagian tersebut tidak membutuhkan artikel.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. I'd like [BLANK] bottle of water and some chocolate.",
+              "answer": "a",
+              "hint": "Bottle adalah kata benda tunggal yang dapat dihitung.",
+              "explanation": "Gunakan 'a' sebelum bottle."
+            },
+            {
+              "q": "2. The printer has run out of [BLANK] ink.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none",
+                "no article"
+              ],
+              "hint": "Ink (tinta) adalah kata benda tak dapat dihitung (uncountable).",
+              "explanation": "'ink' tidak dapat dihitung sehingga tidak memakai artikel a/an (-)."
+            },
+            {
+              "q": "3. He is [BLANK] vegetarian, you can't eat [BLANK2] meat at his house.",
+              "answer": "a / -",
+              "alternateAnswers": [
+                "a/-",
+                "a / none"
+              ],
+              "hint": "Vegetarian adalah sebutan orang tunggal, meat adalah daging (tak dapat dihitung).",
+              "explanation": "Gunakan 'a' untuk vegetarian dan tanda strip (-) untuk meat."
+            },
+            {
+              "q": "4. My neighbour is [BLANK] photographer. Let's ask him to take [BLANK2] shot of us.",
+              "answer": "a / a",
+              "alternateAnswers": [
+                "a/a"
+              ],
+              "hint": "Keduanya diawali bunyi konsonan tunggal.",
+              "explanation": "Gunakan 'a photographer' dan 'a shot'."
+            },
+            {
+              "q": "5. [BLANK] person who suffers from [BLANK2] claustrophobia does not like being in [BLANK3] small spaces.",
+              "answer": "A / - / -",
+              "alternateAnswers": [
+                "A/-/-",
+                "a / - / -",
+                "a/-/-"
+              ],
+              "hint": "Person (tunggal), claustrophobia (kondisi/penyakit abstrak), small spaces (jamak).",
+              "explanation": "A person (tunggal), claustrophobia (tanpa artikel), small spaces (jamak tanpa artikel)."
+            },
+            {
+              "q": "6. I'll give you [BLANK] hundred pounds if you can dive off the top diving board into the pool.",
+              "answer": "a",
+              "hint": "Menyatakan angka seratus: a hundred.",
+              "explanation": "Frasa baku jumlah: 'a hundred pounds'."
+            },
+            {
+              "q": "7. I'd like to buy [BLANK] computer but the one I like is [BLANK2] expensive model.",
+              "answer": "a / an",
+              "alternateAnswers": [
+                "a/an"
+              ],
+              "hint": "Computer (konsonan), expensive model (vokal).",
+              "explanation": "'a computer' dan 'an expensive model'."
+            },
+            {
+              "q": "8. I have [BLANK] fear of [BLANK2] heights.",
+              "answer": "a / -",
+              "alternateAnswers": [
+                "a/-"
+              ],
+              "hint": "a fear of (frasa baku), heights adalah bentuk jamak.",
+              "explanation": "'a fear of heights' (heights jamak tanpa artikel)."
+            },
+            {
+              "q": "9. I'm inviting [BLANK] group of friends for lunch tomorrow night.",
+              "answer": "a",
+              "hint": "Group adalah kata benda kumpulan tunggal.",
+              "explanation": "Gunakan 'a group of friends'."
+            },
+            {
+              "q": "10. I want [BLANK] assistant who can speak French.",
+              "answer": "an",
+              "hint": "Assistant diawali bunyi vokal /ə/.",
+              "explanation": "Gunakan 'an assistant'."
+            }
+          ]
+        },
+        {
+          "id": "u2_ex4",
+          "unitId": 2,
+          "page": 8,
+          "title": "Latihan 4: Ubahlah Kalimat Berikut Menjadi Bentuk Jamak",
+          "instruction": "Ketik kalimat bentuk jamak lengkap dengan perubahan subjek dan kata kerja.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. A dog is an animal.",
+              "answer": "Dogs are animals.",
+              "hint": "A dog -> Dogs, is -> are, an animal -> animals.",
+              "explanation": "Bentuk jamak: 'Dogs are animals.'"
+            },
+            {
+              "q": "2. A potato is a vegetable.",
+              "answer": "Potatoes are vegetables.",
+              "hint": "Potato berakhir -o ditambah -es.",
+              "explanation": "Bentuk jamak: 'Potatoes are vegetables.'"
+            },
+            {
+              "q": "3. A leaf fell off the tree.",
+              "answer": "Leaves fell off the tree.",
+              "alternateAnswers": [
+                "Leaves fell off the trees."
+              ],
+              "hint": "Leaf berubah menjadi leaves.",
+              "explanation": "Bentuk jamak kata benda berakhiran -f berubah menjadi -ves: 'Leaves fell off the tree.'"
+            },
+            {
+              "q": "4. A pencil is like a pen.",
+              "answer": "Pencils are like pens.",
+              "hint": "Pencil -> pencils, is -> are, pen -> pens.",
+              "explanation": "Bentuk jamak: 'Pencils are like pens.'"
+            },
+            {
+              "q": "5. A writer writes a book.",
+              "answer": "Writers write books.",
+              "hint": "Writer -> writers, writes -> write, book -> books.",
+              "explanation": "Bentuk jamak: 'Writers write books.'"
+            },
+            {
+              "q": "6. A garden usually has a bush.",
+              "answer": "Gardens usually have bushes.",
+              "hint": "Garden -> gardens, has -> have, bush -> bushes.",
+              "explanation": "Kata benda berakhiran -sh ditambah -es: 'Gardens usually have bushes.'"
+            },
+            {
+              "q": "7. A party is a fun way to celebrate your birthday.",
+              "answer": "Parties are fun ways to celebrate birthdays.",
+              "alternateAnswers": [
+                "Parties are a fun way to celebrate your birthday.",
+                "Parties are fun ways to celebrate your birthday."
+              ],
+              "hint": "Party berubah menjadi parties (akhiran -ies).",
+              "explanation": "Bentuk jamak: 'Parties are fun ways to celebrate birthdays.'"
+            },
+            {
+              "q": "8. A wish is a special dream.",
+              "answer": "Wishes are special dreams.",
+              "hint": "Wish -> wishes, is -> are, dream -> dreams.",
+              "explanation": "Kata benda berakhiran -sh ditambah -es: 'Wishes are special dreams.'"
+            }
+          ]
+        },
+        {
+          "id": "u2_ex5",
+          "unitId": 2,
+          "page": 8,
+          "title": "Latihan 5: Tulis Ulang Kalimat Menjadi Bentuk Jamak (Kata Tunjuk & Benda)",
+          "instruction": "Ubah kata tunjuk (this/that -> these/those) dan kata bendanya menjadi jamak.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. This giraffe is taller than that tiger.",
+              "answer": "These giraffes are taller than those tigers.",
+              "hint": "This giraffe -> These giraffes, that tiger -> those tigers.",
+              "explanation": "Bentuk jamak: 'These giraffes are taller than those tigers.'"
+            },
+            {
+              "q": "2. This house is bigger than that one.",
+              "answer": "These houses are bigger than those ones.",
+              "hint": "This house -> These houses, that one -> those ones.",
+              "explanation": "Bentuk jamak: 'These houses are bigger than those ones.'"
+            },
+            {
+              "q": "3. This is a tasty cake.",
+              "answer": "These are tasty cakes.",
+              "hint": "This is -> These are, a tasty cake -> tasty cakes.",
+              "explanation": "Bentuk jamak: 'These are tasty cakes.'"
+            },
+            {
+              "q": "4. That is an interesting painting.",
+              "answer": "Those are interesting paintings.",
+              "hint": "That is -> Those are, an interesting painting -> interesting paintings.",
+              "explanation": "Bentuk jamak: 'Those are interesting paintings.'"
+            },
+            {
+              "q": "5. This is a sad film.",
+              "answer": "These are sad films.",
+              "hint": "This is -> These are, a sad film -> sad films.",
+              "explanation": "Bentuk jamak: 'These are sad films.'"
+            },
+            {
+              "q": "6. That goat escaped from the field.",
+              "answer": "Those goats escaped from the field.",
+              "alternateAnswers": [
+                "Those goats escaped from the fields."
+              ],
+              "hint": "That goat -> Those goats.",
+              "explanation": "Bentuk jamak: 'Those goats escaped from the field.'"
+            },
+            {
+              "q": "7. This is a bicycle and that is a motorbike.",
+              "answer": "These are bicycles and those are motorbikes.",
+              "hint": "This is -> These are, that is -> those are.",
+              "explanation": "Bentuk jamak: 'These are bicycles and those are motorbikes.'"
+            },
+            {
+              "q": "8. That is a friendly dog.",
+              "answer": "Those are friendly dogs.",
+              "hint": "That is -> Those are, a friendly dog -> friendly dogs.",
+              "explanation": "Bentuk jamak: 'Those are friendly dogs.'"
+            }
+          ]
+        },
+        {
+          "id": "u2_ex6",
+          "unitId": 2,
+          "page": 9,
+          "title": "Latihan 6: Pilihlah Bentuk Kata Tunjuk yang Tepat",
+          "instruction": "Pilihlah salah satu kata tunjuk yang tepat sesuai konteks tunggal/jamak dan jarak.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "1. Are [BLANK] your trainers? I found them in the changing room.",
+              "options": [
+                "these",
+                "this"
+              ],
+              "answer": "these",
+              "hint": "Trainers adalah kata benda jamak.",
+              "explanation": "Gunakan 'these' karena 'trainers' berbentuk jamak."
+            },
+            {
+              "q": "2. [BLANK] bread is out-of-date. Throw it in the bin.",
+              "options": [
+                "That",
+                "Those"
+              ],
+              "answer": "That",
+              "hint": "Bread adalah kata benda tak dapat dihitung (diperlakukan tunggal).",
+              "explanation": "'bread' adalah uncountable noun tunggal, sehingga memakai 'That'."
+            },
+            {
+              "q": "3. What do you think of [BLANK] earrings over there?",
+              "options": [
+                "those",
+                "these"
+              ],
+              "answer": "those",
+              "hint": "Frasa 'over there' menandakan letak jauh dan earrings jamak.",
+              "explanation": "Gunakan 'those' untuk benda jamak di kejauhan ('over there')."
+            },
+            {
+              "q": "4. [BLANK] exercise is easy.",
+              "options": [
+                "This",
+                "These"
+              ],
+              "answer": "This",
+              "hint": "Exercise adalah kata benda tunggal.",
+              "explanation": "Gunakan 'This' untuk kata benda tunggal."
+            },
+            {
+              "q": "5. [BLANK] are my notes I took in class.",
+              "options": [
+                "These",
+                "This"
+              ],
+              "answer": "These",
+              "hint": "Notes berbentuk jamak.",
+              "explanation": "Gunakan 'These' yang berpasangan dengan 'are'."
+            },
+            {
+              "q": "6. No, [BLANK] isn't my coat over there by the front door. Mine is blue.",
+              "options": [
+                "that",
+                "this"
+              ],
+              "answer": "that",
+              "hint": "Terdapat keterangan jarak jauh: 'over there by the front door'.",
+              "explanation": "Gunakan 'that' untuk merujuk benda tunggal yang jauh."
+            },
+            {
+              "q": "7. [BLANK] are my cakes on the table which I baked for the charity bake sale.",
+              "options": [
+                "Those",
+                "That"
+              ],
+              "answer": "Those",
+              "hint": "Cakes adalah jamak dan dipasangkan dengan 'are'.",
+              "explanation": "Gunakan 'Those' karena kata bendanya 'cakes' (jamak)."
+            },
+            {
+              "q": "8. Hello everyone! I'm Jonathan and [BLANK] is my friend, Alicia.",
+              "options": [
+                "this",
+                "that"
+              ],
+              "answer": "this",
+              "hint": "Memperkenalkan orang di sebelah kita menggunakan 'this is...'",
+              "explanation": "Rumus baku memperkenalkan seseorang di samping penutur adalah 'this is my friend...'"
+            }
+          ]
+        },
+        {
+          "id": "u2_ex7",
+          "unitId": 2,
+          "page": 9,
+          "title": "Latihan 7: Dengarkan Rekaman Audio (TR 4) dan Pilih Kalimat yang Terdengar",
+          "instruction": "Pilihlah opsi (a atau b) yang sesuai dengan kalimat pada audio rekaman.",
+          "type": "choice",
+          "audioTrack": "TR 4",
+          "questions": [
+            {
+              "q": "1. Rekaman Nomor 1:",
+              "options": [
+                "This is a photo of my family.",
+                "That is a photo of my family."
+              ],
+              "answer": "This is a photo of my family.",
+              "hint": "Perhatikan kata tunjuk yang diucapkan pembicara.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'This is a photo of my family.'"
+            },
+            {
+              "q": "2. Rekaman Nomor 2:",
+              "options": [
+                "I don't like these mushrooms.",
+                "I don't like this mushroom."
+              ],
+              "answer": "I don't like these mushrooms.",
+              "hint": "Perhatikan bentuk tunggal atau jamak dari mushroom.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'I don't like these mushrooms.'"
+            },
+            {
+              "q": "3. Rekaman Nomor 3:",
+              "options": [
+                "How did you find those gloves?",
+                "How did you find these gloves?"
+              ],
+              "answer": "How did you find those gloves?",
+              "hint": "Dengarkan pelafalan these atau those.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'How did you find those gloves?'"
+            },
+            {
+              "q": "4. Rekaman Nomor 4:",
+              "options": [
+                "That is a big room.",
+                "This is a big room."
+              ],
+              "answer": "That is a big room.",
+              "hint": "Dengarkan whether pembicara mengatakan That atau This.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'That is a big room.'"
+            },
+            {
+              "q": "5. Rekaman Nomor 5:",
+              "options": [
+                "I'm going to read these books on holiday.",
+                "I'm going to read this book on holiday."
+              ],
+              "answer": "I'm going to read these books on holiday.",
+              "hint": "Dengarkan bentuk jamak kata buku.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'I'm going to read these books on holiday.'"
+            },
+            {
+              "q": "6. Rekaman Nomor 6:",
+              "options": [
+                "Those jeans over there are really cheap.",
+                "These jeans over there are really cheap."
+              ],
+              "answer": "Those jeans over there are really cheap.",
+              "hint": "Perhatikan kata penunjuk posisi 'over there'.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'Those jeans over there are really cheap.'"
+            },
+            {
+              "q": "7. Rekaman Nomor 7:",
+              "options": [
+                "This watch is expensive.",
+                "These watches are expensive."
+              ],
+              "answer": "This watch is expensive.",
+              "hint": "Perhatikan apakah jam tangan tunggal atau jamak.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'This watch is expensive.'"
+            },
+            {
+              "q": "8. Rekaman Nomor 8:",
+              "options": [
+                "Are these seats taken?",
+                "Are those seats taken?"
+              ],
+              "answer": "Are these seats taken?",
+              "hint": "Dengarkan pelafalan these / those.",
+              "explanation": "Naskah audio TR 4 menyatakan: 'Are these seats taken?'"
+            }
+          ]
+        },
+        {
+          "id": "u2_ex8",
+          "unitId": 2,
+          "page": 9,
+          "title": "Latihan 8: Dengarkan Pertanyaan Audio (TR 5) dan Pilih Jawaban yang Tepat",
+          "instruction": "Pilihlah respon jawaban yang paling tepat secara gramatikal terhadap pertanyaan audio.",
+          "type": "choice",
+          "audioTrack": "TR 5",
+          "questions": [
+            {
+              "q": "1. Audio: 'Where are these men from?'",
+              "options": [
+                "They're from Germany.",
+                "There from Germany."
+              ],
+              "answer": "They're from Germany.",
+              "hint": "Subjek these men (orang) dijawab dengan They're.",
+              "explanation": "'They're' adalah singkatan 'They are' yang merujuk pada asal usul pria-pria tersebut."
+            },
+            {
+              "q": "2. Audio: 'Is this book his?'",
+              "options": [
+                "Yes, it is.",
+                "Yes, they are."
+              ],
+              "answer": "Yes, it is.",
+              "hint": "Buku adalah benda tunggal (it).",
+              "explanation": "Pertanyaan 'Is this book...' dijawab dengan 'Yes, it is.'"
+            },
+            {
+              "q": "3. Audio: 'Are you students at this university?'",
+              "options": [
+                "No, we aren't.",
+                "Yes, they are."
+              ],
+              "answer": "No, we aren't.",
+              "hint": "Pertanyaan ditujukan kepada Anda sekalian (you plural).",
+              "explanation": "Pertanyaan kepada 'you' jamak dijawab dengan 'No, we aren't.'"
+            },
+            {
+              "q": "4. Audio: 'What shall I do with my shoes?'",
+              "options": [
+                "Put them by the door over there.",
+                "They're very nice."
+              ],
+              "answer": "Put them by the door over there.",
+              "hint": "Pertanyaan meminta instruksi tindakan ('What shall I do...?').",
+              "explanation": "Respon terhadap instruksi adalah kalimat perintah: 'Put them by the door over there.'"
+            },
+            {
+              "q": "5. Audio: 'Do you like that pasta I made?'",
+              "options": [
+                "Yes, I do.",
+                "Yes, I like."
+              ],
+              "answer": "Yes, I do.",
+              "hint": "Pertanyaan dengan 'Do you...' dijawab dengan 'Yes, I do.'",
+              "explanation": "Bentuk jawaban singkat baku dalam bahasa Inggris adalah 'Yes, I do.' (bukan 'Yes, I like')."
+            }
+          ]
+        },
+        {
+          "id": "u2_ex9",
+          "unitId": 2,
+          "page": 9,
+          "title": "Latihan 9: Perbaiki Kesalahan Tata Bahasa dalam Kalimat Berikut",
+          "instruction": "Ketik kalimat yang sudah diperbaiki kesalahannya.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. I am doing an unit in my exercise book.",
+              "answer": "I am doing a unit in my exercise book.",
+              "hint": "Kata 'unit' diawali bunyi konsonan /juː/.",
+              "explanation": "Gunakan 'a unit' bukan 'an unit'."
+            },
+            {
+              "q": "2. Those is a great car.",
+              "answer": "That is a great car.",
+              "hint": "Car adalah benda tunggal.",
+              "explanation": "Gunakan 'That is a great car.' karena bendanya tunggal."
+            },
+            {
+              "q": "3. My favourite snack is apples.",
+              "answer": "My favourite snacks are apples.",
+              "alternateAnswers": [
+                "My favourite snack is an apple.",
+                "My favourite snack is apple."
+              ],
+              "hint": "Sesuaikan subjek dan predikat (snacks are apples atau snack is an apple).",
+              "explanation": "Bentuk koreksi: 'My favourite snacks are apples.' atau 'My favourite snack is an apple.'"
+            },
+            {
+              "q": "4. Is this my memory stick over there?",
+              "answer": "Is that my memory stick over there?",
+              "hint": "Keterangan jarak 'over there' membutuhkan kata tunjuk jauh.",
+              "explanation": "Gunakan 'that' untuk letak yang jauh ('over there')."
+            },
+            {
+              "q": "5. I like that people very much.",
+              "answer": "I like those people very much.",
+              "hint": "'People' adalah kata benda jamak.",
+              "explanation": "Karena 'people' adalah jamak, gunakan 'those people'."
+            },
+            {
+              "q": "6. We don't need to wear an uniform to school.",
+              "answer": "We don't need to wear a uniform to school.",
+              "hint": "'uniform' diawali bunyi konsonan /j/.",
+              "explanation": "Gunakan 'a uniform'."
+            },
+            {
+              "q": "7. My sister is coming in a hour.",
+              "answer": "My sister is coming in an hour.",
+              "hint": "'hour' diawali bunyi vokal /aʊ/ karena h tidak berbunyi.",
+              "explanation": "Gunakan 'an hour' karena h tidak dilafalkan."
+            },
+            {
+              "q": "8. These exercises is helpful.",
+              "answer": "These exercises are helpful.",
+              "alternateAnswers": [
+                "This exercise is helpful."
+              ],
+              "hint": "Exercises adalah jamak, pasangannya are.",
+              "explanation": "Gunakan 'These exercises are helpful.' atau 'This exercise is helpful.'"
+            },
+            {
+              "q": "9. Put the knifes and forks on the table, please.",
+              "answer": "Put the knives and forks on the table, please.",
+              "hint": "Bentuk jamak dari knife adalah knives (akhiran -ves).",
+              "explanation": "Bentuk jamak kata benda 'knife' adalah 'knives'."
+            },
+            {
+              "q": "10. My mother is teacher.",
+              "answer": "My mother is a teacher.",
+              "hint": "Profesi/pekerjaan tunggal wajib disertai artikel a/an.",
+              "explanation": "Wajib menggunakan artikel: 'My mother is a teacher.'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "the",
+      "english_title": "The Definite Article (the)",
+      "category": "Articles & Determiners",
+      "page": 10,
+      "grammar": {
+        "summary": "Artikel tertentu 'the' (Definite Article) digunakan untuk membicarakan sesuatu yang spesifik, telah dibicarakan sebelumnya, atau benda yang hanya ada satu (unik). 'The' tidak digunakan ketika membicarakan hal-hal umum secara luas.",
+        "tables": [
+          {
+            "title": "Perbedaan Penggunaan 'The' (Definit) vs 'A/An' (Tak Tentu)",
+            "headers": [
+              "Kategori Benda",
+              "Definit (Khusus / Jelas)",
+              "Tak Tentu (Umum / Acak)"
+            ],
+            "rows": [
+              [
+                "Dapat dihitung tunggal",
+                "the clown (badut tersebut)",
+                "a clown (seorang badut)"
+              ],
+              [
+                "Dapat dihitung jamak",
+                "the clowns (badut-badut tersebut)",
+                "clowns (badut secara umum)"
+              ],
+              [
+                "Tak dapat dihitung",
+                "the money (uang spesifik itu)",
+                "money (uang secara umum)"
+              ]
+            ]
+          },
+          {
+            "title": "Kapan Harus Menggunakan dan Tidak Menggunakan 'The'",
+            "headers": [
+              "Gunakan 'The'",
+              "JANGAN Gunakan 'The'"
+            ],
+            "rows": [
+              [
+                "Benda unik di alam semesta: the moon, the sun, the sky",
+                "Sebelum nama olahraga / permainan: play football, play chess"
+              ],
+              [
+                "Sebelum alat musik setelah kata kerja play: play the piano",
+                "Sebelum nama gelar resmi tanpa nama: Captain Hook"
+              ],
+              [
+                "Sebelum nama keluarga: the Smiths, the Browns",
+                "Sebelum nama danau dan satu gunung: Lake Michigan, Mount Everest"
+              ],
+              [
+                "Sebelum sungai, laut, dan samudra: the Thames, the Atlantic",
+                "Sebelum nama negara tunggal: Italy, Japan, France, Indonesia"
+              ],
+              [
+                "Sebelum negara perserikatan/jamak: the USA, the UK, the Netherlands",
+                "Sebelum waktu makan umum: have breakfast, what's for dinner?"
+              ],
+              [
+                "Sebelum superlatif & ordinal: the best, the first, the only",
+                "Sebelum kata benda jamak yang merujuk hal umum: Rabbits are cute"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Gunakan 'the' jika mitra tutur sudah mengetahui benda mana yang dimaksud secara spesifik: 'Brian wants the action DVD.', 'I want the jumper you showed me.'",
+          "Jangan gunakan 'the' ketika membicarakan kategori secara umum: 'Italians love to eat well.' (bukan The Italians), 'Rabbits are faster than turtles.'",
+          "Penempatan: 'the' diletakkan sebelum kata benda, kata sifat, atau kata penentu jumlah: 'the tigers', 'the scary tigers', 'the four tigers'."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u3_ex1",
+          "unitId": 3,
+          "page": 11,
+          "title": "Latihan 1: Isilah dengan 'the' Ketika Diperlukan (atau '-' jika tidak perlu)",
+          "instruction": "Ketik the atau tanda strip (-) jika kalimat tersebut tidak memerlukan artikel definit.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. [BLANK] life is very easy for them at the moment.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none",
+                "no article"
+              ],
+              "hint": "Life merujuk kehidupan secara umum.",
+              "explanation": "Membicarakan konsep hidup secara umum tidak memakai 'the'."
+            },
+            {
+              "q": "2. [BLANK] oranges I bought were very cheap.",
+              "answer": "The",
+              "alternateAnswers": [
+                "the"
+              ],
+              "hint": "Jeruk yang spesifik ('yang saya beli').",
+              "explanation": "Spesifik merujuk buah jeruk yang dibeli penutur, gunakan 'The'."
+            },
+            {
+              "q": "3. We went to a Chinese restaurant last night and [BLANK] food was excellent.",
+              "answer": "the",
+              "hint": "Makanan di restoran yang baru saja dikunjungi (spesifik).",
+              "explanation": "Gunakan 'the' karena merujuk makanan spesifik di restoran itu."
+            },
+            {
+              "q": "4. They play [BLANK] football very well.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Nama cabang olahraga tidak memakai the.",
+              "explanation": "Olahraga seperti 'football' tidak menggunakan artikel."
+            },
+            {
+              "q": "5. The party was fun but I didn't enjoy [BLANK] music.",
+              "answer": "the",
+              "hint": "Musik spesifik di pesta tersebut.",
+              "explanation": "Merujuk musik di pesta tersebut secara definit, gunakan 'the'."
+            },
+            {
+              "q": "6. I don't like the smell of [BLANK] Brussels sprouts.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Sayuran Brussels sprouts secara umum.",
+              "explanation": "Merujuk jenis sayur secara umum, tidak memakai artikel."
+            },
+            {
+              "q": "7. They don't believe in [BLANK] ghosts.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Hantu secara umum.",
+              "explanation": "Konsep hantu secara umum tidak menggunakan 'the'."
+            },
+            {
+              "q": "8. I was [BLANK] first person down for breakfast this morning.",
+              "answer": "the",
+              "hint": "Bilangan bertingkat (ordinal) 'first' selalu didahului the.",
+              "explanation": "Ordinal numbers selalu memakai 'the first'."
+            },
+            {
+              "q": "9. He dropped [BLANK] glass on [BLANK2] floor.",
+              "answer": "the / the",
+              "alternateAnswers": [
+                "the/the",
+                "a / the",
+                "a/the"
+              ],
+              "hint": "Gelas dan lantai di ruangan.",
+              "explanation": "Gunakan 'the' (atau 'a' untuk glass) dan 'the floor'."
+            },
+            {
+              "q": "10. This is [BLANK] fastest car I've ever driven.",
+              "answer": "the",
+              "hint": "Bentuk superlatif 'fastest' wajib memakai the.",
+              "explanation": "Bentuk superlatif selalu memakai 'the fastest'."
+            },
+            {
+              "q": "11. Does she play [BLANK] piano well?",
+              "answer": "the",
+              "hint": "Alat musik setelah kata kerja play wajib memakai the.",
+              "explanation": "Nama instrumen musik setelah play menggunakan 'the piano'."
+            },
+            {
+              "q": "12. [BLANK] sun was shining in [BLANK2] sky.",
+              "answer": "The / the",
+              "alternateAnswers": [
+                "The/the",
+                "the / the"
+              ],
+              "hint": "Matahari dan langit adalah benda unik di alam.",
+              "explanation": "Benda unik menggunakan 'The sun' dan 'the sky'."
+            },
+            {
+              "q": "13. This is [BLANK] only pair of sunglasses I own.",
+              "answer": "the",
+              "hint": "Kata 'only' didahului artikel the.",
+              "explanation": "Frasa definit: 'the only pair'."
+            },
+            {
+              "q": "14. I buy '[BLANK] Times' newspaper every Saturday.",
+              "answer": "the",
+              "alternateAnswers": [
+                "The"
+              ],
+              "hint": "Nama surat kabar terkenal memakai the.",
+              "explanation": "Nama koran pers memakai 'the Times'."
+            },
+            {
+              "q": "15. I'm going on holiday in [BLANK] June.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Nama bulan tidak memakai the.",
+              "explanation": "Nama bulan (June) tidak menggunakan artikel."
+            },
+            {
+              "q": "16. [BLANK] water boils at 100° C.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Air sebagai zat alami umum.",
+              "explanation": "Pernyataan sains tentang zat umum tidak menggunakan 'the'."
+            },
+            {
+              "q": "17. Sometimes it's difficult to find [BLANK] time to do [BLANK2] things you like.",
+              "answer": "the / the",
+              "alternateAnswers": [
+                "the/the"
+              ],
+              "hint": "Waktu yang tepat dan hal-hal yang disukai.",
+              "explanation": "Gunakan 'the time' dan 'the things you like'."
+            },
+            {
+              "q": "18. I'd like to visit [BLANK] Japan and [BLANK2] USA.",
+              "answer": "- / the",
+              "alternateAnswers": [
+                "-/the"
+              ],
+              "hint": "Japan negara tunggal (-), USA negara perserikatan (the).",
+              "explanation": "Negara bukan kesatuan tanpa artikel (-), sedangkan serikat memakai 'the USA'."
+            }
+          ]
+        },
+        {
+          "id": "u3_ex2",
+          "unitId": 3,
+          "page": 11,
+          "title": "Latihan 2: Buat Kalimat dengan Menggunakan Kata yang Tersedia (Audio TR 6)",
+          "instruction": "Ketik kalimat yang lengkap dengan penambahan artikel the yang tepat.",
+          "type": "fill",
+          "audioTrack": "TR 6",
+          "questions": [
+            {
+              "q": "1. furniture / your house / beautiful",
+              "answer": "The furniture in your house is beautiful.",
+              "hint": "The furniture in your house is...",
+              "explanation": "Susunan yang benar: 'The furniture in your house is beautiful.'"
+            },
+            {
+              "q": "2. where / sugar?",
+              "answer": "Where is the sugar?",
+              "hint": "Where is the...",
+              "explanation": "Susunan: 'Where is the sugar?'"
+            },
+            {
+              "q": "3. glasses / table / his",
+              "answer": "His glasses are on the table.",
+              "alternateAnswers": [
+                "The glasses on the table are his."
+              ],
+              "hint": "His glasses are on the table.",
+              "explanation": "Berdasarkan audio TR 6: 'His glasses are on the table.'"
+            },
+            {
+              "q": "4. where / teachers?",
+              "answer": "Where are the teachers?",
+              "hint": "Where are the...",
+              "explanation": "Susunan: 'Where are the teachers?'"
+            },
+            {
+              "q": "5. for you / fruit and vegetables / healthy",
+              "answer": "Fruit and vegetables are healthy for you.",
+              "hint": "Fruit and vegetables are...",
+              "explanation": "Buah dan sayur umum tidak memakai the: 'Fruit and vegetables are healthy for you.'"
+            },
+            {
+              "q": "6. parks / my city / beautiful",
+              "answer": "The parks in my city are beautiful.",
+              "hint": "The parks in my city are...",
+              "explanation": "Susunan: 'The parks in my city are beautiful.'"
+            },
+            {
+              "q": "7. weather / today! / nice",
+              "answer": "The weather is nice today!",
+              "hint": "The weather is...",
+              "explanation": "Susunan: 'The weather is nice today!'"
+            },
+            {
+              "q": "8. my brother / sister-in-law / Amsterdam / live",
+              "answer": "My brother and my sister-in-law live in Amsterdam.",
+              "alternateAnswers": [
+                "My brother and sister-in-law live in Amsterdam."
+              ],
+              "hint": "My brother and my sister-in-law live in...",
+              "explanation": "Susunan: 'My brother and my sister-in-law live in Amsterdam.'"
+            },
+            {
+              "q": "9. students / classroom / in",
+              "answer": "The students are in the classroom.",
+              "hint": "The students are in...",
+              "explanation": "Susunan: 'The students are in the classroom.'"
+            },
+            {
+              "q": "10. smaller fish / sharks / eat",
+              "answer": "Sharks eat smaller fish.",
+              "hint": "Sharks eat...",
+              "explanation": "Ikan hiu secara umum: 'Sharks eat smaller fish.'"
+            }
+          ]
+        },
+        {
+          "id": "u3_ex3",
+          "unitId": 3,
+          "page": 11,
+          "title": "Latihan 3: Perbaiki Kalimat Berikut Jika Diperlukan",
+          "instruction": "Ketik kalimat yang benar. Jika kalimat aslinya sudah benar, ketik 'Correct'.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. What do you usually have for breakfast?",
+              "answer": "Correct",
+              "alternateAnswers": [
+                "correct"
+              ],
+              "hint": "Waktu makan tidak memakai the.",
+              "explanation": "Kalimat sudah benar karena 'for breakfast' tidak memakai artikel."
+            },
+            {
+              "q": "2. Do you watch news every day?",
+              "answer": "Do you watch the news every day?",
+              "hint": "Siaran berita di televisi menggunakan 'the news'.",
+              "explanation": "Tambahkan the: 'Do you watch the news every day?'"
+            },
+            {
+              "q": "3. I love cakes, but cakes my wife makes are really special.",
+              "answer": "I love cakes, but the cakes my wife makes are really special.",
+              "hint": "Kue buatan istri bersifat spesifik.",
+              "explanation": "Gunakan 'the cakes my wife makes' karena merujuk kue spesifik."
+            },
+            {
+              "q": "4. When I was a child I visited the France, the Germany, and the Netherlands.",
+              "answer": "When I was a child I visited France, Germany, and the Netherlands.",
+              "hint": "France dan Germany tidak memakai the, Netherlands tetap memakai the.",
+              "explanation": "Hilangkan 'the' di depan France dan Germany."
+            },
+            {
+              "q": "5. Sweaters in that shop are expensive.",
+              "answer": "The sweaters in that shop are expensive.",
+              "hint": "Baju hangat di toko tersebut spesifik.",
+              "explanation": "Tambahkan 'The': 'The sweaters in that shop are expensive.'"
+            },
+            {
+              "q": "6. Mum is listening to music and Dad is in the garden.",
+              "answer": "Correct",
+              "alternateAnswers": [
+                "correct"
+              ],
+              "hint": "Music umum tanpa the, the garden benar.",
+              "explanation": "Kalimat sudah tepat ('Correct')."
+            },
+            {
+              "q": "7. The fizzy drinks in the fridge are really cold.",
+              "answer": "Correct",
+              "alternateAnswers": [
+                "correct"
+              ],
+              "hint": "Minuman spesifik di dalam kulkas.",
+              "explanation": "Kalimat sudah tepat ('Correct')."
+            },
+            {
+              "q": "8. The birds love to eat the seeds.",
+              "answer": "Birds love to eat seeds.",
+              "alternateAnswers": [
+                "Birds love to eat the seeds.",
+                "The birds love to eat seeds."
+              ],
+              "hint": "Burung dan biji-bijian secara umum tidak memakai the.",
+              "explanation": "Pernyataan umum: 'Birds love to eat seeds.'"
+            },
+            {
+              "q": "9. I have some meat and fish in the fridge. The meat is fine, but fish isn't fresh.",
+              "answer": "I have some meat and fish in the fridge. The meat is fine, but the fish isn't fresh.",
+              "hint": "Ikan yang kedua sudah spesifik merujuk ikan di kulkas.",
+              "explanation": "Tambahkan 'the' di depan fish: '...but the fish isn't fresh.'"
+            },
+            {
+              "q": "10. I enjoy the tennis but I prefer playing cards.",
+              "answer": "I enjoy tennis but I prefer playing cards.",
+              "hint": "Olahraga tenis tidak memakai the.",
+              "explanation": "Hilangkan the sebelum tennis: 'I enjoy tennis but I prefer playing cards.'"
+            }
+          ]
+        },
+        {
+          "id": "u3_ex4",
+          "unitId": 3,
+          "page": 12,
+          "title": "Latihan 4: Tulis Kalimat dengan Menggunakan Artikel 'the'",
+          "instruction": "Susun kata-kata berikut menjadi kalimat lengkap dengan menyisipkan artikel 'the' yang tepat.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. Mike / took trip / to USA",
+              "answer": "Mike took a trip to the USA.",
+              "hint": "Mike took a trip to the USA.",
+              "explanation": "Gunakan 'a trip' dan 'the USA'."
+            },
+            {
+              "q": "2. Paul and Hannah / in / same class",
+              "answer": "Paul and Hannah are in the same class.",
+              "hint": "are in the same class.",
+              "explanation": "Ordinal/identitas sama memakai 'the same class'."
+            },
+            {
+              "q": "3. Megan / plays / keyboard",
+              "answer": "Megan plays the keyboard.",
+              "hint": "plays the keyboard.",
+              "explanation": "Instrumen musik memakai 'the keyboard'."
+            },
+            {
+              "q": "4. Louise / went / boat ride / on River Thames",
+              "answer": "Louise went on a boat ride on the River Thames.",
+              "hint": "on the River Thames.",
+              "explanation": "Nama sungai memakai artikel: 'the River Thames'."
+            },
+            {
+              "q": "5. When / start / marathon race / ?",
+              "answer": "When does the marathon race start?",
+              "alternateAnswers": [
+                "When will the marathon race start?"
+              ],
+              "hint": "When does the marathon race start?",
+              "explanation": "Lomba maraton spesifik memakai 'the marathon race'."
+            },
+            {
+              "q": "6. Where / papers / had / on my desk / ?",
+              "answer": "Where are the papers I had on my desk?",
+              "hint": "Where are the papers...",
+              "explanation": "Kertas spesifik di atas meja memakai 'the papers'."
+            },
+            {
+              "q": "7. These / jeans / only / ones / fit me",
+              "answer": "These jeans are the only ones that fit me.",
+              "hint": "are the only ones...",
+              "explanation": "Kata only didahului the: 'the only ones'."
+            },
+            {
+              "q": "8. Police / have / important job",
+              "answer": "The police have an important job.",
+              "hint": "The police have an important job.",
+              "explanation": "Kepolisian sebagai institusi memakai 'The police'."
+            }
+          ]
+        },
+        {
+          "id": "u3_ex5",
+          "unitId": 3,
+          "page": 12,
+          "title": "Latihan 5: Tambahkan a, an atau the Jika Diperlukan (atau '-' jika tidak perlu)",
+          "instruction": "Ketik a, an, the, atau tanda strip (-) pada setiap bagian kosong yang tersedia.",
+          "type": "fill",
+          "questions": [
+            {
+              "q": "1. [BLANK] children love [BLANK2] ice cream.",
+              "answer": "- / -",
+              "alternateAnswers": [
+                "-/-",
+                "The / -",
+                "The/-"
+              ],
+              "hint": "Anak-anak dan es krim secara umum.",
+              "explanation": "Pernyataan umum tentang anak dan es krim tanpa artikel (- / -)."
+            },
+            {
+              "q": "2. [BLANK] vegetables are healthy.",
+              "answer": "-",
+              "alternateAnswers": [
+                "none"
+              ],
+              "hint": "Sayuran secara umum.",
+              "explanation": "Pernyataan umum sayuran tanpa artikel (-)."
+            },
+            {
+              "q": "3. I want [BLANK] glass of [BLANK2] milk.",
+              "answer": "a / -",
+              "alternateAnswers": [
+                "a/-"
+              ],
+              "hint": "Segelas susu.",
+              "explanation": "Gunakan 'a glass of milk' (susu uncountable tanpa artikel)."
+            },
+            {
+              "q": "4. [BLANK] door of [BLANK2] garage is broken.",
+              "answer": "The / the",
+              "alternateAnswers": [
+                "The/the",
+                "the / the"
+              ],
+              "hint": "Pintu garasi spesifik.",
+              "explanation": "Gunakan 'The door of the garage'."
+            },
+            {
+              "q": "5. Can you play [BLANK] violin?",
+              "answer": "the",
+              "hint": "Instrumen musik setelah play.",
+              "explanation": "Gunakan 'the violin'."
+            },
+            {
+              "q": "6. Do you prefer [BLANK] romantic book or [BLANK2] book about adventures?",
+              "answer": "a / a",
+              "alternateAnswers": [
+                "a/a"
+              ],
+              "hint": "Satu buku romantis atau satu buku petualangan.",
+              "explanation": "Keduanya benda tunggal tak tentu: 'a romantic book or a book...'"
+            },
+            {
+              "q": "7. Jack and Jill went up [BLANK] hill to get [BLANK2] bucket of water.",
+              "answer": "the / a",
+              "alternateAnswers": [
+                "the/a"
+              ],
+              "hint": "Bukit spesifik, seember air.",
+              "explanation": "Gunakan 'the hill' dan 'a bucket of water'."
+            },
+            {
+              "q": "8. He took up swimming as [BLANK] hobby [BLANK2] last year.",
+              "answer": "a / -",
+              "alternateAnswers": [
+                "a/-"
+              ],
+              "hint": "Sebuah hobi, tahun lalu.",
+              "explanation": "Gunakan 'a hobby' dan 'last year' tanpa artikel (-)."
+            },
+            {
+              "q": "9. [BLANK] butcher opposite [BLANK2] library always sells [BLANK3] good meat.",
+              "answer": "The / the / -",
+              "alternateAnswers": [
+                "The/the/-"
+              ],
+              "hint": "Toko daging seberang perpustakaan, daging berkualitas baik.",
+              "explanation": "'The butcher opposite the library always sells good meat.'"
+            },
+            {
+              "q": "10. [BLANK] birds can fly very high in [BLANK2] sky.",
+              "answer": "- / the",
+              "alternateAnswers": [
+                "-/the"
+              ],
+              "hint": "Burung umum, langit unik.",
+              "explanation": "Burung umum tanpa artikel (-), langit memakai 'the sky'."
+            },
+            {
+              "q": "11. There is [BLANK] fly in my glass of water.",
+              "answer": "a",
+              "hint": "Seekor lalat (tunggal).",
+              "explanation": "Gunakan 'a fly'."
+            },
+            {
+              "q": "12. Take [BLANK] umbrella with you to [BLANK2] office. It looks like rain.",
+              "answer": "an / the",
+              "alternateAnswers": [
+                "an/the"
+              ],
+              "hint": "Sebuah payung, kantor tujuan.",
+              "explanation": "Gunakan 'an umbrella' dan 'the office'."
+            },
+            {
+              "q": "13. We had [BLANK] meal at [BLANK2] new restaurant [BLANK3] last night.",
+              "answer": "a / a / -",
+              "alternateAnswers": [
+                "a/a/-"
+              ],
+              "hint": "Makan di sebuah restoran baru kemarin malam.",
+              "explanation": "'a meal at a new restaurant last night'."
+            },
+            {
+              "q": "14. I am fond of [BLANK] tea with [BLANK2] lemon.",
+              "answer": "- / -",
+              "alternateAnswers": [
+                "-/-"
+              ],
+              "hint": "Teh dan lemon sebagai minuman umum.",
+              "explanation": "Teh dengan lemon secara umum tidak memakai artikel (- / -)."
+            },
+            {
+              "q": "15. [BLANK] clouds over [BLANK2] sea are looking very grey.",
+              "answer": "The / the",
+              "alternateAnswers": [
+                "The/the"
+              ],
+              "hint": "Awan dan laut spesifik yang sedang dilihat.",
+              "explanation": "'The clouds over the sea are looking very grey.'"
+            },
+            {
+              "q": "16. It is nice to play [BLANK] game of [BLANK2] tennis on [BLANK3] summer afternoon.",
+              "answer": "a / - / a",
+              "alternateAnswers": [
+                "a/-/a"
+              ],
+              "hint": "Satu permainan tenis di suatu sore musim panas.",
+              "explanation": "'a game of tennis on a summer afternoon'."
+            }
+          ]
+        },
+        {
+          "id": "u3_ex6",
+          "unitId": 3,
+          "page": 12,
+          "title": "Latihan 6: Perbaiki Wacana dengan Menghilangkan 'the' yang Tidak Perlu",
+          "instruction": "Baca wacana tentang hobi berenang berikut, lalu ketik wacana yang sudah diperbaiki tanpa kata 'the' yang salah.",
+          "type": "fill",
+          "image": "images/u3_ex6_swimmers.png",
+          "questions": [
+            {
+              "q": "Wacana asli:\n\"I like the tennis. I'm also very good at the swimming, but I don't like the swimming pools very much because there are always too many people there. But the swimming pool near our house is very nice. I often go there on the Saturday mornings. I meet my friends and we have the lunch at the cafeteria after we swim. I usually have a sandwich. There is also a big glass window in the cafeteria, and you can watch the swimmers while you eat.\"\n\nKetik paragraf hasil perbaikan di bawah:",
+              "answer": "I like tennis. I'm also very good at swimming, but I don't like swimming pools very much because there are always too many people there. But the swimming pool near our house is very nice. I often go there on Saturday mornings. I meet my friends and we have lunch at the cafeteria after we swim. I usually have a sandwich. There is also a big glass window in the cafeteria, and you can watch the swimmers while you eat.",
+              "hint": "Hilangkan kata 'the' sebelum kata: tennis, swimming, swimming pools, Saturday mornings, lunch.",
+              "explanation": "Aturan: Nama olahraga (tennis, swimming), benda jamak umum (swimming pools), hari (Saturday mornings), dan waktu makan (lunch) tidak boleh memakai artikel 'the'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "one / ones",
+      "english_title": "Pronoun Substitutes: one / ones",
+      "category": "Pronouns",
+      "page": 13,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk one / ones (Pronoun Substitutes: one / ones) pada halaman 13 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Pronoun Substitutes: one / ones",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "one / ones",
+                "Pronouns",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Pronoun Substitutes: one / ones.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u4_preview",
+          "unitId": 4,
+          "page": 13,
+          "title": "Latihan Penjajakan Awal Unit 4: one / ones",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Pronoun Substitutes: one / ones.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 4 (Pronoun Substitutes: one / ones) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Pronouns",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Pronouns",
+              "hint": "Lihat kategori materi Unit 4.",
+              "explanation": "Unit 4 berada di bawah kategori Pronouns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Kata ganti objek, Kata ganti dan kata sifat kepemilikan",
+      "english_title": "Object Pronouns, Possessive Pronouns & Adjectives",
+      "category": "Pronouns & Possessives",
+      "page": 14,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata ganti objek, Kata ganti dan kata sifat kepemilikan (Object Pronouns, Possessive Pronouns & Adjectives) pada halaman 14 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Object Pronouns, Possessive Pronouns & Adjectives",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata ganti objek, Kata ganti dan kata sifat kepemilikan",
+                "Pronouns & Possessives",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Object Pronouns, Possessive Pronouns & Adjectives.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u5_preview",
+          "unitId": 5,
+          "page": 14,
+          "title": "Latihan Penjajakan Awal Unit 5: Kata ganti objek, Kata ganti dan kata sifat kepemilikan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Object Pronouns, Possessive Pronouns & Adjectives.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 5 (Object Pronouns, Possessive Pronouns & Adjectives) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Pronouns & Possessives",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Pronouns & Possessives",
+              "hint": "Lihat kategori materi Unit 5.",
+              "explanation": "Unit 5 berada di bawah kategori Pronouns & Possessives."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Present simple have (got) untuk kepemilikan; kalimat dengan to have",
+      "english_title": "Present Simple have (got) & Phrases with to have",
+      "category": "Verbs & Expressions",
+      "page": 17,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present simple have (got) untuk kepemilikan; kalimat dengan to have (Present Simple have (got) & Phrases with to have) pada halaman 17 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Simple have (got) & Phrases with to have",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present simple have (got) untuk kepemilikan; kalimat dengan to have",
+                "Verbs & Expressions",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Simple have (got) & Phrases with to have.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u6_preview",
+          "unitId": 6,
+          "page": 17,
+          "title": "Latihan Penjajakan Awal Unit 6: Present simple have (got) untuk kepemilikan; kalimat dengan to have",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Simple have (got) & Phrases with to have.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 6 (Present Simple have (got) & Phrases with to have) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Verbs & Expressions",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Verbs & Expressions",
+              "hint": "Lihat kategori materi Unit 6.",
+              "explanation": "Unit 6 berada di bawah kategori Verbs & Expressions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Present simple dan keterangan frekuensi",
+      "english_title": "Present Simple & Adverbs of Frequency",
+      "category": "Present Tenses",
+      "page": 20,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present simple dan keterangan frekuensi (Present Simple & Adverbs of Frequency) pada halaman 20 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Simple & Adverbs of Frequency",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present simple dan keterangan frekuensi",
+                "Present Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Simple & Adverbs of Frequency.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u7_preview",
+          "unitId": 7,
+          "page": 20,
+          "title": "Latihan Penjajakan Awal Unit 7: Present simple dan keterangan frekuensi",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Simple & Adverbs of Frequency.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 7 (Present Simple & Adverbs of Frequency) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Present Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Present Tenses",
+              "hint": "Lihat kategori materi Unit 7.",
+              "explanation": "Unit 7 berada di bawah kategori Present Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Kata sifat dan kata benda kebangsaan; Waktu / Tanggal",
+      "english_title": "Nationality Adjectives & Nouns; Time and Dates",
+      "category": "Adjectives & Time",
+      "page": 23,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata sifat dan kata benda kebangsaan; Waktu / Tanggal (Nationality Adjectives & Nouns; Time and Dates) pada halaman 23 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Nationality Adjectives & Nouns; Time and Dates",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata sifat dan kata benda kebangsaan; Waktu / Tanggal",
+                "Adjectives & Time",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Nationality Adjectives & Nouns; Time and Dates.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u8_preview",
+          "unitId": 8,
+          "page": 23,
+          "title": "Latihan Penjajakan Awal Unit 8: Kata sifat dan kata benda kebangsaan; Waktu / Tanggal",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Nationality Adjectives & Nouns; Time and Dates.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 8 (Nationality Adjectives & Nouns; Time and Dates) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Adjectives & Time",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Adjectives & Time",
+              "hint": "Lihat kategori materi Unit 8.",
+              "explanation": "Unit 8 berada di bawah kategori Adjectives & Time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Objek langsung dan tidak langsung; Urutan kata",
+      "english_title": "Direct and Indirect Objects; Word Order",
+      "category": "Sentence Structure",
+      "page": 26,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Objek langsung dan tidak langsung; Urutan kata (Direct and Indirect Objects; Word Order) pada halaman 26 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Direct and Indirect Objects; Word Order",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Objek langsung dan tidak langsung; Urutan kata",
+                "Sentence Structure",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Direct and Indirect Objects; Word Order.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u9_preview",
+          "unitId": 9,
+          "page": 26,
+          "title": "Latihan Penjajakan Awal Unit 9: Objek langsung dan tidak langsung; Urutan kata",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Direct and Indirect Objects; Word Order.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 9 (Direct and Indirect Objects; Word Order) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Sentence Structure",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Sentence Structure",
+              "hint": "Lihat kategori materi Unit 9.",
+              "explanation": "Unit 9 berada di bawah kategori Sentence Structure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Present continuous",
+      "english_title": "Present Continuous Tense",
+      "category": "Present Tenses",
+      "page": 28,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present continuous (Present Continuous Tense) pada halaman 28 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Continuous Tense",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present continuous",
+                "Present Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Continuous Tense.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u10_preview",
+          "unitId": 10,
+          "page": 28,
+          "title": "Latihan Penjajakan Awal Unit 10: Present continuous",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Continuous Tense.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 10 (Present Continuous Tense) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Present Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Present Tenses",
+              "hint": "Lihat kategori materi Unit 10.",
+              "explanation": "Unit 10 berada di bawah kategori Present Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "must, have to, can, could, be able to, should, need, may, might",
+      "english_title": "Modal Verbs: Obligation, Ability & Probability",
+      "category": "Modal Verbs",
+      "page": 32,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk must, have to, can, could, be able to, should, need, may, might (Modal Verbs: Obligation, Ability & Probability) pada halaman 32 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Modal Verbs: Obligation, Ability & Probability",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "must, have to, can, could, be able to, should, need, may, might",
+                "Modal Verbs",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Modal Verbs: Obligation, Ability & Probability.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u11_preview",
+          "unitId": 11,
+          "page": 32,
+          "title": "Latihan Penjajakan Awal Unit 11: must, have to, can, could, be able to, should, need, may, might",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Modal Verbs: Obligation, Ability & Probability.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 11 (Modal Verbs: Obligation, Ability & Probability) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Modal Verbs",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Modal Verbs",
+              "hint": "Lihat kategori materi Unit 11.",
+              "explanation": "Unit 11 berada di bawah kategori Modal Verbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Kata depan tempat",
+      "english_title": "Prepositions of Place",
+      "category": "Prepositions",
+      "page": 35,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata depan tempat (Prepositions of Place) pada halaman 35 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Prepositions of Place",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata depan tempat",
+                "Prepositions",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Prepositions of Place.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u12_preview",
+          "unitId": 12,
+          "page": 35,
+          "title": "Latihan Penjajakan Awal Unit 12: Kata depan tempat",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Prepositions of Place.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 12 (Prepositions of Place) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Prepositions",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Prepositions",
+              "hint": "Lihat kategori materi Unit 12.",
+              "explanation": "Unit 12 berada di bawah kategori Prepositions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Kata depan waktu",
+      "english_title": "Prepositions of Time",
+      "category": "Prepositions",
+      "page": 38,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata depan waktu (Prepositions of Time) pada halaman 38 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Prepositions of Time",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata depan waktu",
+                "Prepositions",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Prepositions of Time.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u13_preview",
+          "unitId": 13,
+          "page": 38,
+          "title": "Latihan Penjajakan Awal Unit 13: Kata depan waktu",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Prepositions of Time.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 13 (Prepositions of Time) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Prepositions",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Prepositions",
+              "hint": "Lihat kategori materi Unit 13.",
+              "explanation": "Unit 13 berada di bawah kategori Prepositions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Kata depan Pergerakan",
+      "english_title": "Prepositions of Movement",
+      "category": "Prepositions",
+      "page": 41,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata depan Pergerakan (Prepositions of Movement) pada halaman 41 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Prepositions of Movement",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata depan Pergerakan",
+                "Prepositions",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Prepositions of Movement.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u14_preview",
+          "unitId": 14,
+          "page": 41,
+          "title": "Latihan Penjajakan Awal Unit 14: Kata depan Pergerakan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Prepositions of Movement.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 14 (Prepositions of Movement) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Prepositions",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Prepositions",
+              "hint": "Lihat kategori materi Unit 14.",
+              "explanation": "Unit 14 berada di bawah kategori Prepositions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Imperatif",
+      "english_title": "The Imperative",
+      "category": "Sentence Types",
+      "page": 44,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Imperatif (The Imperative) pada halaman 44 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: The Imperative",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Imperatif",
+                "Sentence Types",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan The Imperative.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u15_preview",
+          "unitId": 15,
+          "page": 44,
+          "title": "Latihan Penjajakan Awal Unit 15: Imperatif",
+          "instruction": "Uji pemahaman awal Anda mengenai topik The Imperative.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 15 (The Imperative) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Sentence Types",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Sentence Types",
+              "hint": "Lihat kategori materi Unit 15.",
+              "explanation": "Unit 15 berada di bawah kategori Sentence Types."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Kata benda dapat dan tidak dapat dihitung; Kata benda kumpulan; Kata benda gabungan",
+      "english_title": "Countable & Uncountable Nouns; Collective & Compound Nouns",
+      "category": "Nouns",
+      "page": 47,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata benda dapat dan tidak dapat dihitung; Kata benda kumpulan; Kata benda gabungan (Countable & Uncountable Nouns; Collective & Compound Nouns) pada halaman 47 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Countable & Uncountable Nouns; Collective & Compound Nouns",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata benda dapat dan tidak dapat dihitung; Kata benda kumpulan; Kata benda gabungan",
+                "Nouns",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Countable & Uncountable Nouns; Collective & Compound Nouns.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u16_preview",
+          "unitId": 16,
+          "page": 47,
+          "title": "Latihan Penjajakan Awal Unit 16: Kata benda dapat dan tidak dapat dihitung; Kata benda kumpulan; Kata benda gabungan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Countable & Uncountable Nouns; Collective & Compound Nouns.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 16 (Countable & Uncountable Nouns; Collective & Compound Nouns) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Nouns",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Nouns",
+              "hint": "Lihat kategori materi Unit 16.",
+              "explanation": "Unit 16 berada di bawah kategori Nouns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "some, any, a few, a little, few, little, no, none",
+      "english_title": "Quantifiers: some, any, a few, a little, no, none",
+      "category": "Quantifiers",
+      "page": 50,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk some, any, a few, a little, few, little, no, none (Quantifiers: some, any, a few, a little, no, none) pada halaman 50 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Quantifiers: some, any, a few, a little, no, none",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "some, any, a few, a little, few, little, no, none",
+                "Quantifiers",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Quantifiers: some, any, a few, a little, no, none.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u17_preview",
+          "unitId": 17,
+          "page": 50,
+          "title": "Latihan Penjajakan Awal Unit 17: some, any, a few, a little, few, little, no, none",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Quantifiers: some, any, a few, a little, no, none.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 17 (Quantifiers: some, any, a few, a little, no, none) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Quantifiers",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Quantifiers",
+              "hint": "Lihat kategori materi Unit 17.",
+              "explanation": "Unit 17 berada di bawah kategori Quantifiers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "much, many, a lot (of), too, so (...that), pertanyaan dengan How",
+      "english_title": "Quantifiers & Degree Adverbs; How Questions",
+      "category": "Quantifiers & Degree",
+      "page": 53,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk much, many, a lot (of), too, so (...that), pertanyaan dengan How (Quantifiers & Degree Adverbs; How Questions) pada halaman 53 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Quantifiers & Degree Adverbs; How Questions",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "much, many, a lot (of), too, so (...that), pertanyaan dengan How",
+                "Quantifiers & Degree",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Quantifiers & Degree Adverbs; How Questions.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u18_preview",
+          "unitId": 18,
+          "page": 53,
+          "title": "Latihan Penjajakan Awal Unit 18: much, many, a lot (of), too, so (...that), pertanyaan dengan How",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Quantifiers & Degree Adverbs; How Questions.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 18 (Quantifiers & Degree Adverbs; How Questions) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Quantifiers & Degree",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Quantifiers & Degree",
+              "hint": "Lihat kategori materi Unit 18.",
+              "explanation": "Unit 18 berada di bawah kategori Quantifiers & Degree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "other(s), another, else; every, each; all, whole; both, either, neither",
+      "english_title": "Distributives & Indefinite Pronouns",
+      "category": "Determiners & Pronouns",
+      "page": 56,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk other(s), another, else; every, each; all, whole; both, either, neither (Distributives & Indefinite Pronouns) pada halaman 56 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Distributives & Indefinite Pronouns",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "other(s), another, else; every, each; all, whole; both, either, neither",
+                "Determiners & Pronouns",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Distributives & Indefinite Pronouns.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u19_preview",
+          "unitId": 19,
+          "page": 56,
+          "title": "Latihan Penjajakan Awal Unit 19: other(s), another, else; every, each; all, whole; both, either, neither",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Distributives & Indefinite Pronouns.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 19 (Distributives & Indefinite Pronouns) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Determiners & Pronouns",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Determiners & Pronouns",
+              "hint": "Lihat kategori materi Unit 19.",
+              "explanation": "Unit 19 berada di bawah kategori Determiners & Pronouns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Bentuk genitif dengan 's; whose",
+      "english_title": "Genitive 's and whose",
+      "category": "Possessives",
+      "page": 59,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Bentuk genitif dengan 's; whose (Genitive 's and whose) pada halaman 59 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Genitive 's and whose",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Bentuk genitif dengan 's; whose",
+                "Possessives",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Genitive 's and whose.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u20_preview",
+          "unitId": 20,
+          "page": 59,
+          "title": "Latihan Penjajakan Awal Unit 20: Bentuk genitif dengan 's; whose",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Genitive 's and whose.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 20 (Genitive 's and whose) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Possessives",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Possessives",
+              "hint": "Lihat kategori materi Unit 20.",
+              "explanation": "Unit 20 berada di bawah kategori Possessives."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Kata ganti refleksi; each other; one another; get + kata sifat",
+      "english_title": "Reflexive & Reciprocal Pronouns; get + Adjective",
+      "category": "Pronouns & Idioms",
+      "page": 61,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata ganti refleksi; each other; one another; get + kata sifat (Reflexive & Reciprocal Pronouns; get + Adjective) pada halaman 61 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Reflexive & Reciprocal Pronouns; get + Adjective",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata ganti refleksi; each other; one another; get + kata sifat",
+                "Pronouns & Idioms",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Reflexive & Reciprocal Pronouns; get + Adjective.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u21_preview",
+          "unitId": 21,
+          "page": 61,
+          "title": "Latihan Penjajakan Awal Unit 21: Kata ganti refleksi; each other; one another; get + kata sifat",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Reflexive & Reciprocal Pronouns; get + Adjective.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 21 (Reflexive & Reciprocal Pronouns; get + Adjective) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Pronouns & Idioms",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Pronouns & Idioms",
+              "hint": "Lihat kategori materi Unit 21.",
+              "explanation": "Unit 21 berada di bawah kategori Pronouns & Idioms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Kata sifat komparatif dan superlatif",
+      "english_title": "Comparative and Superlative Adjectives",
+      "category": "Comparisons",
+      "page": 64,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata sifat komparatif dan superlatif (Comparative and Superlative Adjectives) pada halaman 64 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Comparative and Superlative Adjectives",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata sifat komparatif dan superlatif",
+                "Comparisons",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Comparative and Superlative Adjectives.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u22_preview",
+          "unitId": 22,
+          "page": 64,
+          "title": "Latihan Penjajakan Awal Unit 22: Kata sifat komparatif dan superlatif",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Comparative and Superlative Adjectives.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 22 (Comparative and Superlative Adjectives) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Comparisons",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Comparisons",
+              "hint": "Lihat kategori materi Unit 22.",
+              "explanation": "Unit 22 berada di bawah kategori Comparisons."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "Komparatif / Superlatif dengan kata benda dan kata kerja; less, fewer; the least, the fewest; as ... as",
+      "english_title": "Comparisons with Nouns & Verbs; as ... as",
+      "category": "Comparisons",
+      "page": 68,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Komparatif / Superlatif dengan kata benda dan kata kerja; less, fewer; the least, the fewest; as ... as (Comparisons with Nouns & Verbs; as ... as) pada halaman 68 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Comparisons with Nouns & Verbs; as ... as",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Komparatif / Superlatif dengan kata benda dan kata kerja; less, fewer; the least, the fewest; as ... as",
+                "Comparisons",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Comparisons with Nouns & Verbs; as ... as.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u23_preview",
+          "unitId": 23,
+          "page": 68,
+          "title": "Latihan Penjajakan Awal Unit 23: Komparatif / Superlatif dengan kata benda dan kata kerja; less, fewer; the least, the fewest; as ... as",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Comparisons with Nouns & Verbs; as ... as.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 23 (Comparisons with Nouns & Verbs; as ... as) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Comparisons",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Comparisons",
+              "hint": "Lihat kategori materi Unit 23.",
+              "explanation": "Unit 23 berada di bawah kategori Comparisons."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Past simple to be",
+      "english_title": "Past Simple of to be (was / were)",
+      "category": "Past Tenses",
+      "page": 71,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Past simple to be (Past Simple of to be (was / were)) pada halaman 71 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Past Simple of to be (was / were)",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Past simple to be",
+                "Past Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Past Simple of to be (was / were).",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u24_preview",
+          "unitId": 24,
+          "page": 71,
+          "title": "Latihan Penjajakan Awal Unit 24: Past simple to be",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Past Simple of to be (was / were).",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 24 (Past Simple of to be (was / were)) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Past Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Past Tenses",
+              "hint": "Lihat kategori materi Unit 24.",
+              "explanation": "Unit 24 berada di bawah kategori Past Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "Past simple",
+      "english_title": "Past Simple Tense",
+      "category": "Past Tenses",
+      "page": 74,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Past simple (Past Simple Tense) pada halaman 74 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Past Simple Tense",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Past simple",
+                "Past Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Past Simple Tense.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u25_preview",
+          "unitId": 25,
+          "page": 74,
+          "title": "Latihan Penjajakan Awal Unit 25: Past simple",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Past Simple Tense.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 25 (Past Simple Tense) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Past Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Past Tenses",
+              "hint": "Lihat kategori materi Unit 25.",
+              "explanation": "Unit 25 berada di bawah kategori Past Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Past continuous",
+      "english_title": "Past Continuous Tense",
+      "category": "Past Tenses",
+      "page": 78,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Past continuous (Past Continuous Tense) pada halaman 78 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Past Continuous Tense",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Past continuous",
+                "Past Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Past Continuous Tense.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u26_preview",
+          "unitId": 26,
+          "page": 78,
+          "title": "Latihan Penjajakan Awal Unit 26: Past continuous",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Past Continuous Tense.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 26 (Past Continuous Tense) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Past Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Past Tenses",
+              "hint": "Lihat kategori materi Unit 26.",
+              "explanation": "Unit 26 berada di bawah kategori Past Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Present perfect simple",
+      "english_title": "Present Perfect Simple Tense",
+      "category": "Perfect Tenses",
+      "page": 81,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present perfect simple (Present Perfect Simple Tense) pada halaman 81 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Perfect Simple Tense",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present perfect simple",
+                "Perfect Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Perfect Simple Tense.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u27_preview",
+          "unitId": 27,
+          "page": 81,
+          "title": "Latihan Penjajakan Awal Unit 27: Present perfect simple",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Perfect Simple Tense.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 27 (Present Perfect Simple Tense) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Perfect Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Perfect Tenses",
+              "hint": "Lihat kategori materi Unit 27.",
+              "explanation": "Unit 27 berada di bawah kategori Perfect Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "Present perfect continuous; Present perfect tenses dengan for dan since",
+      "english_title": "Present Perfect Continuous; for and since",
+      "category": "Perfect Tenses",
+      "page": 85,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present perfect continuous; Present perfect tenses dengan for dan since (Present Perfect Continuous; for and since) pada halaman 85 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Perfect Continuous; for and since",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present perfect continuous; Present perfect tenses dengan for dan since",
+                "Perfect Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Perfect Continuous; for and since.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u28_preview",
+          "unitId": 28,
+          "page": 85,
+          "title": "Latihan Penjajakan Awal Unit 28: Present perfect continuous; Present perfect tenses dengan for dan since",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Perfect Continuous; for and since.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 28 (Present Perfect Continuous; for and since) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Perfect Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Perfect Tenses",
+              "hint": "Lihat kategori materi Unit 28.",
+              "explanation": "Unit 28 berada di bawah kategori Perfect Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "Present perfect simple atau Past simple",
+      "english_title": "Present Perfect Simple vs Past Simple",
+      "category": "Tense Contrast",
+      "page": 88,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Present perfect simple atau Past simple (Present Perfect Simple vs Past Simple) pada halaman 88 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Present Perfect Simple vs Past Simple",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Present perfect simple atau Past simple",
+                "Tense Contrast",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Present Perfect Simple vs Past Simple.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u29_preview",
+          "unitId": 29,
+          "page": 88,
+          "title": "Latihan Penjajakan Awal Unit 29: Present perfect simple atau Past simple",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Present Perfect Simple vs Past Simple.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 29 (Present Perfect Simple vs Past Simple) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Tense Contrast",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Tense Contrast",
+              "hint": "Lihat kategori materi Unit 29.",
+              "explanation": "Unit 29 berada di bawah kategori Tense Contrast."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "Past perfect, Past perfect atau Past simple?",
+      "english_title": "Past Perfect vs Past Simple",
+      "category": "Past & Perfect Tenses",
+      "page": 90,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Past perfect, Past perfect atau Past simple? (Past Perfect vs Past Simple) pada halaman 90 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Past Perfect vs Past Simple",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Past perfect, Past perfect atau Past simple?",
+                "Past & Perfect Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Past Perfect vs Past Simple.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u30_preview",
+          "unitId": 30,
+          "page": 90,
+          "title": "Latihan Penjajakan Awal Unit 30: Past perfect, Past perfect atau Past simple?",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Past Perfect vs Past Simple.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 30 (Past Perfect vs Past Simple) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Past & Perfect Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Past & Perfect Tenses",
+              "hint": "Lihat kategori materi Unit 30.",
+              "explanation": "Unit 30 berada di bawah kategori Past & Perfect Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "Future simple; Future menggunakan going to",
+      "english_title": "Future Simple (will) vs Future with going to",
+      "category": "Future Tenses",
+      "page": 92,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Future simple; Future menggunakan going to (Future Simple (will) vs Future with going to) pada halaman 92 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Future Simple (will) vs Future with going to",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Future simple; Future menggunakan going to",
+                "Future Tenses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Future Simple (will) vs Future with going to.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u31_preview",
+          "unitId": 31,
+          "page": 92,
+          "title": "Latihan Penjajakan Awal Unit 31: Future simple; Future menggunakan going to",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Future Simple (will) vs Future with going to.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 31 (Future Simple (will) vs Future with going to) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Future Tenses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Future Tenses",
+              "hint": "Lihat kategori materi Unit 31.",
+              "explanation": "Unit 31 berada di bawah kategori Future Tenses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "Klausa relatif",
+      "english_title": "Relative Clauses (Defining & Non-defining)",
+      "category": "Clauses",
+      "page": 95,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Klausa relatif (Relative Clauses (Defining & Non-defining)) pada halaman 95 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Relative Clauses (Defining & Non-defining)",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Klausa relatif",
+                "Clauses",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Relative Clauses (Defining & Non-defining).",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u32_preview",
+          "unitId": 32,
+          "page": 95,
+          "title": "Latihan Penjajakan Awal Unit 32: Klausa relatif",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Relative Clauses (Defining & Non-defining).",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 32 (Relative Clauses (Defining & Non-defining)) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Clauses",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Clauses",
+              "hint": "Lihat kategori materi Unit 32.",
+              "explanation": "Unit 32 berada di bawah kategori Clauses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "Kata tanya; Seruan",
+      "english_title": "Question Words and Exclamations",
+      "category": "Questions & Exclamations",
+      "page": 98,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata tanya; Seruan (Question Words and Exclamations) pada halaman 98 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Question Words and Exclamations",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata tanya; Seruan",
+                "Questions & Exclamations",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Question Words and Exclamations.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u33_preview",
+          "unitId": 33,
+          "page": 98,
+          "title": "Latihan Penjajakan Awal Unit 33: Kata tanya; Seruan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Question Words and Exclamations.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 33 (Question Words and Exclamations) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Questions & Exclamations",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Questions & Exclamations",
+              "hint": "Lihat kategori materi Unit 33.",
+              "explanation": "Unit 33 berada di bawah kategori Questions & Exclamations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "Pengandaian",
+      "english_title": "Conditionals (Zero, First, Second, Third)",
+      "category": "Conditionals",
+      "page": 100,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Pengandaian (Conditionals (Zero, First, Second, Third)) pada halaman 100 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Conditionals (Zero, First, Second, Third)",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Pengandaian",
+                "Conditionals",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Conditionals (Zero, First, Second, Third).",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u34_preview",
+          "unitId": 34,
+          "page": 100,
+          "title": "Latihan Penjajakan Awal Unit 34: Pengandaian",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Conditionals (Zero, First, Second, Third).",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 34 (Conditionals (Zero, First, Second, Third)) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Conditionals",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Conditionals",
+              "hint": "Lihat kategori materi Unit 34.",
+              "explanation": "Unit 34 berada di bawah kategori Conditionals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "Question tags",
+      "english_title": "Question Tags",
+      "category": "Questions",
+      "page": 103,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Question tags (Question Tags) pada halaman 103 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Question Tags",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Question tags",
+                "Questions",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Question Tags.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u35_preview",
+          "unitId": 35,
+          "page": 103,
+          "title": "Latihan Penjajakan Awal Unit 35: Question tags",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Question Tags.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 35 (Question Tags) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Questions",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Questions",
+              "hint": "Lihat kategori materi Unit 35.",
+              "explanation": "Unit 35 berada di bawah kategori Questions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "Kata kerja pengindraan",
+      "english_title": "Sense Verbs (look, smell, sound, taste, feel)",
+      "category": "Verbs",
+      "page": 105,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kata kerja pengindraan (Sense Verbs (look, smell, sound, taste, feel)) pada halaman 105 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Sense Verbs (look, smell, sound, taste, feel)",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kata kerja pengindraan",
+                "Verbs",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Sense Verbs (look, smell, sound, taste, feel).",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u36_preview",
+          "unitId": 36,
+          "page": 105,
+          "title": "Latihan Penjajakan Awal Unit 36: Kata kerja pengindraan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Sense Verbs (look, smell, sound, taste, feel).",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 36 (Sense Verbs (look, smell, sound, taste, feel)) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Verbs",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Verbs",
+              "hint": "Lihat kategori materi Unit 36.",
+              "explanation": "Unit 36 berada di bawah kategori Verbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "Bentuk -ing (gerund) setelah preposisi dan kalimat tertentu",
+      "english_title": "Gerund after Prepositions and Fixed Expressions",
+      "category": "Gerunds & Infinitives",
+      "page": 107,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Bentuk -ing (gerund) setelah preposisi dan kalimat tertentu (Gerund after Prepositions and Fixed Expressions) pada halaman 107 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Gerund after Prepositions and Fixed Expressions",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Bentuk -ing (gerund) setelah preposisi dan kalimat tertentu",
+                "Gerunds & Infinitives",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Gerund after Prepositions and Fixed Expressions.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u37_preview",
+          "unitId": 37,
+          "page": 107,
+          "title": "Latihan Penjajakan Awal Unit 37: Bentuk -ing (gerund) setelah preposisi dan kalimat tertentu",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Gerund after Prepositions and Fixed Expressions.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 37 (Gerund after Prepositions and Fixed Expressions) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Gerunds & Infinitives",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Gerunds & Infinitives",
+              "hint": "Lihat kategori materi Unit 37.",
+              "explanation": "Unit 37 berada di bawah kategori Gerunds & Infinitives."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "title": "Gerund (-ing form) / Bentuk infinitif",
+      "english_title": "Gerund vs Infinitive",
+      "category": "Gerunds & Infinitives",
+      "page": 109,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Gerund (-ing form) / Bentuk infinitif (Gerund vs Infinitive) pada halaman 109 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Gerund vs Infinitive",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Gerund (-ing form) / Bentuk infinitif",
+                "Gerunds & Infinitives",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Gerund vs Infinitive.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u38_preview",
+          "unitId": 38,
+          "page": 109,
+          "title": "Latihan Penjajakan Awal Unit 38: Gerund (-ing form) / Bentuk infinitif",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Gerund vs Infinitive.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 38 (Gerund vs Infinitive) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Gerunds & Infinitives",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Gerunds & Infinitives",
+              "hint": "Lihat kategori materi Unit 38.",
+              "explanation": "Unit 38 berada di bawah kategori Gerunds & Infinitives."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title": "Kalimat laporan",
+      "english_title": "Reported Speech (Indirect Speech)",
+      "category": "Reported Speech",
+      "page": 112,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kalimat laporan (Reported Speech (Indirect Speech)) pada halaman 112 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: Reported Speech (Indirect Speech)",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kalimat laporan",
+                "Reported Speech",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan Reported Speech (Indirect Speech).",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u39_preview",
+          "unitId": 39,
+          "page": 112,
+          "title": "Latihan Penjajakan Awal Unit 39: Kalimat laporan",
+          "instruction": "Uji pemahaman awal Anda mengenai topik Reported Speech (Indirect Speech).",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 39 (Reported Speech (Indirect Speech)) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Reported Speech",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Reported Speech",
+              "hint": "Lihat kategori materi Unit 39.",
+              "explanation": "Unit 39 berada di bawah kategori Reported Speech."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "title": "Kalimat pasif",
+      "english_title": "The Passive Voice",
+      "category": "Voice",
+      "page": 115,
+      "grammar": {
+        "summary": "Materi pembahasan komprehensif untuk Kalimat pasif (The Passive Voice) pada halaman 115 buku Grammar Plus B1.",
+        "tables": [
+          {
+            "title": "Ikhtisar Topik: The Passive Voice",
+            "headers": [
+              "Poin Pembelajaran",
+              "Fokus Tata Bahasa",
+              "Tingkat Kemampuan"
+            ],
+            "rows": [
+              [
+                "Kalimat pasif",
+                "Voice",
+                "CEFR B1 (Tingkat XI & XII - Fase F)"
+              ],
+              [
+                "Latihan Terpadu",
+                "Soal Isian & Pilihan Ganda",
+                "Standar KKM 75%"
+              ]
+            ]
+          }
+        ],
+        "rules": [
+          "Unit ini membahas mendalam mengenai kaidah penggunaan The Passive Voice.",
+          "Penyusunan modul latihan interaktif untuk unit ini sedang dipersiapkan dan segera dirilis."
+        ]
+      },
+      "exercises": [
+        {
+          "id": "u40_preview",
+          "unitId": 40,
+          "page": 115,
+          "title": "Latihan Penjajakan Awal Unit 40: Kalimat pasif",
+          "instruction": "Uji pemahaman awal Anda mengenai topik The Passive Voice.",
+          "type": "choice",
+          "questions": [
+            {
+              "q": "Topik utama pada Unit 40 (The Passive Voice) berada pada kategori tata bahasa apa?",
+              "options": [
+                "Voice",
+                "Basic Phonetics",
+                "Irregular Verbs Only",
+                "Punctuation Marks"
+              ],
+              "answer": "Voice",
+              "hint": "Lihat kategori materi Unit 40.",
+              "explanation": "Unit 40 berada di bawah kategori Voice."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "irregular_verbs": [
+    {
+      "base": "be",
+      "past_simple": "was / were",
+      "past_participle": "been",
+      "meaning": "menjadi / berada"
+    },
+    {
+      "base": "become",
+      "past_simple": "became",
+      "past_participle": "become",
+      "meaning": "menjadi"
+    },
+    {
+      "base": "begin",
+      "past_simple": "began",
+      "past_participle": "begun",
+      "meaning": "mulai"
+    },
+    {
+      "base": "break",
+      "past_simple": "broke",
+      "past_participle": "broken",
+      "meaning": "mematahkan / memecahkan"
+    },
+    {
+      "base": "bring",
+      "past_simple": "brought",
+      "past_participle": "brought",
+      "meaning": "membawa"
+    },
+    {
+      "base": "build",
+      "past_simple": "built",
+      "past_participle": "built",
+      "meaning": "membangun"
+    },
+    {
+      "base": "buy",
+      "past_simple": "bought",
+      "past_participle": "bought",
+      "meaning": "membeli"
+    },
+    {
+      "base": "catch",
+      "past_simple": "caught",
+      "past_participle": "caught",
+      "meaning": "menangkap"
+    },
+    {
+      "base": "choose",
+      "past_simple": "chose",
+      "past_participle": "chosen",
+      "meaning": "memilih"
+    },
+    {
+      "base": "come",
+      "past_simple": "came",
+      "past_participle": "come",
+      "meaning": "datang"
+    },
+    {
+      "base": "do",
+      "past_simple": "did",
+      "past_participle": "done",
+      "meaning": "melakukan"
+    },
+    {
+      "base": "draw",
+      "past_simple": "drew",
+      "past_participle": "drawn",
+      "meaning": "menggambar"
+    },
+    {
+      "base": "drink",
+      "past_simple": "drank",
+      "past_participle": "drunk",
+      "meaning": "minum"
+    },
+    {
+      "base": "drive",
+      "past_simple": "drove",
+      "past_participle": "driven",
+      "meaning": "mengemudi"
+    },
+    {
+      "base": "eat",
+      "past_simple": "ate",
+      "past_participle": "eaten",
+      "meaning": "makan"
+    },
+    {
+      "base": "fall",
+      "past_simple": "fell",
+      "past_participle": "fallen",
+      "meaning": "jatuh"
+    },
+    {
+      "base": "feel",
+      "past_simple": "felt",
+      "past_participle": "felt",
+      "meaning": "merasakan"
+    },
+    {
+      "base": "find",
+      "past_simple": "found",
+      "past_participle": "found",
+      "meaning": "menemukan"
+    },
+    {
+      "base": "fly",
+      "past_simple": "flew",
+      "past_participle": "flown",
+      "meaning": "terbang"
+    },
+    {
+      "base": "forget",
+      "past_simple": "forgot",
+      "past_participle": "forgotten",
+      "meaning": "lupa"
+    },
+    {
+      "base": "freeze",
+      "past_simple": "froze",
+      "past_participle": "frozen",
+      "meaning": "membeku"
+    },
+    {
+      "base": "get",
+      "past_simple": "got",
+      "past_participle": "got / gotten",
+      "meaning": "mendapatkan / menjadi"
+    },
+    {
+      "base": "give",
+      "past_simple": "gave",
+      "past_participle": "given",
+      "meaning": "memberi"
+    },
+    {
+      "base": "go",
+      "past_simple": "went",
+      "past_participle": "been / gone",
+      "meaning": "pergi"
+    },
+    {
+      "base": "grow",
+      "past_simple": "grew",
+      "past_participle": "grown",
+      "meaning": "tumbuh"
+    },
+    {
+      "base": "have",
+      "past_simple": "had",
+      "past_participle": "had",
+      "meaning": "memiliki / melakukan"
+    },
+    {
+      "base": "hear",
+      "past_simple": "heard",
+      "past_participle": "heard",
+      "meaning": "mendengar"
+    },
+    {
+      "base": "hide",
+      "past_simple": "hid",
+      "past_participle": "hidden",
+      "meaning": "bersembunyi"
+    },
+    {
+      "base": "hold",
+      "past_simple": "held",
+      "past_participle": "held",
+      "meaning": "memegang / mengadakan"
+    },
+    {
+      "base": "keep",
+      "past_simple": "kept",
+      "past_participle": "kept",
+      "meaning": "menjaga / menyimpan"
+    },
+    {
+      "base": "know",
+      "past_simple": "knew",
+      "past_participle": "known",
+      "meaning": "mengetahui"
+    },
+    {
+      "base": "leave",
+      "past_simple": "left",
+      "past_participle": "left",
+      "meaning": "meninggalkan / berangkat"
+    },
+    {
+      "base": "lose",
+      "past_simple": "lost",
+      "past_participle": "lost",
+      "meaning": "kehilangan / kalah"
+    },
+    {
+      "base": "make",
+      "past_simple": "made",
+      "past_participle": "made",
+      "meaning": "membuat"
+    },
+    {
+      "base": "meet",
+      "past_simple": "met",
+      "past_participle": "met",
+      "meaning": "bertemu"
+    },
+    {
+      "base": "pay",
+      "past_simple": "paid",
+      "past_participle": "paid",
+      "meaning": "membayar"
+    },
+    {
+      "base": "read",
+      "past_simple": "read",
+      "past_participle": "read",
+      "meaning": "membaca"
+    },
+    {
+      "base": "run",
+      "past_simple": "ran",
+      "past_participle": "run",
+      "meaning": "berlari"
+    },
+    {
+      "base": "say",
+      "past_simple": "said",
+      "past_participle": "said",
+      "meaning": "mengatakan"
+    },
+    {
+      "base": "see",
+      "past_simple": "saw",
+      "past_participle": "seen",
+      "meaning": "melihat"
+    },
+    {
+      "base": "sell",
+      "past_simple": "sold",
+      "past_participle": "sold",
+      "meaning": "menjual"
+    },
+    {
+      "base": "send",
+      "past_simple": "sent",
+      "past_participle": "sent",
+      "meaning": "mengirim"
+    },
+    {
+      "base": "sing",
+      "past_simple": "sang",
+      "past_participle": "sung",
+      "meaning": "menyanyi"
+    },
+    {
+      "base": "sleep",
+      "past_simple": "slept",
+      "past_participle": "slept",
+      "meaning": "tidur"
+    },
+    {
+      "base": "speak",
+      "past_simple": "spoke",
+      "past_participle": "spoken",
+      "meaning": "berbicara"
+    },
+    {
+      "base": "spend",
+      "past_simple": "spent",
+      "past_participle": "spent",
+      "meaning": "menghabiskan / membelanjakan"
+    },
+    {
+      "base": "swim",
+      "past_simple": "swam",
+      "past_participle": "swum",
+      "meaning": "berenang"
+    },
+    {
+      "base": "take",
+      "past_simple": "took",
+      "past_participle": "taken",
+      "meaning": "mengambil"
+    },
+    {
+      "base": "teach",
+      "past_simple": "taught",
+      "past_participle": "taught",
+      "meaning": "mengajar"
+    },
+    {
+      "base": "tell",
+      "past_simple": "told",
+      "past_participle": "told",
+      "meaning": "menceritakan / memberi tahu"
+    },
+    {
+      "base": "think",
+      "past_simple": "thought",
+      "past_participle": "thought",
+      "meaning": "berpikir"
+    },
+    {
+      "base": "understand",
+      "past_simple": "understood",
+      "past_participle": "understood",
+      "meaning": "memahami"
+    },
+    {
+      "base": "wear",
+      "past_simple": "wore",
+      "past_participle": "worn",
+      "meaning": "mengenakan / memakai"
+    },
+    {
+      "base": "win",
+      "past_simple": "won",
+      "past_participle": "won",
+      "meaning": "menang"
+    },
+    {
+      "base": "write",
+      "past_simple": "wrote",
+      "past_participle": "written",
+      "meaning": "menulis"
+    }
+  ],
+  "phonetics": {
+    "symbols": [
+      {
+        "type": "Konsonan",
+        "symbol": "/p/",
+        "example": "pen"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/b/",
+        "example": "bad"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/t/",
+        "example": "tea"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/d/",
+        "example": "did"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/k/",
+        "example": "cat"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/g/",
+        "example": "get"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/f/",
+        "example": "fall"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/v/",
+        "example": "van"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/θ/",
+        "example": "thin"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/ð/",
+        "example": "this"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/s/",
+        "example": "see"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/z/",
+        "example": "zoo"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/ʃ/",
+        "example": "she"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/tʃ/",
+        "example": "cheese"
+      },
+      {
+        "type": "Konsonan",
+        "symbol": "/dʒ/",
+        "example": "joy"
+      },
+      {
+        "type": "Vokal",
+        "symbol": "/i:/",
+        "example": "eat"
+      },
+      {
+        "type": "Vokal",
+        "symbol": "/ɪ/",
+        "example": "it"
+      },
+      {
+        "type": "Vokal",
+        "symbol": "/e/",
+        "example": "bed"
+      },
+      {
+        "type": "Vokal",
+        "symbol": "/æ/",
+        "example": "has"
+      },
+      {
+        "type": "Vokal",
+        "symbol": "/ɑ:/",
+        "example": "start"
+      },
+      {
+        "type": "Diftong",
+        "symbol": "/eɪ/",
+        "example": "day"
+      },
+      {
+        "type": "Diftong",
+        "symbol": "/aɪ/",
+        "example": "five"
+      },
+      {
+        "type": "Diftong",
+        "symbol": "/aʊ/",
+        "example": "sound"
+      }
+    ],
+    "punctuation": [
+      {
+        "mark": "Capital Letter (A)",
+        "indo": "HURUF KAPITAL",
+        "use": "Awal kalimat, nama orang, hari, bulan, bahasa"
+      },
+      {
+        "mark": "Full stop (.)",
+        "indo": "Titik",
+        "use": "Akhir kalimat berita"
+      },
+      {
+        "mark": "Comma (,)",
+        "indo": "Koma",
+        "use": "Jeda klausa, pemisah daftar rincian"
+      },
+      {
+        "mark": "Apostrophe (')",
+        "indo": "Tanda petik atas",
+        "use": "Kepemilikan ('s) atau singkatan (don't)"
+      },
+      {
+        "mark": "Question mark (?)",
+        "indo": "Tanda tanya",
+        "use": "Akhir kalimat tanya"
+      },
+      {
+        "mark": "Exclamation mark (!)",
+        "indo": "Tanda seru",
+        "use": "Perintah, keheranan, seruan emosi"
+      }
+    ]
+  },
+  "audio_transcripts": [
+    {
+      "track": "TR 2 (Unit 1 Latihan 4)",
+      "content": "Juan: Excuse me. Is this seat taken?\nKathy: No, go ahead and sit down.\nJuan: Thanks. My name's Juan, by the way. What's yours?\nKathy: Oh hi! Nice to meet you. I'm Kathy.\nJuan: That's an unusual accent. Where are you from?\nKathy: I'm from Bristol, in the UK. I'm here on holiday. And you?\nJuan: I'm from Portugal.\nKathy: Who are you here with?\nJuan: Just some friends from university. We're doing some research for a project.\nKathy: Whose are those sketches? They're really good.\nJuan: Thanks! They're mine. I'm drawing some pictures of the famous paintings here.\nKathy: What do you study?\nJuan: Art and design.\nKathy: That sounds cool.\nJuan: Well, enjoy your holiday Kathy.\nKathy: OK, thank you. It was nice speaking to you. Bye!"
+    },
+    {
+      "track": "TR 3 (Unit 2 Latihan 2)",
+      "content": "1 I always eat an apple after breakfast.\n2 My brother bought an interesting book about elephants.\n3 Maryanne saw a famous singer in town.\n4 Italy is a sunny country.\n5 Max had a fantastic birthday party.\n6 I usually take a packed lunch to school."
+    },
+    {
+      "track": "TR 4 (Unit 2 Latihan 7)",
+      "content": "1 This is a photo of my family.\n2 I don't like these mushrooms.\n3 How did you find those gloves?\n4 That is a big room.\n5 I'm going to read these books on holiday.\n6 Those jeans over there are really cheap.\n7 This watch is expensive.\n8 Are these seats taken?"
+    },
+    {
+      "track": "TR 5 (Unit 2 Latihan 8)",
+      "content": "1 Where are these men from?\n2 Is this book his?\n3 Are you students at this university?\n4 What shall I do with my shoes?\n5 Do you like that pasta I made?"
+    },
+    {
+      "track": "TR 6 (Unit 3 Latihan 2)",
+      "content": "1 The furniture in your house is beautiful.\n2 Where is the sugar?\n3 His glasses are on the table.\n4 Where are the teachers?\n5 Fruit and vegetables are healthy for you.\n6 The parks in my city are beautiful.\n7 The weather is nice today!\n8 My brother and my sister-in-law live in Amsterdam.\n9 The students are in the classroom.\n10 Sharks eat smaller fish."
+    }
+  ]
+}

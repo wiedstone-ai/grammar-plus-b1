@@ -1,0 +1,5 @@
+temp_pages/
+credentials.json
+__pycache__/
+*.pyc
+.DS_Store

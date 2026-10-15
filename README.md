@@ -2,7 +2,7 @@
 **Berdasarkan Buku:** *Grammar Plus B1 - Panduan dan Latihan Tata Bahasa Inggris* (Sarah Jane Lewis, Kesaint Blanc Publishing)  
 **Tingkat Pembelajaran:** Khusus Siswa **Tingkat XI dan XII (Kurikulum Merdeka Fase F)**  
 **Database Spreadsheet:** [https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc](https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc)  
-**Web App API (Aktif & Otomatis):** `https://script.google.com/macros/s/AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466/exec`  
+**Web App API (Aktif & Otomatis):** `https://script.google.com/macros/s/AKfycbxEVnJvbx5hXnOuQKtT134tjuD8wtWVIw5ukHXjbcn1X7lOGitlw4YPqWoVOSggRo-p/exec`  
 **Desain:** Strict Light Background (Putih Bersih Kontras Tinggi, Elegan, Modern).
 
 ---
@@ -55,7 +55,7 @@
 ## 📊 Integrasi Google Spreadsheet & Web App API (100% Otomatis)
 
 Sistem telah dihubungkan langsung ke Web App API:  
-`https://script.google.com/macros/s/AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466/exec`  
+`https://script.google.com/macros/s/AKfycbxEVnJvbx5hXnOuQKtT134tjuD8wtWVIw5ukHXjbcn1X7lOGitlw4YPqWoVOSggRo-p/exec`  
 yang menulis dan membaca data secara real-time ke spreadsheet:  
 [https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc](https://docs.google.com/spreadsheets/d/1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc)
 

@@ -11,7 +11,7 @@ import json
 import urllib.request
 
 SPREADSHEET_ID = '1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc'
-DEFAULT_GAS_URL = 'https://script.google.com/macros/s/AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466/exec'
+DEFAULT_GAS_URL = 'https://script.google.com/macros/s/AKfycbxEVnJvbx5hXnOuQKtT134tjuD8wtWVIw5ukHXjbcn1X7lOGitlw4YPqWoVOSggRo-p/exec'
 SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive'

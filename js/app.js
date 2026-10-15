@@ -15,7 +15,7 @@ const APP_CONFIG = {
   spreadsheetId: "1rTpLFo_QD6-XhcQE43CAZZc3WbI0gkiCXIjhSvg_CPc",
   minPassingScore: 75, // KKM 75%
   defaultTeacherPin: "GURU123",
-  defaultScriptUrl: "https://script.google.com/macros/s/AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466/exec"
+  defaultScriptUrl: "https://script.google.com/macros/s/AKfycbxEVnJvbx5hXnOuQKtT134tjuD8wtWVIw5ukHXjbcn1X7lOGitlw4YPqWoVOSggRo-p/exec"
 };
 
 // State Aplikasi
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function initStorage() {
   // Load GAS URL dari localStorage atau gunakan URL default aktif
   const savedUrl = localStorage.getItem("grammar_b1_gas_url");
-  if (!savedUrl || savedUrl === "" || savedUrl.includes("placeholder")) {
+  if (!savedUrl || savedUrl === "" || savedUrl.includes("placeholder") || savedUrl.includes("AKfycbxTJDw0Y_H1XzJrfC3TSyJCjQQh0zfyY6MbSugMYOGKuXfqnAL9vsu4N2pFFf29s466")) {
     AppState.gasUrl = APP_CONFIG.defaultScriptUrl || "";
     localStorage.setItem("grammar_b1_gas_url", AppState.gasUrl);
   } else {

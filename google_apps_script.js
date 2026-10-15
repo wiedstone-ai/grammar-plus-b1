@@ -135,10 +135,14 @@ function handleAction(action, body, callback) {
       for (let i = 1; i < data.length; i++) {
         const row = data[i];
         if (row[1]) {
+          let pass = String(row[2] || "").trim();
+          if (/^\d{7}$/.test(pass)) {
+            pass = "0" + pass;
+          }
           students.push({
             timestamp: row[0],
             username: String(row[1]).trim(),
-            password: String(row[2]).trim(),
+            password: pass,
             nama: String(row[3]).trim(),
             tingkat: String(row[4]).trim(),
             fase: String(row[5]).trim(),
@@ -158,27 +162,31 @@ function handleAction(action, body, callback) {
       const data = ws.getDataRange().getValues();
       if (data.length <= 1) return jsonResponse({ status: "success", scores: [] }, callback);
 
-      const scores = [];
+      // Gunakan map agar nilai latihan yang diulang selalu mengambil capaian mutakhir
+      const scoresMap = {};
       for (let i = 1; i < data.length; i++) {
         const row = data[i];
         if (row[1]) {
-          scores.push({
+          const uName = String(row[1]).trim().toUpperCase();
+          const exId = String(row[6]).trim();
+          const key = uName + "___" + exId;
+          scoresMap[key] = {
             timestamp: row[0],
             username: String(row[1]).trim(),
             nama: String(row[2]).trim(),
             tingkat: String(row[3]).trim(),
             rombel: String(row[4]).trim(),
             unitId: row[5],
-            exerciseId: String(row[6]).trim(),
+            exerciseId: exId,
             exerciseTitle: String(row[7]).trim(),
             skor: row[8],
             totalSoal: row[9],
             persentase: String(row[10]).trim(),
             status: String(row[11]).trim()
-          });
+          };
         }
       }
-      return jsonResponse({ status: "success", scores: scores }, callback);
+      return jsonResponse({ status: "success", scores: Object.values(scoresMap) }, callback);
     }
 
     // 3. REGISTER STUDENT (KHUSUS XI DAN XII)
@@ -198,6 +206,8 @@ function handleAction(action, body, callback) {
       const nama = String(body.nama || "").trim().toUpperCase();
       const fase = String(body.fase || "F").trim().toUpperCase();
       const tanggalLahir = String(body.tanggalLahir || "").trim();
+      const rombel = String(body.rombel || "").trim();
+      const presensi = String(body.presensi || "").trim();
       
       // Format password default ke DDMMYYYY jika belum diubah
       function formatToDDMMYYYY(tgl) {
@@ -212,10 +222,15 @@ function handleAction(action, body, callback) {
             return d + m + y;
           }
         }
-        return str.replace(/[^0-9]/g, "");
+        var clean = str.replace(/[^0-9]/g, "");
+        if (clean.length === 7) return "0" + clean;
+        return clean;
       }
 
-      const password = String(body.password || formatToDDMMYYYY(tanggalLahir)).trim();
+      let password = String(body.password || formatToDDMMYYYY(tanggalLahir)).trim();
+      if (/^\d{7}$/.test(password)) {
+        password = "0" + password;
+      }
       const role = String(body.role || "Siswa").trim();
       const timestamp = body.timestamp || new Date().toLocaleString("id-ID");
 
@@ -234,8 +249,9 @@ function handleAction(action, body, callback) {
       }
 
       if (!exists) {
+        // Tanda petik tunggal ' agar angka nol di awal password (DDMMYYYY) tidak dihilangkan Google Sheet
         ws.appendRow([
-          timestamp, username, password, nama,
+          timestamp, username, "'" + password, nama,
           tingkat, fase, rombel, presensi, tanggalLahir, role
         ]);
       }
@@ -247,7 +263,7 @@ function handleAction(action, body, callback) {
       }, callback);
     }
 
-    // 4. SUBMIT SCORE
+    // 4. SUBMIT SCORE (DILENGKAPI SISTEM UPDATE JIKA MURID MENGULANG JAWABAN)
     if (action === "submitScore") {
       const ws = ss.getSheetByName("Nilai");
       const timestamp = body.timestamp || new Date().toLocaleString("id-ID");
@@ -263,15 +279,37 @@ function handleAction(action, body, callback) {
       const persentase = String(body.persentase || "0%").trim();
       const status = String(body.status || "BELUM LULUS").trim();
 
-      ws.appendRow([
-        timestamp, username, nama, tingkat, rombel,
-        unitId, exerciseId, exerciseTitle, skor, totalSoal,
-        persentase, status
-      ]);
+      // Cek apakah murid sudah memiliki riwayat untuk latihan ini (agar saat murid mengulang, nilai diupdate)
+      const data = ws.getDataRange().getValues();
+      let existingRow = -1;
+      for (let i = 1; i < data.length; i++) {
+        const rowUser = String(data[i][1]).trim().toUpperCase();
+        const rowEx = String(data[i][6]).trim();
+        if (rowUser === username.toUpperCase() && rowEx === exerciseId) {
+          existingRow = i + 1; // 1-indexed untuk Spreadsheet
+          break;
+        }
+      }
+
+      if (existingRow > 0) {
+        // Perbarui baris yang sudah ada dengan nilai dan persentase terbaru
+        ws.getRange(existingRow, 1, 1, 12).setValues([[
+          timestamp, username, nama, tingkat, rombel,
+          unitId, exerciseId, exerciseTitle, skor, totalSoal,
+          persentase, status
+        ]]);
+      } else {
+        // Tambahkan baris baru jika baru pertama kali mengerjakan
+        ws.appendRow([
+          timestamp, username, nama, tingkat, rombel,
+          unitId, exerciseId, exerciseTitle, skor, totalSoal,
+          persentase, status
+        ]);
+      }
 
       return jsonResponse({
         status: "success",
-        message: "Nilai berhasil dicatat ke Spreadsheet",
+        message: existingRow > 0 ? "Nilai latihan berhasil diperbarui di Spreadsheet" : "Nilai berhasil dicatat ke Spreadsheet",
         score: { username, unitId, exerciseId, skor, totalSoal, persentase, status }
       }, callback);
     }

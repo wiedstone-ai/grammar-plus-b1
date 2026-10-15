@@ -112,6 +112,12 @@ function initStorage() {
   if (savedScores) {
     try { AppState.scores = JSON.parse(savedScores); } catch (e) { AppState.scores = []; }
   }
+
+  // Sinkronisasi otomatis data siswa dan nilai dari Google Spreadsheet jika URL tersedia
+  if (AppState.gasUrl) {
+    syncStudentsFromGAS();
+    syncScoresFromGAS();
+  }
 }
 
 function saveStudentsToStorage() {
@@ -382,7 +388,7 @@ function showAccountCardModal(student) {
   openModal("modal-account-card");
 }
 
-function handleLogin(e) {
+async function handleLogin(e) {
   e.preventDefault();
   const usernameInput = document.getElementById("login-username").value.trim().toUpperCase();
   const rawPasswordInput = document.getElementById("login-password").value.trim();
@@ -406,16 +412,44 @@ function handleLogin(e) {
     return;
   }
 
-  // 2. Cek Murid Terdaftar
-  const found = AppState.students.find(s => {
-    if (s.username.toUpperCase() !== usernameInput) return false;
-    const sPass = String(s.password || "").trim();
-    // Cocokkan langsung atau via normalisasi DDMMYYYY
-    if (sPass === rawPasswordInput || sPass === normPasswordInput) return true;
-    if (formatBirthdateToPassword(s.tanggalLahir) === normPasswordInput) return true;
+  // Helper verifikasi kata sandi dengan toleransi pemotongan angka nol di awal oleh Spreadsheet
+  const isMatch = (s) => {
+    if (!s || !s.username || s.username.toUpperCase() !== usernameInput) return false;
+    let sPass = String(s.password || "").trim();
+    const sPassPadded = /^\d{7}$/.test(sPass) ? "0" + sPass : sPass;
+    const rawPadded = /^\d{7}$/.test(rawPasswordInput) ? "0" + rawPasswordInput : rawPasswordInput;
+    const normPadded = /^\d{7}$/.test(normPasswordInput) ? "0" + normPasswordInput : normPasswordInput;
+
+    if (sPass === rawPasswordInput || sPassPadded === rawPadded || sPass === normPasswordInput || sPassPadded === normPadded) return true;
+    if (formatBirthdateToPassword(s.tanggalLahir) === normPasswordInput || formatBirthdateToPassword(s.tanggalLahir) === normPadded) return true;
     if (s.tanggalLahir === rawPasswordInput) return true;
     return false;
-  });
+  };
+
+  // 2. Cek di memori lokal terlebih dahulu
+  let found = AppState.students.find(isMatch);
+
+  // 3. Jika belum ditemukan di perangkat lokal, periksa ke Google Spreadsheet secara online
+  if (!found && AppState.gasUrl) {
+    const submitBtn = document.querySelector("#form-login button[type='submit']");
+    const originalText = submitBtn ? submitBtn.innerHTML : "";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "⏳ Memeriksa ke server...";
+    }
+
+    try {
+      await syncStudentsFromGAS();
+      found = AppState.students.find(isMatch);
+    } catch (err) {
+      console.warn("Gagal cek server saat login:", err);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
+    }
+  }
 
   if (found) {
     loginUser(found);
@@ -932,13 +966,42 @@ function renderSingleExercise(ex, unit) {
 }
 
 // Helper normalisasi string jawaban
+// Helper normalisasi string jawaban dengan dukungan singkatan baku bahasa Inggris
 function normalizeAnswer(str) {
-  if (!str) return "";
-  return String(str)
+  if (!str && str !== "-") return "";
+  let res = String(str)
     .trim()
-    .toLowerCase()
-    .replace(/[.,/#!$%^&*;:{}=\-_`~()?'"“”]/g, "")
-    .replace(/\s+/g, " ");
+    .toLowerCase();
+
+  // Normalisasi singkatan baku bahasa Inggris (kontraksi)
+  res = res
+    .replace(/\bcan\'?t\b/g, "cannot")
+    .replace(/\bwon\'?t\b/g, "will not")
+    .replace(/\baren\'?t\b/g, "are not")
+    .replace(/\bisn\'?t\b/g, "is not")
+    .replace(/\bdidn\'?t\b/g, "did not")
+    .replace(/\bdoesn\'?t\b/g, "does not")
+    .replace(/\bdon\'?t\b/g, "do not")
+    .replace(/\bwasn\'?t\b/g, "was not")
+    .replace(/\bweren\'?t\b/g, "were not")
+    .replace(/\bhaven\'?t\b/g, "have not")
+    .replace(/\bhasn\'?t\b/g, "has not")
+    .replace(/\bhadn\'?t\b/g, "had not")
+    .replace(/\bi\'?m\b/g, "i am")
+    .replace(/\byou\'?re\b/g, "you are")
+    .replace(/\bwe\'?re\b/g, "we are")
+    .replace(/\bthey\'?re\b/g, "they are")
+    .replace(/\bhe\'?s\b/g, "he is")
+    .replace(/\bshe\'?s\b/g, "she is")
+    .replace(/\bit\'?s\b/g, "it is")
+    .replace(/\bthere\'?s\b/g, "there is")
+    .replace(/\bthere\'?re\b/g, "there are");
+
+  // Hapus tanda baca umum dan rapikan spasi berlebih
+  return res
+    .replace(/[.,/#!$%^&*;:{}=\-_`~()?'"“”]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function handleGradeExercise(e, exId) {
@@ -1032,7 +1095,15 @@ function handleGradeExercise(e, exId) {
     synced: false
   };
 
-  AppState.scores.push(record);
+  // UPDATE NILAI JIKA LATIHAN INI SUDAH PERNAH DIKERJAKAN (Saat murid mengulang, nilai terupdate!)
+  const existingIdx = AppState.scores.findIndex(
+    s => s.username && s.username.toUpperCase() === record.username.toUpperCase() && s.exerciseId === record.exerciseId
+  );
+  if (existingIdx !== -1) {
+    AppState.scores[existingIdx] = record;
+  } else {
+    AppState.scores.push(record);
+  }
   saveScoresToStorage();
 
   if (typeof ExercisesStore !== "undefined" && typeof ExercisesStore.saveProgress === "function") {
@@ -1044,31 +1115,61 @@ function handleGradeExercise(e, exId) {
 }
 
 function checkAnswerCorrectness(studentAns, questionObj) {
-  if (!studentAns) return false;
+  if (!studentAns && studentAns !== "-") return false;
+  const rawStudent = String(studentAns).trim();
+  const rawCorrect = String(questionObj.answer || "").trim();
+
+  // 1. Cek jika jawaban berupa strip '-' (tanpa artikel)
+  if (rawCorrect === "-" || rawCorrect === "none" || rawCorrect === "no article") {
+    const sLower = rawStudent.toLowerCase();
+    if (sLower === "-" || sLower === "none" || sLower === "no article" || sLower === "tanpa artikel" || sLower === "strip" || sLower === "") {
+      return true;
+    }
+  }
+
   const normStudent = normalizeAnswer(studentAns);
   const normCorrect = normalizeAnswer(questionObj.answer);
 
-  if (normStudent === normCorrect) return true;
+  if (normStudent && normStudent === normCorrect) return true;
 
-  // Cek alternatif jawaban
+  // 2. Cek alternatif jawaban
   const alternates = questionObj.alternateAnswers || [];
   for (let alt of alternates) {
     if (normalizeAnswer(alt) === normStudent) return true;
   }
 
-  // Cek jika format jawaban dipisahkan strip atau slash (misal: "a / an" atau "There are / There is")
-  if (questionObj.answer.includes("/")) {
-    const partsCorrect = questionObj.answer.split("/").map(s => normalizeAnswer(s));
-    const partsStudent = studentAns.split("/").map(s => normalizeAnswer(s));
+  // 3. Cek jika jawaban terdiri dari beberapa bagian (dipisahkan '/', ',', ';')
+  const splitRegex = /[/,;]+/;
+  if (rawCorrect.includes("/") || rawCorrect.includes(",") || rawCorrect.includes(";")) {
+    const partsCorrect = rawCorrect.split(splitRegex).map(s => normalizeAnswer(s));
+    const partsStudent = rawStudent.split(splitRegex).map(s => normalizeAnswer(s));
+    
     if (partsCorrect.length === partsStudent.length) {
       let allMatch = true;
       for (let i = 0; i < partsCorrect.length; i++) {
-        if (partsCorrect[i] !== partsStudent[i]) {
+        const cPart = partsCorrect[i];
+        const sPart = partsStudent[i];
+        // Handle '-' pada salah satu bagian (misal "a / -")
+        if (!cPart || cPart === "-" || cPart === "none") {
+          if (sPart !== "" && sPart !== "-" && sPart !== "none" && sPart !== "no article") {
+            allMatch = false;
+            break;
+          }
+        } else if (cPart !== sPart) {
           allMatch = false;
           break;
         }
       }
       if (allMatch) return true;
+    }
+  }
+
+  // 4. Cek jika jawaban di dalam kurung pilihan, misal "Yes, I am. / No, I'm not."
+  // Jika murid menjawab salah satu dari opsi yang dipisahkan garis miring
+  if (rawCorrect.includes(" / ") || rawCorrect.includes("/")) {
+    const options = rawCorrect.split("/").map(s => normalizeAnswer(s));
+    for (let opt of options) {
+      if (opt && opt === normStudent) return true;
     }
   }
 
@@ -1101,13 +1202,31 @@ function renderStudentRecord() {
     return;
   }
 
-  // Filter nilai siswa aktif
-  const myScores = AppState.scores.filter(s => s.username === user.username);
+  // Filter nilai siswa aktif: ambil nilai TERBARU per exerciseId
+  const myScoresMap = new Map();
+  AppState.scores
+    .filter(s => s.username && s.username.toUpperCase() === user.username.toUpperCase())
+    .forEach(s => {
+      let pct = 0;
+      if (s.totalSoal && Number(s.totalSoal) > 0) {
+        pct = Math.round((Number(s.skor) / Number(s.totalSoal)) * 100);
+      } else {
+        const rawP = String(s.persentase || "").replace("%", "").trim();
+        const pNum = parseFloat(rawP) || 0;
+        pct = pNum <= 1 && pNum > 0 ? Math.round(pNum * 100) : Math.round(pNum);
+      }
+      s.pctNum = pct;
+      s.persentaseFormatted = `${pct}%`;
+      // Timpa dengan rekaman terbaru untuk latihan yang sama
+      myScoresMap.set(s.exerciseId, s);
+    });
+
+  const myScores = Array.from(myScoresMap.values());
   const totalLatihan = myScores.length;
   const avgPercentage = totalLatihan > 0
-    ? Math.round(myScores.reduce((acc, cur) => acc + parseInt(cur.persentase, 10), 0) / totalLatihan)
+    ? Math.round(myScores.reduce((acc, cur) => acc + (cur.pctNum || 0), 0) / totalLatihan)
     : 0;
-  const totalLulus = myScores.filter(s => s.status === "LULUS").length;
+  const totalLulus = myScores.filter(s => s.status === "LULUS" || (s.pctNum || 0) >= 75).length;
 
   container.innerHTML = `
     <!-- Header Resmi Saat Cetak PDF -->
@@ -1138,7 +1257,7 @@ function renderStudentRecord() {
       <!-- Ringkasan Statistik -->
       <div class="form-row" style="margin-top: 1.5rem; margin-bottom: 0.5rem;">
         <div class="card" style="margin-bottom: 0; text-align: center; background: #F8FAFC;">
-          <div style="font-size: 0.8rem; color: #64748B; font-weight: 600;">TOTAL PENGERJAAN</div>
+          <div style="font-size: 0.8rem; color: #64748B; font-weight: 600;">TOTAL LATIHAN</div>
           <div style="font-size: 1.75rem; font-weight: 800; color: #2563EB;">${totalLatihan}</div>
         </div>
         <div class="card" style="margin-bottom: 0; text-align: center; background: #F8FAFC;">
@@ -1179,7 +1298,7 @@ function renderStudentRecord() {
                   <td><strong>Unit ${escapeHtml(String(s.unitId))}</strong></td>
                   <td>${escapeHtml(s.exerciseTitle)}</td>
                   <td>${s.skor} / ${s.totalSoal}</td>
-                  <td><strong>${escapeHtml(s.persentase)}</strong></td>
+                  <td><strong>${escapeHtml(s.persentaseFormatted || s.persentase)}</strong></td>
                   <td>
                     <span class="badge ${s.status === 'LULUS' ? 'badge-success' : 'badge-danger'}">
                       ${escapeHtml(s.status)}
@@ -1203,7 +1322,26 @@ function renderTeacherDashboard() {
   if (!container) return;
 
   const totalSiswa = AppState.students.filter(s => s.role === "Siswa").length;
-  const totalSubmissions = AppState.scores.length;
+
+  // Gunakan map unik per murid dan latihan agar selalu menampilkan nilai terbaru
+  const uniqueScoresMap = new Map();
+  AppState.scores.forEach(sc => {
+    if (!sc.username) return;
+    const key = `${sc.username.toUpperCase()}___${sc.exerciseId}`;
+    let pct = 0;
+    if (sc.totalSoal && Number(sc.totalSoal) > 0) {
+      pct = Math.round((Number(sc.skor) / Number(sc.totalSoal)) * 100);
+    } else {
+      const rawP = String(sc.persentase || "").replace("%", "").trim();
+      const pNum = parseFloat(rawP) || 0;
+      pct = pNum <= 1 && pNum > 0 ? Math.round(pNum * 100) : Math.round(pNum);
+    }
+    sc.pctNum = pct;
+    sc.persentaseFormatted = `${pct}%`;
+    uniqueScoresMap.set(key, sc);
+  });
+  const displayScores = Array.from(uniqueScoresMap.values());
+  const totalSubmissions = displayScores.length;
 
   container.innerHTML = `
     <div class="card" style="border-top: 4px solid #F59E0B;">
@@ -1273,10 +1411,10 @@ function renderTeacherDashboard() {
       </div>
     </div>
 
-    <!-- Tabel Seluruh Nilai Siswa -->
+    <!-- Tabel Seluruh Nilai Siswa (Hasil Mutakhir) -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">📝 Seluruh Rekapan Nilai Latihan Siswa</h3>
+        <h3 class="card-title">📝 Seluruh Rekapan Nilai Latihan Siswa (Nilai Terkini)</h3>
       </div>
       <div class="grammar-table-wrapper">
         <table class="table-grammar">
@@ -1294,7 +1432,7 @@ function renderTeacherDashboard() {
             </tr>
           </thead>
           <tbody>
-            ${AppState.scores.map(sc => `
+            ${displayScores.map(sc => `
               <tr>
                 <td>${escapeHtml(sc.timestamp)}</td>
                 <td><code>${escapeHtml(sc.username)}</code></td>
@@ -1303,7 +1441,7 @@ function renderTeacherDashboard() {
                 <td>Unit ${escapeHtml(String(sc.unitId))}</td>
                 <td>${escapeHtml(sc.exerciseTitle || sc.exerciseId)}</td>
                 <td>${sc.skor} / ${sc.totalSoal}</td>
-                <td><strong>${escapeHtml(sc.persentase)}</strong></td>
+                <td><strong>${escapeHtml(sc.persentaseFormatted || sc.persentase)}</strong></td>
                 <td>
                   <span class="badge ${sc.status === 'LULUS' ? 'badge-success' : 'badge-danger'}">
                     ${escapeHtml(sc.status)}
@@ -1327,8 +1465,26 @@ function exportGradesToExcel() {
 
   const wb = XLSX.utils.book_new();
 
+  // Ambil nilai mutakhir per murid dan latihan
+  const uniqueScoresMap = new Map();
+  AppState.scores.forEach(sc => {
+    if (!sc.username) return;
+    const key = `${sc.username.toUpperCase()}___${sc.exerciseId}`;
+    let pct = 0;
+    if (sc.totalSoal && Number(sc.totalSoal) > 0) {
+      pct = Math.round((Number(sc.skor) / Number(sc.totalSoal)) * 100);
+    } else {
+      const rawP = String(sc.persentase || "").replace("%", "").trim();
+      const pNum = parseFloat(rawP) || 0;
+      pct = pNum <= 1 && pNum > 0 ? Math.round(pNum * 100) : Math.round(pNum);
+    }
+    sc.persentaseFormatted = `${pct}%`;
+    uniqueScoresMap.set(key, sc);
+  });
+  const exportScores = Array.from(uniqueScoresMap.values());
+
   // Sheet 1: Nilai Siswa
-  const scoresData = AppState.scores.map((s, idx) => ({
+  const scoresData = exportScores.map((s, idx) => ({
     "No": idx + 1,
     "Waktu": s.timestamp,
     "Username": s.username,
@@ -1339,7 +1495,7 @@ function exportGradesToExcel() {
     "Latihan": s.exerciseTitle || s.exerciseId,
     "Skor": s.skor,
     "Total Soal": s.totalSoal,
-    "Persentase": s.persentase,
+    "Persentase": s.persentaseFormatted || s.persentase,
     "Status": s.status
   }));
   const wsScores = XLSX.utils.json_to_sheet(scoresData);
@@ -1519,6 +1675,109 @@ function testGasConnection() {
       if (dot) dot.className = "dot-indicator offline";
       showToast("Gagal terhubung ke URL Google Apps Script.", "danger");
     });
+}
+
+function fetchGAS(action) {
+  return new Promise((resolve, reject) => {
+    if (!AppState.gasUrl) return reject(new Error("GAS URL kosong"));
+
+    const callbackName = "gas_cb_" + Math.random().toString(36).substring(2, 9);
+    const timeout = setTimeout(() => {
+      cleanup();
+      reject(new Error("Request ke Google Apps Script timeout (15 detik)"));
+    }, 15000);
+
+    function cleanup() {
+      clearTimeout(timeout);
+      delete window[callbackName];
+      const script = document.getElementById(callbackName);
+      if (script && script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    }
+
+    window[callbackName] = function(data) {
+      cleanup();
+      resolve(data);
+    };
+
+    // Gunakan JSONP via script tag untuk mengatasi limitasi CORS cross-device di peramban
+    const script = document.createElement("script");
+    script.id = callbackName;
+    const sep = AppState.gasUrl.includes("?") ? "&" : "?";
+    script.src = `${AppState.gasUrl}${sep}action=${encodeURIComponent(action)}&callback=${callbackName}&_t=${Date.now()}`;
+    script.onerror = function() {
+      cleanup();
+      // Fallback ke fetch standar
+      fetch(`${AppState.gasUrl}${sep}action=${encodeURIComponent(action)}`)
+        .then(res => res.json())
+        .then(resolve)
+        .catch(reject);
+    };
+    document.head.appendChild(script);
+  });
+}
+
+async function syncStudentsFromGAS() {
+  if (!AppState.gasUrl) return;
+  try {
+    const data = await fetchGAS("getStudents");
+    if (data && data.status === "success" && Array.isArray(data.students)) {
+      const map = new Map();
+      AppState.students.forEach(s => {
+        if (s && s.username) map.set(s.username.toUpperCase(), s);
+      });
+      data.students.forEach(s => {
+        if (!s || !s.username) return;
+        let pass = String(s.password || "").trim();
+        // Jika angka 0 di depan terpotong oleh format number spreadsheet
+        if (/^\d{7}$/.test(pass)) {
+          pass = "0" + pass;
+        }
+        s.password = pass;
+        map.set(s.username.toUpperCase(), s);
+      });
+      AppState.students = Array.from(map.values());
+      saveStudentsToStorage();
+    }
+  } catch (err) {
+    console.warn("Sinkronisasi siswa dari GAS:", err);
+  }
+}
+
+async function syncScoresFromGAS() {
+  if (!AppState.gasUrl) return;
+  try {
+    const data = await fetchGAS("getScores");
+    if (data && data.status === "success" && Array.isArray(data.scores)) {
+      const map = new Map();
+      AppState.scores.forEach(sc => {
+        if (sc && sc.username && sc.exerciseId) {
+          map.set(`${sc.username.toUpperCase()}___${sc.exerciseId}`, sc);
+        }
+      });
+      data.scores.forEach(sc => {
+        if (!sc || !sc.username || !sc.exerciseId) return;
+        const key = `${sc.username.toUpperCase()}___${sc.exerciseId}`;
+        let pct = 0;
+        if (sc.totalSoal && Number(sc.totalSoal) > 0) {
+          pct = Math.round((Number(sc.skor) / Number(sc.totalSoal)) * 100);
+        } else {
+          const rawP = String(sc.persentase || "").replace("%", "").trim();
+          const pNum = parseFloat(rawP) || 0;
+          pct = pNum <= 1 && pNum > 0 ? Math.round(pNum * 100) : Math.round(pNum);
+        }
+        sc.pctNum = pct;
+        sc.persentase = `${pct}%`;
+        sc.synced = true;
+        map.set(key, sc);
+      });
+      AppState.scores = Array.from(map.values());
+      saveScoresToStorage();
+    }
+  } catch (err) {
+    console.warn("Sinkronisasi nilai dari GAS:", err);
+  }
 }
 
 function syncStudentToGAS(student) {

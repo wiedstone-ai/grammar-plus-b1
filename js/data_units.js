@@ -319,6 +319,7 @@ const GRAMMAR_UNITS = [
         "instruction": "Ketik kata tanya yang tepat untuk melengkapi bagian kosong dialog antara Juan dan Kathy.",
         "type": "fill",
         "audioTrack": "TR 2",
+        "audioUrl": "audio/tr2.mp3",
         "questions": [
           {
             "q": "Juan: Thanks. My name's Juan, by the way. (1) [BLANK]'s yours?",
@@ -962,6 +963,7 @@ const GRAMMAR_UNITS = [
         "instruction": "Ketik susunan kalimat yang gramatikal dengan tanda baca yang benar.",
         "type": "fill",
         "audioTrack": "TR 3",
+        "audioUrl": "audio/tr3.mp3",
         "questions": [
           {
             "q": "1. apple / always / after / eat / I / breakfast / an",
@@ -1317,6 +1319,7 @@ const GRAMMAR_UNITS = [
         "instruction": "Pilihlah opsi (a atau b) yang sesuai dengan kalimat pada audio rekaman.",
         "type": "choice",
         "audioTrack": "TR 4",
+        "audioUrl": "audio/tr4.mp3",
         "questions": [
           {
             "q": "1. Rekaman Nomor 1:",
@@ -1408,6 +1411,7 @@ const GRAMMAR_UNITS = [
         "instruction": "Pilihlah respon jawaban yang paling tepat secara gramatikal terhadap pertanyaan audio.",
         "type": "choice",
         "audioTrack": "TR 5",
+        "audioUrl": "audio/tr5.mp3",
         "questions": [
           {
             "q": "1. Audio: 'Where are these men from?'",
@@ -1781,6 +1785,7 @@ const GRAMMAR_UNITS = [
         "instruction": "Ketik kalimat yang lengkap dengan penambahan artikel the yang tepat.",
         "type": "fill",
         "audioTrack": "TR 6",
+        "audioUrl": "audio/tr6.mp3",
         "questions": [
           {
             "q": "1. furniture / your house / beautiful",

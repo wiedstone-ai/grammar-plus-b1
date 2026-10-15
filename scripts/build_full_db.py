@@ -143,6 +143,7 @@ unit1_exercises = [
         "instruction": "Ketik kata tanya yang tepat untuk melengkapi bagian kosong dialog antara Juan dan Kathy.",
         "type": "fill",
         "audioTrack": "TR 2",
+        "audioUrl": "audio/tr2.mp3",
         "questions": [
             {"q": "Juan: Thanks. My name's Juan, by the way. (1) [BLANK]'s yours?", "answer": "What", "alternateAnswers": ["what"], "hint": "Menanyakan nama lawan bicara.", "explanation": "Juan menanyakan nama Kathy: 'What's yours?' (Siapa nama Anda?)"},
             {"q": "Juan: That's an unusual accent. (2) [BLANK] are you from?", "answer": "Where", "alternateAnswers": ["where"], "hint": "Menanyakan asal daerah.", "explanation": "Pertanyaan asal: 'Where are you from?'"},
@@ -325,6 +326,7 @@ unit2_exercises = [
         "instruction": "Ketik susunan kalimat yang gramatikal dengan tanda baca yang benar.",
         "type": "fill",
         "audioTrack": "TR 3",
+        "audioUrl": "audio/tr3.mp3",
         "questions": [
             {"q": "1. apple / always / after / eat / I / breakfast / an", "answer": "I always eat an apple after breakfast.", "hint": "Subjek I + always + eat...", "explanation": "Susunan yang benar: 'I always eat an apple after breakfast.'"},
             {"q": "2. bought / book / my brother / an / about elephants / interesting", "answer": "My brother bought an interesting book about elephants.", "hint": "Subjek My brother + bought + an interesting book...", "explanation": "Susunan: 'My brother bought an interesting book about elephants.'"},
@@ -416,6 +418,7 @@ unit2_exercises = [
         "instruction": "Pilihlah opsi (a atau b) yang sesuai dengan kalimat pada audio rekaman.",
         "type": "choice",
         "audioTrack": "TR 4",
+        "audioUrl": "audio/tr4.mp3",
         "questions": [
             {"q": "1. Rekaman Nomor 1:", "options": ["This is a photo of my family.", "That is a photo of my family."], "answer": "This is a photo of my family.", "hint": "Perhatikan kata tunjuk yang diucapkan pembicara.", "explanation": "Naskah audio TR 4 menyatakan: 'This is a photo of my family.'"},
             {"q": "2. Rekaman Nomor 2:", "options": ["I don't like these mushrooms.", "I don't like this mushroom."], "answer": "I don't like these mushrooms.", "hint": "Perhatikan bentuk tunggal atau jamak dari mushroom.", "explanation": "Naskah audio TR 4 menyatakan: 'I don't like these mushrooms.'"},
@@ -435,6 +438,7 @@ unit2_exercises = [
         "instruction": "Pilihlah respon jawaban yang paling tepat secara gramatikal terhadap pertanyaan audio.",
         "type": "choice",
         "audioTrack": "TR 5",
+        "audioUrl": "audio/tr5.mp3",
         "questions": [
             {"q": "1. Audio: 'Where are these men from?'", "options": ["They're from Germany.", "There from Germany."], "answer": "They're from Germany.", "hint": "Subjek these men (orang) dijawab dengan They're.", "explanation": "'They're' adalah singkatan 'They are' yang merujuk pada asal usul pria-pria tersebut."},
             {"q": "2. Audio: 'Is this book his?'", "options": ["Yes, it is.", "Yes, they are."], "answer": "Yes, it is.", "hint": "Buku adalah benda tunggal (it).", "explanation": "Pertanyaan 'Is this book...' dijawab dengan 'Yes, it is.'"},
@@ -535,6 +539,7 @@ unit3_exercises = [
         "instruction": "Ketik kalimat yang lengkap dengan penambahan artikel the yang tepat.",
         "type": "fill",
         "audioTrack": "TR 6",
+        "audioUrl": "audio/tr6.mp3",
         "questions": [
             {"q": "1. furniture / your house / beautiful", "answer": "The furniture in your house is beautiful.", "hint": "The furniture in your house is...", "explanation": "Susunan yang benar: 'The furniture in your house is beautiful.'"},
             {"q": "2. where / sugar?", "answer": "Where is the sugar?", "hint": "Where is the...", "explanation": "Susunan: 'Where is the sugar?'"},

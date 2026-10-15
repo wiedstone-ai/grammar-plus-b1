@@ -849,6 +849,110 @@ function renderSingleExerciseById(exId) {
   }
 }
 
+// ==========================================
+// AUDIO PLAYBACK & SPEECH SYNTHESIS (TTS)
+// ==========================================
+let isDialoguePlaying = false;
+
+function stopDialogueTTS() {
+  if (window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+  isDialoguePlaying = false;
+  const playBtn = document.getElementById("btn-play-dialogue-tts");
+  if (playBtn) {
+    playBtn.innerHTML = `<span>▶ Putar Percakapan (TTS Suara AI)</span>`;
+    playBtn.className = "btn btn-sm btn-primary";
+  }
+}
+
+function playDialogueTTS(text) {
+  if (!window.speechSynthesis) {
+    alert("Browser Anda tidak mendukung Web Speech API.");
+    return;
+  }
+
+  if (isDialoguePlaying) {
+    stopDialogueTTS();
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+  isDialoguePlaying = true;
+  const playBtn = document.getElementById("btn-play-dialogue-tts");
+  if (playBtn) {
+    playBtn.innerHTML = `<span>⏹ Berhenti Memutar</span>`;
+    playBtn.className = "btn btn-sm btn-danger";
+  }
+
+  const voices = window.speechSynthesis.getVoices() || [];
+  const enVoices = voices.filter(v => v.lang && v.lang.startsWith("en"));
+
+  // Cari suara pria dan wanita bahasa Inggris
+  let maleVoice = enVoices.find(v => /male|guy|david|george|ryan|james|mark/i.test(v.name)) || enVoices[0];
+  let femaleVoice = enVoices.find(v => /female|girl|zira|susan|hazel|sonia|jenny|catherine|victoria/i.test(v.name)) || enVoices[1] || enVoices[0];
+
+  const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+  let index = 0;
+
+  function speakNext() {
+    if (!isDialoguePlaying || index >= lines.length) {
+      stopDialogueTTS();
+      return;
+    }
+
+    const line = lines[index];
+    index++;
+
+    let speaker = "";
+    let speechContent = line;
+
+    if (line.includes(":")) {
+      const parts = line.split(":");
+      speaker = parts[0].trim().toLowerCase();
+      speechContent = parts.slice(1).join(":").trim();
+    }
+
+    const utter = new SpeechSynthesisUtterance(speechContent);
+    utter.rate = 0.95; // Kecepatan nyaman untuk siswa belajar B1
+
+    if (speaker.includes("juan")) {
+      if (maleVoice) utter.voice = maleVoice;
+      utter.pitch = 0.9;
+    } else if (speaker.includes("kathy")) {
+      if (femaleVoice) utter.voice = femaleVoice;
+      utter.pitch = 1.1;
+    } else {
+      if (enVoices[0]) utter.voice = enVoices[0];
+    }
+
+    utter.onend = () => {
+      // Jeda 400ms antar kalimat dialog
+      setTimeout(speakNext, 400);
+    };
+
+    utter.onerror = () => {
+      stopDialogueTTS();
+    };
+
+    window.speechSynthesis.speak(utter);
+  }
+
+  speakNext();
+}
+
+function toggleAudioTranscript(boxId) {
+  const el = document.getElementById(boxId);
+  if (el) {
+    const isHidden = el.style.display === "none";
+    el.style.display = isHidden ? "block" : "none";
+    const toggleBtn = document.getElementById("transcript-box-btn");
+    if (toggleBtn) {
+      toggleBtn.innerText = isHidden ? "🙈 Sembunyikan Naskah Teks" : "👁️ Tampilkan Naskah Teks";
+    }
+  }
+}
+
 function renderSingleExercise(ex, unit) {
   AppState.selectedExercise = ex;
   const container = document.getElementById("single-exercise-container");
@@ -866,16 +970,52 @@ function renderSingleExercise(ex, unit) {
     }
   });
 
-  // Audio Script Box jika ada
+  // Audio Script Box & Audio Player jika ada track rekaman atau audio URL
   let audioHtml = "";
-  if (ex.audioTrack) {
-    const scriptObj = (window.AUDIO_TRANSCRIPTS || []).find(a => a.track.includes(ex.audioTrack));
+  if (ex.audioTrack || ex.audioUrl) {
+    const defaultTrackName = ex.audioTrack ? ex.audioTrack.toLowerCase().replace(/[^a-z0-9]/g, "") : "audio";
+    const audioSrc = ex.audioUrl || `audio/${defaultTrackName}.mp3`;
+    const scriptObj = (window.AUDIO_TRANSCRIPTS || []).find(a => ex.audioTrack && a.track.includes(ex.audioTrack));
+    const transcriptText = scriptObj ? scriptObj.content : (ex.audioScript || "");
+
     audioHtml = `
-      <div class="audio-box" style="margin-bottom: 1.25rem; background: #FEF3C7; border: 1px solid #FDE68A; padding: 0.85rem 1.25rem; border-radius: 8px;">
-        <div style="font-weight: 700; color: #B45309; font-size: 0.875rem; display: flex; align-items: center; gap: 0.5rem;">
-          <span>🎧 Naskah Rekaman Audio (${escapeHtml(ex.audioTrack)})</span>
+      <div class="audio-box" style="margin-bottom: 1.5rem; background: #F8FAFC; border: 1px solid #CBD5E1; padding: 1rem 1.25rem; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <div style="font-weight: 700; color: #1E293B; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">🎧</span> Rekaman Audio Soal ${ex.audioTrack ? `(${escapeHtml(ex.audioTrack)})` : ''}
+          </div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            ${transcriptText ? `
+              <button type="button" id="btn-play-dialogue-tts" class="btn btn-sm btn-primary" onclick="playDialogueTTS(decodeURIComponent('${encodeURIComponent(transcriptText)}'))" style="font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem;">
+                <span>▶ Putar Percakapan (TTS Suara AI)</span>
+              </button>
+              <button type="button" id="transcript-box-btn" class="btn btn-sm btn-secondary" onclick="toggleAudioTranscript('transcript-box-content')" style="font-size: 0.8rem;">
+                👁️ Tampilkan Naskah Teks
+              </button>
+            ` : ''}
+          </div>
         </div>
-        ${scriptObj ? `<div style="font-size: 0.825rem; color: #78350F; margin-top: 0.5rem; white-space: pre-wrap; font-family: monospace;">${escapeHtml(scriptObj.content)}</div>` : ''}
+
+        <!-- Pemutar Audio HTML5 -->
+        <div style="margin-top: 0.75rem;">
+          <audio controls preload="metadata" style="width: 100%; height: 40px; border-radius: 6px; outline: none;" id="audio-player-${ex.id}">
+            <source src="${escapeHtml(audioSrc)}" type="audio/mpeg">
+            <source src="${escapeHtml(audioSrc)}" type="audio/ogg">
+            <source src="${escapeHtml(audioSrc)}" type="audio/wav">
+            Browser Anda tidak mendukung pemutar audio HTML5.
+          </audio>
+          <div id="audio-load-note" style="font-size: 0.75rem; color: #64748B; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+            <span>ℹ️ Sumber audio: <code>${escapeHtml(audioSrc)}</code> (jika file MP3 belum diunggah, gunakan tombol <strong>Putar Percakapan TTS</strong> di atas).</span>
+          </div>
+        </div>
+
+        <!-- Kotak Naskah Transkrip (Dapat Dilipat / Toggle) -->
+        ${transcriptText ? `
+          <div id="transcript-box-content" style="display: none; margin-top: 0.85rem; padding: 0.85rem; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; font-size: 0.85rem; color: #78350F; line-height: 1.6; white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">
+            <div style="font-weight: 700; margin-bottom: 0.35rem; color: #92400E; font-family: sans-serif;">📝 Naskah Transkrip Percakapan:</div>
+            ${escapeHtml(transcriptText)}
+          </div>
+        ` : ''}
       </div>
     `;
   }

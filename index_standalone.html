@@ -7594,15 +7594,61 @@ function renderSingleExercise(ex, unit) {
 
 // Helper normalisasi string jawaban
 // Helper normalisasi string jawaban dengan dukungan singkatan baku bahasa Inggris
+// ==========================================
+// PEMBERIAN NILAI FLEKSIBEL & LENIENT (LEBIH LONGGAR)
+// ==========================================
+
+// Daftar kata kunci tata bahasa kritis (tidak boleh salah eja / salah bentuk grammar)
+const CRITICAL_GRAMMAR_WORDS = new Set([
+  "not", "no", "never",
+  "am", "is", "are", "was", "were", "been", "being",
+  "do", "does", "did", "done",
+  "have", "has", "had",
+  "will", "would", "shall", "should", "can", "could", "must", "might", "may",
+  "to"
+]);
+
+// Hitung Levenshtein Distance untuk toleransi typo minor
+function levenshteinDistance(s1, s2) {
+  if (s1 === s2) return 0;
+  if (!s1) return s2 ? s2.length : 0;
+  if (!s2) return s1.length;
+  
+  const m = s1.length;
+  const n = s2.length;
+  let prevRow = [];
+  let currRow = [];
+  for (let j = 0; j <= n; j++) prevRow[j] = j;
+
+  for (let i = 1; i <= m; i++) {
+    currRow[0] = i;
+    const c1 = s1.charCodeAt(i - 1);
+    for (let j = 1; j <= n; j++) {
+      const cost = c1 === s2.charCodeAt(j - 1) ? 0 : 1;
+      currRow[j] = Math.min(
+        currRow[j - 1] + 1,
+        prevRow[j] + 1,
+        prevRow[j - 1] + cost
+      );
+    }
+    for (let j = 0; j <= n; j++) prevRow[j] = currRow[j];
+  }
+  return prevRow[n];
+}
+
 function normalizeAnswer(str) {
   if (!str && str !== "-") return "";
   let res = String(str)
     .trim()
     .toLowerCase();
 
-  // Normalisasi singkatan baku bahasa Inggris (kontraksi)
+  // 1. Normalisasi semua jenis kutip/apostrof ke apostrof standar '
+  res = res.replace(/[‘’`´]/g, "'");
+
+  // 2. Normalisasi singkatan baku bahasa Inggris (kontraksi)
   res = res
     .replace(/\bcan\'?t\b/g, "cannot")
+    .replace(/\bcan\s+not\b/g, "cannot")
     .replace(/\bwon\'?t\b/g, "will not")
     .replace(/\baren\'?t\b/g, "are not")
     .replace(/\bisn\'?t\b/g, "is not")
@@ -7614,6 +7660,12 @@ function normalizeAnswer(str) {
     .replace(/\bhaven\'?t\b/g, "have not")
     .replace(/\bhasn\'?t\b/g, "has not")
     .replace(/\bhadn\'?t\b/g, "had not")
+    .replace(/\bshouldn\'?t\b/g, "should not")
+    .replace(/\bwouldn\'?t\b/g, "would not")
+    .replace(/\bcouldn\'?t\b/g, "could not")
+    .replace(/\bmustn\'?t\b/g, "must not")
+    .replace(/\bneedn\'?t\b/g, "need not")
+    .replace(/\bshan\'?t\b/g, "shall not")
     .replace(/\bi\'?m\b/g, "i am")
     .replace(/\byou\'?re\b/g, "you are")
     .replace(/\bwe\'?re\b/g, "we are")
@@ -7621,14 +7673,174 @@ function normalizeAnswer(str) {
     .replace(/\bhe\'?s\b/g, "he is")
     .replace(/\bshe\'?s\b/g, "she is")
     .replace(/\bit\'?s\b/g, "it is")
+    .replace(/\bthat\'?s\b/g, "that is")
     .replace(/\bthere\'?s\b/g, "there is")
-    .replace(/\bthere\'?re\b/g, "there are");
+    .replace(/\bthere\'?re\b/g, "there are")
+    .replace(/\bwho\'?s\b/g, "who is")
+    .replace(/\bwhat\'?s\b/g, "what is")
+    .replace(/\bwhere\'?s\b/g, "where is")
+    .replace(/\bhow\'?s\b/g, "how is")
+    .replace(/\blet\'?s\b/g, "let us")
+    .replace(/\bi\'?ve\b/g, "i have")
+    .replace(/\byou\'?ve\b/g, "you have")
+    .replace(/\bwe\'?ve\b/g, "we have")
+    .replace(/\bthey\'?ve\b/g, "they have")
+    .replace(/\bi\'?ll\b/g, "i will")
+    .replace(/\byou\'?ll\b/g, "you will")
+    .replace(/\bhe\'?ll\b/g, "he will")
+    .replace(/\bshe\'?ll\b/g, "she will")
+    .replace(/\bwe\'?ll\b/g, "we will")
+    .replace(/\bthey\'?ll\b/g, "they will")
+    .replace(/\bit\'?ll\b/g, "it will")
+    .replace(/\bi\'?d\b/g, "i would")
+    .replace(/\byou\'?d\b/g, "you would")
+    .replace(/\bhe\'?d\b/g, "he would")
+    .replace(/\bshe\'?d\b/g, "she would")
+    .replace(/\bwe\'?d\b/g, "we would")
+    .replace(/\bthey\'?d\b/g, "they would");
 
-  // Hapus tanda baca umum dan rapikan spasi berlebih
+  // 3. Normalisasi ejaan British vs American
+  res = res
+    .replace(/\bcolour(s?)\b/g, "color$1")
+    .replace(/\bfavourite(s?)\b/g, "favorite$1")
+    .replace(/\bflavour(s?)\b/g, "flavor$1")
+    .replace(/\bneighbour(s?)\b/g, "neighbor$1")
+    .replace(/\bhonour(s?)\b/g, "honor$1")
+    .replace(/\bhumour\b/g, "humor")
+    .replace(/\brumour(s?)\b/g, "rumor$1")
+    .replace(/\btheatre(s?)\b/g, "theater$1")
+    .replace(/\bcentre(s?)\b/g, "center$1")
+    .replace(/\bmetre(s?)\b/g, "meter$1")
+    .replace(/\blitre(s?)\b/g, "liter$1")
+    .replace(/\borganis(e|ed|ing|ation)\b/g, "organiz$1")
+    .replace(/\brealis(e|ed|ing|ation)\b/g, "realiz$1")
+    .replace(/\brecognis(e|ed|ing|ation)\b/g, "recogniz$1")
+    .replace(/\bapologis(e|ed|ing)\b/g, "apologiz$1")
+    .replace(/\btravelling\b/g, "traveling")
+    .replace(/\bcancelled\b/g, "canceled")
+    .replace(/\bprogramme(s?)\b/g, "program$1")
+    .replace(/\bgrey\b/g, "gray");
+
+  // 4. Hapus tanda baca umum dan rapikan spasi berlebih
   return res
     .replace(/[.,/#!$%^&*;:{}=\-_`~()?'"“”]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+// Menghapus kata keterangan derajat / intensifier dan artikel (the, a, an, very, much, etc.)
+// Hanya digunakan jika kalimat aslinya terdiri dari minimal 3 kata.
+function stripOptionalWords(normStr) {
+  if (!normStr) return "";
+  const optionalTokens = new Set([
+    "the", "a", "an",
+    "very", "much", "really", "just", "quite", "so", "too"
+  ]);
+  const tokens = normStr.split(" ");
+  const filtered = tokens.filter(w => !optionalTokens.has(w));
+  return filtered.join(" ").trim();
+}
+
+// Menormalisasi posisi adverb waktu (bisa di awal atau akhir kalimat)
+function normalizeTimeAdverbPosition(normStr) {
+  if (!normStr) return "";
+  const adverbs = [
+    "today", "tonight", "yesterday", "tomorrow", "now",
+    "at the moment", "this morning", "this afternoon", "this evening",
+    "this week", "next week", "last week", "last year", "next year", "last night"
+  ];
+  for (let adv of adverbs) {
+    if (normStr.startsWith(adv + " ")) {
+      const rest = normStr.slice(adv.length + 1).trim();
+      return (rest + " " + adv).trim();
+    }
+  }
+  return normStr;
+}
+
+// Cek kecocokan kalimat dengan toleransi typo minor (1-2 huruf typo)
+function isSentenceFuzzyMatch(s1, s2) {
+  if (s1 === s2) return true;
+  const words1 = s1.split(" ");
+  const words2 = s2.split(" ");
+  
+  if (words1.length === words2.length && words1.length >= 3) {
+    let typoCount = 0;
+    for (let i = 0; i < words1.length; i++) {
+      const w1 = words1[i];
+      const w2 = words2[i];
+      if (w1 === w2) continue;
+      
+      // Kata grammar kritis tidak boleh salah
+      if (CRITICAL_GRAMMAR_WORDS.has(w1) || CRITICAL_GRAMMAR_WORDS.has(w2)) {
+        return false;
+      }
+      
+      const dist = levenshteinDistance(w1, w2);
+      if (w2.length >= 7 && dist <= 2) {
+        typoCount++;
+      } else if (w2.length >= 4 && dist <= 1) {
+        typoCount++;
+      } else {
+        return false;
+      }
+    }
+    const maxAllowedTypos = words1.length >= 7 ? 2 : 1;
+    return typoCount <= maxAllowedTypos;
+  }
+  
+  return false;
+}
+
+// Fungsi pembanding dua teks jawaban secara longgar & cerdas
+function compareSingleAnswerLenient(studentStr, correctStr) {
+  const normS = normalizeAnswer(studentStr);
+  const normC = normalizeAnswer(correctStr);
+
+  if (!normS || !normC) return false;
+
+  // 1. Kecocokan persis setelah normalisasi
+  if (normS === normC) return true;
+
+  // 2. Kecocokan dengan penyesuaian posisi keterangan waktu (Time Adverb)
+  const timeS = normalizeTimeAdverbPosition(normS);
+  const timeC = normalizeTimeAdverbPosition(normC);
+  if (timeS === timeC) return true;
+
+  // 3. Toleransi typo pada kata tunggal panjang (>= 6 huruf, non-grammar)
+  if (!normC.includes(" ") && !normS.includes(" ")) {
+    if (normC.length >= 6 && !CRITICAL_GRAMMAR_WORDS.has(normC)) {
+      if (levenshteinDistance(normS, normC) <= 1) return true;
+    }
+    return false;
+  }
+
+  // 4. Toleransi penghapusan kata opsional (the, a, an, very, much, just, really, quite, so, too)
+  // Berlaku untuk kalimat dengan panjang minimal 3 kata
+  const wordsC = normC.split(" ");
+  if (wordsC.length >= 3) {
+    const strippedS = stripOptionalWords(normS);
+    const strippedC = stripOptionalWords(normC);
+
+    if (strippedS && strippedC && strippedC.split(" ").length >= 2) {
+      if (strippedS === strippedC) return true;
+
+      // Cek dengan normalisasi posisi adverb waktu setelah stripping
+      const strippedTimeS = normalizeTimeAdverbPosition(strippedS);
+      const strippedTimeC = normalizeTimeAdverbPosition(strippedC);
+      if (strippedTimeS === strippedTimeC) return true;
+
+      // Cek fuzzy typo pada stripped
+      if (isSentenceFuzzyMatch(strippedS, strippedC)) return true;
+      if (isSentenceFuzzyMatch(strippedTimeS, strippedTimeC)) return true;
+    }
+
+    // 5. Cek typo pada kalimat lengkap
+    if (isSentenceFuzzyMatch(normS, normC)) return true;
+    if (isSentenceFuzzyMatch(timeS, timeC)) return true;
+  }
+
+  return false;
 }
 
 function handleGradeExercise(e, exId) {
@@ -7673,8 +7885,12 @@ function handleGradeExercise(e, exId) {
         fb.style.backgroundColor = "#FEF2F2";
         fb.style.border = "1px solid #FECACA";
         fb.style.color = "#991B1B";
+        const ansText = String(q.answer || "").trim();
+        const formattedAns = ansText.endsWith(".") || ansText.endsWith("?") || ansText.endsWith("!")
+          ? ansText
+          : ansText + ".";
         fb.innerHTML = `
-          <strong>✗ Kurang Tepat.</strong> Jawaban yang benar: <strong>${escapeHtml(q.answer)}</strong>.<br>
+          <strong>✗ Kurang Tepat.</strong> Jawaban yang benar: <strong>${escapeHtml(formattedAns)}</strong><br>
           <span style="font-size: 0.8rem; color: #475569;">${escapeHtml(q.explanation || q.hint || "")}</span>
         `;
       }
@@ -7754,49 +7970,56 @@ function checkAnswerCorrectness(studentAns, questionObj) {
     }
   }
 
-  const normStudent = normalizeAnswer(studentAns);
-  const normCorrect = normalizeAnswer(questionObj.answer);
+  // 2. Bandingkan jawaban utama dengan fleksibilitas tinggi
+  if (compareSingleAnswerLenient(rawStudent, rawCorrect)) return true;
 
-  if (normStudent && normStudent === normCorrect) return true;
-
-  // 2. Cek alternatif jawaban
+  // 3. Bandingkan alternatif jawaban yang terdaftar
   const alternates = questionObj.alternateAnswers || [];
   for (let alt of alternates) {
-    if (normalizeAnswer(alt) === normStudent) return true;
+    if (compareSingleAnswerLenient(rawStudent, alt)) return true;
   }
 
-  // 3. Cek jika jawaban terdiri dari beberapa bagian (dipisahkan '/', ',', ';')
-  const splitRegex = /[/,;]+/;
-  if (rawCorrect.includes("/") || rawCorrect.includes(",") || rawCorrect.includes(";")) {
-    const partsCorrect = rawCorrect.split(splitRegex).map(s => normalizeAnswer(s));
-    const partsStudent = rawStudent.split(splitRegex).map(s => normalizeAnswer(s));
-    
-    if (partsCorrect.length === partsStudent.length) {
-      let allMatch = true;
-      for (let i = 0; i < partsCorrect.length; i++) {
-        const cPart = partsCorrect[i];
-        const sPart = partsStudent[i];
-        // Handle '-' pada salah satu bagian (misal "a / -")
-        if (!cPart || cPart === "-" || cPart === "none") {
-          if (sPart !== "" && sPart !== "-" && sPart !== "none" && sPart !== "no article") {
-            allMatch = false;
-            break;
-          }
-        } else if (cPart !== sPart) {
-          allMatch = false;
-          break;
-        }
-      }
-      if (allMatch) return true;
+  // 4. Cek jika jawaban di dalam kurung pilihan / opsi bergaris miring (misal: "Yes, I am. / No, I'm not.")
+  if (rawCorrect.includes("/")) {
+    const slashOptions = rawCorrect.split("/").map(s => s.trim());
+    for (let opt of slashOptions) {
+      if (opt && compareSingleAnswerLenient(rawStudent, opt)) return true;
     }
   }
 
-  // 4. Cek jika jawaban di dalam kurung pilihan, misal "Yes, I am. / No, I'm not."
-  // Jika murid menjawab salah satu dari opsi yang dipisahkan garis miring
-  if (rawCorrect.includes(" / ") || rawCorrect.includes("/")) {
-    const options = rawCorrect.split("/").map(s => normalizeAnswer(s));
-    for (let opt of options) {
-      if (opt && opt === normStudent) return true;
+  // 5. Cek jika jawaban terdiri dari beberapa bagian (dipisahkan '/', ',', ';', atau spasi)
+  const splitRegex = /[/,;|\n]+/;
+  if (rawCorrect.includes("/") || rawCorrect.includes(",") || rawCorrect.includes(";")) {
+    const partsCorrect = rawCorrect.split(splitRegex).map(s => s.trim()).filter(Boolean);
+    if (partsCorrect.length > 1) {
+      let partsStudent = rawStudent.split(splitRegex).map(s => s.trim()).filter(Boolean);
+      // Jika siswa mengetik tanpa tanda pemisah (hanya dipisah spasi), coba cocokkan
+      if (partsStudent.length !== partsCorrect.length) {
+        const spaceParts = rawStudent.trim().split(/\s+/);
+        if (spaceParts.length === partsCorrect.length) {
+          partsStudent = spaceParts;
+        }
+      }
+
+      if (partsCorrect.length === partsStudent.length) {
+        let allMatch = true;
+        for (let i = 0; i < partsCorrect.length; i++) {
+          const cPart = partsCorrect[i];
+          const sPart = partsStudent[i];
+          // Handle '-' pada salah satu bagian (misal "a / -")
+          if (!cPart || cPart === "-" || cPart === "none" || cPart === "no article") {
+            const normSPart = normalizeAnswer(sPart);
+            if (normSPart !== "" && normSPart !== "-" && normSPart !== "none") {
+              allMatch = false;
+              break;
+            }
+          } else if (!compareSingleAnswerLenient(sPart, cPart)) {
+            allMatch = false;
+            break;
+          }
+        }
+        if (allMatch) return true;
+      }
     }
   }
 

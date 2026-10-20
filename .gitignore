@@ -3,3 +3,7 @@ credentials.json
 __pycache__/
 *.pyc
 .DS_Store
+
+# Audio files (streamed online via Google Drive)
+*.mp3
+audio/*.mp3

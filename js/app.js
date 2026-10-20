@@ -629,10 +629,10 @@ function renderUnitGrid(filterKeyword = "") {
   }
 
   container.innerHTML = filtered.map(unit => {
-    const isComplete = unit.id <= 3;
-    const badgeHtml = isComplete
-      ? `<span class="badge badge-success">✓ Soal Lengkap &amp; Pembahasan</span>`
-      : `<span class="badge badge-warning">⏳ Materi &amp; Penjajakan Awal</span>`;
+    const exCount = (unit.exercises || []).length;
+    const badgeHtml = exCount > 0
+      ? `<span class="badge badge-success">✓ ${exCount} Latihan Lengkap</span>`
+      : `<span class="badge badge-secondary">Materi</span>`;
 
     return `
       <div class="unit-card" onclick="openUnitDetail(${unit.id})">
@@ -970,11 +970,62 @@ function renderSingleExercise(ex, unit) {
     }
   });
 
+// PETA ID GOOGLE DRIVE AUDIO CLOUD STREAMING (GRAMMAR PLUS B1)
+const B1_AUDIO_DRIVE_MAP = {
+  1: "1cayI7WgQH2APkEXH1ArmcH4opqzeQ891",
+  2: "1DZFz1uokev6J5Dr50qS5C3tgT9dqOJYm",
+  3: "12sTJu0P5cG3f6UPf7zwr-KV8YTR-dd7b",
+  4: "1PWCH0gNkc-Nui-7zby9LXTDlOxG4OrH-",
+  5: "1ET6STxZ_BwUy2Jf1InSBUb1pvHQLwmMS",
+  6: "1YHjnDLcUnFxmQ2Fnx0EVITiNTAR0-d9k",
+  7: "19IrSR_9c7UjI8BAjIwLvjUE3TVlYen3o",
+  8: "1sKwS_05YSYNOWmj6jj2H8_bqL8fxTBhn",
+  9: "1RgpnzVF00MEhM2J1721xBCgWUx8nBP7v",
+  10: "1Ci4kZ1nv6E6jlbZWy0hJZ4VOB-0iYQGh",
+  11: "1t-2_GeRSKvls23r3HhAFGHSdvsxq67xN",
+  12: "18Q6KnNOLYpSm1AvyU-BqeA9J5BcH3C22",
+  13: "1cqxHqA0yallVBxzoEBB0VaPpr9nySN8c",
+  14: "1Z6TzFWEEctRTbPEdo--VKkbmm0uHVGl1",
+  15: "1cRxLLhJ2U-3RKhxLlD8a5JTPX7Ps0hQL",
+  16: "1LemtWqrTziSGewNSHmTyN9MzkvAwEcJx",
+  17: "13UGwdGFAj_ZB7e-cTyHR0LUXkzj1jZU3",
+  18: "1_lTaeEPko3IMpKk_RVn9hZR-lhaWPUA-",
+  19: "1K2Mrnyfn29oUnFyOhMPSxiiNGmo94Qob",
+  20: "1_Mr1PXC8lSjZcm3ivjjmyv-EB956nnWY",
+  21: "1kHDaBB61t3NDeyp_NFcGGq8zMCbq9xv3",
+  22: "1e3xeVn0c92fpHY0FBtIUy47Xdbp4FAXZ",
+  23: "1VvfjIco-010tTnpsW9ukBj5hEpjBEDDr",
+  24: "19Zz-wEfEse2RxQ0OLDIyGEB5-qKOE4NG",
+  25: "1HzDnRF3ZHuXdPnuk5Rc59MIpIgZNVTe2",
+  26: "14VywELwSujtyUgH8WAUms3otjVN5GmW1",
+  27: "1213jZ4wHSeg-zWCKL0hQrRCd8bu1skPA",
+  28: "1BfJKkWGk7Gz2Sv1HxZoOMTKPi6nHHRLb",
+  29: "1fiS9mem-FEwhQQZ4SAgVhU1VPP2-9AuN",
+  30: "1bn7EXl-NuFB0d-IqLB7DH38-b1WXVFGx",
+  31: "1ZF6M6Ptx1UQJ2Mtr3kG8f-f0Hzxo0FLN",
+  32: "14sM-KKEy_YonQk-rdFcakdNgGdq3-SgN",
+  33: "18VrheTsnxcgVbMy_GITSJ9OXT7pn8tQ6",
+  34: "1bDC1NUBu-vL0G6O9eSEfsWSaIujIQ74k",
+  35: "1sfp4ascDgYmvG5Ov3qbBivulFY4GijJC",
+  36: "1nLv35LunfOS9rEumGGTcs7XR9Q0d-Vlp",
+  37: "13XYKd9itw3Um1yAtwWXV1eajFZr2A3OX",
+  38: "1Nc2gP_w2cwgCk5qC0Xc21kPOQUb6V3_A"
+};
+
+function getB1AudioStreamUrl(trackStr) {
+  if (!trackStr) return "";
+  const m = String(trackStr).match(/(\d+)/);
+  if (!m) return "";
+  const num = parseInt(m[1], 10);
+  const fid = B1_AUDIO_DRIVE_MAP[num];
+  if (!fid) return "";
+  return `https://docs.google.com/uc?export=download&id=${fid}`;
+}
+
   // Audio Script Box & Audio Player jika ada track rekaman atau audio URL
   let audioHtml = "";
   if (ex.audioTrack || ex.audioUrl) {
-    const defaultTrackName = ex.audioTrack ? ex.audioTrack.toLowerCase().replace(/[^a-z0-9]/g, "") : "audio";
-    const audioSrc = ex.audioUrl || `audio/${defaultTrackName}.mp3`;
+    const cloudAudioSrc = getB1AudioStreamUrl(ex.audioTrack) || ex.audioUrl || "";
     const scriptObj = (window.AUDIO_TRANSCRIPTS || []).find(a => ex.audioTrack && a.track.includes(ex.audioTrack));
     const transcriptText = scriptObj ? scriptObj.content : (ex.audioScript || "");
 
@@ -983,11 +1034,12 @@ function renderSingleExercise(ex, unit) {
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;">
           <div style="font-weight: 700; color: #1E293B; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;">
             <span style="font-size: 1.25rem;">🎧</span> Rekaman Audio Soal ${ex.audioTrack ? `(${escapeHtml(ex.audioTrack)})` : ''}
+            <span style="font-size: 0.725rem; color: #15803D; background: #DCFCE7; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 600;">☁️ Cloud Stream</span>
           </div>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
             ${transcriptText ? `
               <button type="button" id="btn-play-dialogue-tts" class="btn btn-sm btn-primary" onclick="playDialogueTTS(decodeURIComponent('${encodeURIComponent(transcriptText)}'))" style="font-size: 0.8rem; display: flex; align-items: center; gap: 0.35rem;">
-                <span>▶ Putar Percakapan (TTS Suara AI)</span>
+                <span>▶ Suara AI TTS</span>
               </button>
               <button type="button" id="transcript-box-btn" class="btn btn-sm btn-secondary" onclick="toggleAudioTranscript('transcript-box-content')" style="font-size: 0.8rem;">
                 👁️ Tampilkan Naskah Teks
@@ -996,16 +1048,13 @@ function renderSingleExercise(ex, unit) {
           </div>
         </div>
 
-        <!-- Pemutar Audio HTML5 -->
+        <!-- Pemutar Audio HTML5 Langsung dari Google Drive -->
         <div style="margin-top: 0.75rem;">
-          <audio controls preload="metadata" style="width: 100%; height: 40px; border-radius: 6px; outline: none;" id="audio-player-${ex.id}">
-            <source src="${escapeHtml(audioSrc)}" type="audio/mpeg">
-            <source src="${escapeHtml(audioSrc)}" type="audio/ogg">
-            <source src="${escapeHtml(audioSrc)}" type="audio/wav">
+          <audio controls preload="none" style="width: 100%; max-width: 520px; height: 38px; border-radius: 6px; outline: none;" id="audio-player-${ex.id}" src="${escapeHtml(cloudAudioSrc)}">
             Browser Anda tidak mendukung pemutar audio HTML5.
           </audio>
-          <div id="audio-load-note" style="font-size: 0.75rem; color: #64748B; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
-            <span>ℹ️ Sumber audio: <code>${escapeHtml(audioSrc)}</code> (jika file MP3 belum diunggah, gunakan tombol <strong>Putar Percakapan TTS</strong> di atas).</span>
+          <div id="audio-load-note" style="font-size: 0.75rem; color: #15803D; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.35rem;">
+            <span>☁️ Audio asli diputar langsung melalui Cloud Streaming Google Drive (ringan, tanpa perlu menyimpan berkas MP3 di GitHub).</span>
           </div>
         </div>
 
@@ -1072,6 +1121,16 @@ function renderSingleExercise(ex, unit) {
     `;
   }).join("");
 
+  // Gambar Latihan Keseluruhan jika ada (misal gambar diagram, jam, atau memo)
+  let exerciseImageHtml = "";
+  if (ex.image) {
+    exerciseImageHtml = `
+      <div style="margin: 1rem 0 1.5rem 0; text-align: center; background: #F8FAFC; padding: 0.75rem; border-radius: 8px; border: 1px solid #CBD5E1;">
+        <img src="${escapeHtml(ex.image)}" alt="Ilustrasi ${escapeHtml(ex.title)}" style="max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 6px; box-shadow: var(--shadow-sm);">
+      </div>
+    `;
+  }
+
   container.innerHTML = `
     <div class="card" style="margin-bottom: 1.5rem;">
       <div style="border-bottom: 1px solid #E2E8F0; padding-bottom: 0.75rem; margin-bottom: 1rem;">
@@ -1085,6 +1144,8 @@ function renderSingleExercise(ex, unit) {
       </div>
 
       ${audioHtml}
+
+      ${exerciseImageHtml}
 
       <form id="form-exercise-submission" onsubmit="handleGradeExercise(event, '${ex.id}')">
         ${questionsHtml}
@@ -1985,14 +2046,29 @@ function renderAudioTranscripts() {
   const container = document.getElementById("audio-transcripts-container");
   if (!container || !window.AUDIO_TRANSCRIPTS) return;
 
-  container.innerHTML = window.AUDIO_TRANSCRIPTS.map(a => `
-    <div class="card" style="margin-bottom: 1rem; border-left: 3px solid #F59E0B;">
-      <h4 style="font-size: 0.95rem; font-weight: 700; color: #B45309;">${escapeHtml(a.track)}</h4>
-      <div style="font-size: 0.85rem; color: #334155; line-height: 1.7; white-space: pre-wrap; margin-top: 0.5rem; font-family: monospace;">
-        ${escapeHtml(a.content)}
+  container.innerHTML = window.AUDIO_TRANSCRIPTS.map(a => {
+    const streamUrl = getB1AudioStreamUrl(a.track);
+    return `
+      <div class="card" style="margin-bottom: 1rem; border-left: 3px solid #F59E0B; padding: 1.15rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.65rem;">
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #B45309; margin: 0;">${escapeHtml(a.track)}</h4>
+          ${streamUrl ? `
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <audio controls preload="none" style="height: 34px; max-width: 320px;" src="${streamUrl}">
+                Browser tidak mendukung audio.
+              </audio>
+              <span style="font-size: 0.725rem; color: #047857; background: #ECFDF5; padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid #A7F3D0; font-weight: 600;">
+                ☁️ Cloud Play
+              </span>
+            </div>
+          ` : ''}
+        </div>
+        <div style="font-size: 0.85rem; color: #334155; line-height: 1.7; white-space: pre-wrap; margin-top: 0.5rem; font-family: monospace; background: #F8FAFC; padding: 0.75rem; border-radius: 6px; border: 1px solid #E2E8F0;">
+          ${escapeHtml(a.content)}
+        </div>
       </div>
-    </div>
-  `).join("");
+    `;
+  }).join("");
 }
 
 // ==========================================

@@ -4,8 +4,8 @@
  */
 
 const ExercisesStore = {
-  STORAGE_KEY: "grammar_b1_exercises_v1.0",
-  PROGRESS_KEY: "grammar_b1_progress_v1",
+  STORAGE_KEY: "grammar_b1_exercises_v2.0",
+  PROGRESS_KEY: "grammar_b1_progress_v2",
   db: null,
 
   _getStorage(key) {
@@ -49,8 +49,8 @@ const ExercisesStore = {
       if (stored) {
         const parsed = JSON.parse(stored);
         if (parsed && Array.isArray(parsed.units) && parsed.units.length >= 40) {
-          const u1 = parsed.units.find(u => u.id === 1);
-          if (u1 && u1.exercises && u1.exercises.length >= 9) {
+          const totalEx = parsed.units.reduce((acc, u) => acc + (u.exercises ? u.exercises.length : 0), 0);
+          if (totalEx >= 100) {
             this.db = parsed;
             if (typeof window !== "undefined") window.GRAMMAR_UNITS = this.db.units;
             return;
@@ -61,7 +61,7 @@ const ExercisesStore = {
       // Initialize from sourceUnits
       if (sourceUnits && sourceUnits.length > 0) {
         this.db = {
-          version: "1.0.0",
+          version: "2.0.0",
           course: "Grammar Plus B1",
           updatedAt: new Date().toISOString(),
           units: sourceUnits
@@ -74,7 +74,7 @@ const ExercisesStore = {
       const fallback = (typeof GRAMMAR_UNITS !== "undefined" && Array.isArray(GRAMMAR_UNITS))
         ? GRAMMAR_UNITS
         : ((typeof window !== "undefined" && Array.isArray(window.GRAMMAR_UNITS)) ? window.GRAMMAR_UNITS : []);
-      this.db = { version: "1.0.0", units: fallback };
+      this.db = { version: "2.0.0", units: fallback };
       if (typeof window !== "undefined") window.GRAMMAR_UNITS = fallback;
     }
   },
